@@ -8600,7 +8600,8 @@ header.site-header {
   max-width: 100%;
   width: 100%;
   margin: 0 auto;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  padding: 1rem 0; }
   header.site-header .header-in {
     display: -webkit-box;
     display: -ms-flexbox;
