@@ -62,6 +62,18 @@ Primary use: Ecommerce
   //   }
   // });
 
+  function customDropdown() {
+    $('.custom-dropdown a')
+      .mouseover(function (e) {
+        e.preventDefault();
+        $(this).closest('.custom-dropdown').addClass('show-dropdown');
+      })
+      .mouseout(function () {
+        $(this).closest('.custom-dropdown').removeClass('show-dropdown');
+      });
+  }
+  customDropdown();
+
   // Categories Slider
   $('.categories-slider').slick({
     slidesToScroll: 3,

@@ -8,17 +8,18 @@
         @include justify-content-between;
         border: 1px solid $border-color;
         @include align-items-stretch;
-        background-color: $bg-color;
-        flex-grow: 1;
-        max-width: 240px;
+        background-color: $white-color;
+        @include flex-grow(1);
+        max-width: 600px;
+        @include radius(5px);
 
         input {
             &.form-control {
                 flex-grow: 1;
-                height: calc(1.4rem + .75rem + 2px);
+                height: calc(1.2rem + .75rem + 2px);
                 border: none;
                 display: initial;
-                background-color: $bg-color;
+                background-color: $white-color;
 
                 &:focus {
                     background-color: $bg-color;
@@ -31,7 +32,7 @@
         }
 
         span {
-            padding: 0 .5rem;
+            width: 44px;
             padding-right: 0;
             text-align: center;
             @include display-flex(flex);
@@ -39,10 +40,11 @@
             @include align-items-center;
             @include flex-direction-column(column);
             cursor: pointer;
+            background-color: $primary-color;
 
             i {
-                font-size: 1.2rem;
-                color: $primary-dark;
+                font-size: 1rem;
+                color: $white-color;
             }
 
             &.is-right {

@@ -264,10 +264,12 @@ a.load-more-button {
     @include radius(100%);
     min-height: 34px;
     cursor: pointer;
+    background-color: $bg-light;
     @include transition(all .4s ease-in-out);
+    border: 1px solid $border-color;
 
     i {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     &.is-bg {
@@ -278,6 +280,10 @@ a.load-more-button {
             background-color: $primary-color;
             color: $white-color;
         }
+    }
+
+    &.is-shadow {
+        @include box-shadow (0 .125rem .25rem rgba(0, 0, 0, .075));
     }
 
     &.is-border {
