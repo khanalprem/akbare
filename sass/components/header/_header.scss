@@ -1,0 +1,285 @@
+@import "./menu";
+@import "./zite-header";
+
+header {
+
+    &.site-header {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1011;
+
+        .header-in {
+            @include display-flex(flex);
+            @include justify-content-between;
+            @include align-items-center;
+
+            .site-logo,
+            .header-right {
+                @include flex(0 0 50%);
+                max-width: 50%;
+            }
+
+            .site-logo {
+                padding-left: 2rem;
+            }
+
+            .header-right {
+                @include display-flex(flex);
+                @include justify-content-end;
+                @include align-items-center;
+
+
+                .main-navigation-wrap {
+                    @include flex-grow(1);
+                    @include display-flex(flex);
+                    @include justify-content-end;
+                    @include align-items-center;
+                    background-color: $secondary-color;
+                }
+            }
+
+
+            .user-language {
+                ul {
+                    @include display-flex(flex);
+                    @include justify-content-end;
+                    @include align-items-center;
+
+                    li {
+                        margin-left: 1rem;
+
+                        &.custom-dropdown {
+                            a {
+                                padding-right: 1rem;
+
+                                &::after {
+                                    display: none;
+                                }
+                            }
+
+                            &.language {
+                                a {
+                                    color: $white-color;
+                                }
+                            }
+
+                            ul {
+                                &.custom-dropdown-menu {
+                                    display: none;
+
+                                    li {
+                                        margin: 0;
+                                    }
+                                }
+                            }
+
+                            &.notifications {
+                                .sup {
+                                    position: absolute;
+                                    top: 5px;
+                                    right: 0;
+                                    @include radius(50%);
+                                    background-color: $secondary-color;
+                                    padding: 2px 5px;
+                                    @include display-flex(flex);
+                                    @include justify-content-center;
+                                    @include align-items-center;
+                                    @include flex-direction-column(column);
+                                    color: $white-color;
+                                    font-size: .6125rem;
+
+                                    i {
+                                        margin: 0;
+                                    }
+                                }
+
+                                a {
+                                    color: $body-color;
+                                    padding-right: 1rem;
+
+                                    i {
+                                        margin-top: .6rem;
+                                    }
+
+
+
+                                    &::after {
+                                        display: none;
+                                    }
+                                }
+
+                                ul {
+                                    &.custom-dropdown-menu {
+                                        min-width: 400px;
+                                        min-height: 300px;
+                                        max-width: 400px;
+
+                                        li {
+                                            a {
+                                                @include align-items-start;
+                                                color: $body-color;
+                                                display: initial;
+                                                padding: 0;
+
+                                            }
+
+                                            figure {
+                                                img {
+                                                    width: 30px;
+                                                    height: 30px;
+                                                    @include radius(100%);
+                                                }
+                                            }
+
+                                            .list-content {
+                                                p {
+                                                    margin: 0;
+
+                                                    a {
+                                                        color: $heading-color;
+                                                    }
+
+                                                    b {
+                                                        a {
+                                                            color: $heading-color;
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            &.list-header {
+                                                a {
+                                                    @include align-items-center;
+                                                    @include justify-content-center;
+                                                    @include display-flex(flex);
+                                                    width: 30px;
+                                                    height: 30px;
+                                                    min-height: 30px;
+
+                                                    i {
+                                                        margin: 0;
+                                                        color: $primary-color;
+                                                    }
+                                                }
+                                            }
+
+                                            &.list-footer {
+                                                @include align-items-center;
+                                                @include justify-content-between;
+                                                @include display-flex(flex);
+
+                                                a.circle-icon {
+                                                    @include align-items-center;
+                                                    @include justify-content-center;
+                                                    @include display-flex(flex);
+
+                                                    i {
+                                                        margin: 0;
+                                                    }
+                                                }
+
+                                                a.common-button {
+                                                    width: unset;
+                                                    height: unset;
+                                                    min-height: unset;
+                                                    padding: 0;
+                                                    @include align-items-center;
+
+                                                    span {
+                                                        display: unset;
+                                                        justify-content: unset;
+                                                        align-items: unset;
+                                                        margin-right: .25rem;
+                                                        font-size: .875rem;
+                                                    }
+
+                                                    i {
+                                                        color: $primary-color;
+                                                        margin: 0;
+                                                        line-height: 1;
+                                                    }
+
+                                                    &:hover {
+                                                        background-color: transparent;
+
+                                                        span {
+                                                            color: $primary-color;
+                                                            background-color: transparent;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.profile {
+                                a {
+                                    img {
+                                        max-width: 40px;
+                                        width: 40px;
+                                        height: 40px;
+                                        @include radius(100%);
+                                        @include box-shadow(0 10px 20px rgba($heading-color, .2));
+                                        margin-right: .5rem;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .forcast {
+
+
+                .forcast-in {
+                    background-color: $primary-color;
+                    min-height: 61px;
+                    min-width: 150px;
+
+                    .forcast-content {
+                        @include display-flex(flex);
+                        @include justify-content-center;
+                        @include align-items-center;
+                        @include flex-direction-column(column);
+                        padding: .5rem 1rem;
+                        color: $white-color
+                    }
+                }
+            }
+        }
+
+        a.logo {
+            @include flex(0 0 180px);
+            max-width: 180px;
+
+            @media #{$breakpoint-xs} {
+                max-width: 150px;
+            }
+        }
+
+        &.sticky {
+            z-index: 1011 !important;
+        }
+    }
+}
+
+@media #{$breakpoint-md} {
+    .Is-toggle {
+        .site-header {
+            .header-in {
+                .main-navigation {
+                    right: 0;
+                }
+            }
+        }
+    }
+}

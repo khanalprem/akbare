@@ -1,0 +1,46 @@
+@import "switcher";
+@import "button";
+@import "field";
+@import "checkbox";
+@import "search";
+@import "radios";
+@import "social-icons";
+@import "custom-dropdown";
+@import "custom-select";
+@import "custom-upload";
+@import "progress";
+@import "./date-picker";
+@import "qty";
+
+.close-icon {
+    width: 34px;
+    height: 34px;
+    @include display-flex(flex);
+    @include justify-content-center;
+    @include align-items-center;
+    @include flex-direction-column(column);
+    border: 1px solid $border-color;
+    @include radius(100%);
+    cursor: pointer;
+    @include transition(all .5s ease-in-out);
+
+    &:hover {
+        color: $red-color;
+        border-color: $red-color;
+    }
+}
+
+.form-group {
+    select {
+        &.form-control {
+            font-size: .875rem;
+            -webkit-outline: none;
+            outline: none;
+
+            &:focus {
+                box-shadow: none;
+                border-color: $secondary-color;
+            }
+        }
+    }
+}

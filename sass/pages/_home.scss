@@ -1,0 +1,106 @@
+.is-title {
+    margin-bottom: 1rem;
+
+    h5 {
+        font-size: 1.25rem;
+        font-weight: 500;
+
+        &::first-letter {
+            text-transform: capitalize;
+        }
+    }
+}
+
+.categories-slider {
+    .categories-slider-item {
+        background-color: $white-color;
+        @include box-shadow (0 .125rem .25rem rgba(0, 0, 0, .075));
+        @include radius(.40rem);
+        padding: 1rem .5rem;
+        margin: 0 .5rem;
+        text-align: center;
+
+        a {
+            display: block;
+            text-align: center;
+        }
+
+        img {
+            max-height: 40px;
+            margin: 0 auto;
+        }
+
+        p {
+            font-size: .775rem;
+            @include trim(1);
+            margin-top: .5rem;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.akabare-promo {
+    margin: 4rem 0;
+}
+
+.promo-slider {
+
+
+    .promo-slider-item {
+        margin: 0 .5rem;
+    }
+
+    img {
+        @include radius(5px);
+    }
+}
+
+.recommend-slider2 {
+    &.slick-dotted {
+        &.slick-slider {
+            margin-bottom: .6125rem;
+        }
+    }
+}
+
+.akabare-product {
+    background-color: $white-color;
+    @include box-shadow (0 .125rem .25rem rgba(0, 0, 0, .075));
+    @include radius(.40rem);
+    padding: 1rem;
+    position: relative;
+
+    .discount {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+
+        .badge {
+            font-size: 11px;
+            padding: 7px 9px;
+            font-weight: 500;
+            background-color: rgba($secondary-color, .25);
+            color: $secondary-color;
+            @include radius(.25rem);
+        }
+    }
+
+    .product-content {
+        h5 {
+            font-size: 1rem;
+
+            a {
+                color: initial;
+            }
+        }
+
+        .price {
+            color: $primary-color;
+            font-weight: 500;
+        }
+    }
+
+    .recommend-item {
+        margin: .5rem;
+    }
+}
