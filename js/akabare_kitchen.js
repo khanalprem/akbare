@@ -74,6 +74,54 @@ Primary use: Ecommerce
   }
   customDropdown();
 
+  function openModal() {
+    $('.common-button').on('click', function (e) {
+      e.preventDefault();
+      var targetId = $(this).attr('popup-link');
+      $('#' + targetId).addClass('open');
+    });
+  }
+  openModal();
+
+  function closeModal() {
+    $('.popup-footer .common-button, .close-icon').on('click', function (e) {
+      e.preventDefault();
+      $(this).closest('.popup').removeClass('open');
+    });
+  }
+  closeModal();
+
+  function sidebar_open_modal() {
+    $('.sidebar-modal-link').on('click', function (e) {
+      e.preventDefault();
+      var targetId = $(this).attr('modal-link');
+      $('#' + targetId).addClass('is-open');
+    });
+  }
+  sidebar_open_modal();
+
+  function sidebar_close_modal() {
+    $('.popup-footer .close-modal,.close-icon').on('click', function (e) {
+      e.preventDefault();
+      $(this).closest('.sidebar-modal').removeClass('is-open');
+    });
+  }
+  sidebar_close_modal();
+
+  function customTab() {
+    $('.custom-tab ul.tab-list a').click(function (e) {
+      e.preventDefault();
+      var tab_id = $(this).attr('data-tab');
+
+      $('.custom-tab ul.tab-list li a').removeClass('is-active');
+      $('.custom-tab .custom-tab-content .tab-item').removeClass('is-active');
+
+      $(this).addClass('is-active');
+      $('#' + tab_id).addClass('is-active');
+    });
+  }
+  customTab();
+
   // Categories Slider
   $('.categories-slider').slick({
     slidesToScroll: 3,
@@ -129,14 +177,6 @@ Primary use: Ecommerce
     ],
   });
 
-  // Osahan Slider
-  $('.osahan-slider').slick({
-    centerMode: false,
-    slidesToShow: 1,
-    arrows: false,
-    dots: true,
-  });
-
   // Recommend Slider
   $('.recommend-slider2').slick({
     infinite: true,
@@ -188,6 +228,46 @@ Primary use: Ecommerce
     ],
   });
 
+  /*==================================
+   Toggle Button
+ ==================================*/
+  $('a.open-button').on('click', function (e) {
+    e.preventDefault();
+    $('.main-navigation').show(300);
+  });
+
+  function mainnavButton() {
+    $('.open-button').clone().appendTo('.main-navigation .mobile-menu-toggle');
+    $('.main-navigation .open-button').addClass('active');
+    $('.active').on('click', function () {
+      $('.main-navigation').hide(300);
+    });
+  }
+  mainnavButton();
+
+  /*==================================
+  Responsive menu
+==================================*/
+  function menuIcon() {
+    $(
+      '.main-navigation li.menu-item-has-children,.main-navigation li.page-item-has-children'
+    ).prepend('<span class="icon"></span>');
+  }
+  menuIcon();
+
+  if (winwidth <= 991) {
+    $(
+      '.main-navigation li.menu-item-has-children span.icon,.main-navigation li.page-item-has-children span.icon'
+    ).on('click', function (e) {
+      e.preventDefault();
+      $(this)
+        .siblings(
+          '.main-navigation li.menu-item-has-children ul.sub-menu,.main-navigation li.page-item-has-children ul.sub-menu'
+        )
+        .slideToggle(300);
+    });
+  }
+
   // Sidebar
   var $main_nav = $('#main-nav');
   var $toggle = $('.toggle');
@@ -196,7 +276,7 @@ Primary use: Ecommerce
     disableAt: false,
     customToggle: $toggle,
     levelSpacing: 40,
-    navTitle: 'Askbootstrap',
+    navTitle: 'Akabare Kitchen',
     levelTitles: true,
     levelTitleAsBack: true,
     pushContent: '#container',

@@ -1,0 +1,64 @@
+.sidebar-modal {
+    .welcome-content {
+        margin: 1rem 0;
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        p {
+            &::first-letter {
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    form {
+        button {
+            width: 100%;
+        }
+    }
+
+    p {
+        &.or {
+            text-align: center;
+            margin: 1rem 0;
+            opacity: .7;
+        }
+
+    }
+
+    .already-signup {
+
+        p {
+            a {
+                margin-left: .5rem;
+                color: $primary-color;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+
+    .popup-footer {
+        a {
+            @include flex(0 0 50%);
+            max-width: 50%;
+            margin: 0;
+            text-align: center;
+            text-transform: capitalize;
+            color: $heading-color;
+
+            &:not(:last-child) {
+                border-right: 1px solid $border-color;
+            }
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}

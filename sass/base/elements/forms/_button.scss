@@ -15,8 +15,9 @@
     overflow: hidden;
     vertical-align: middle;
     cursor: pointer;
-    @include transition(all .3s ease-in-out);
+    @include transition(all .5s ease);
     @include radius(4px);
+    border: none;
 
     &:focus {
         border-color: $primary-color;
@@ -66,6 +67,19 @@
             }
         }
 
+    }
+
+    &.is-google {
+        background-color: $bg-color;
+        border: 1px solid $border-color;
+
+        &.is-icon {
+            margin-right: .5rem;
+
+            i {
+                color: $secondary-color;
+            }
+        }
     }
 
     &.is-auto {
@@ -168,8 +182,6 @@
     }
 
     &.is-icon {
-        @include justify-content-between;
-        color: $white-color;
 
         i {
             margin-right: .5rem;

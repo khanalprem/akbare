@@ -5,7 +5,7 @@ textarea {
     &.form-control {
         display: block;
         width: 100%;
-        height: calc(1.9em + 0.75rem + 2px);
+        height: calc(1.7em + 0.75rem + 2px);
         padding: 0.375rem 0.75rem;
         font-size: .875rem;
         font-weight: 400;
@@ -72,11 +72,11 @@ input[type="time"].form-control {
 }
 
 .form-group {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
 
     label {
-        font-weight: 500;
-        text-transform: uppercase;
+        font-weight: 400;
+        text-transform: capitalize;
         margin-bottom: .5rem;
         display: block;
         color: $body-color;

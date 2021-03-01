@@ -31,7 +31,6 @@
             position: relative;
             @include transition(all .5s linear);
             border: 1px solid transparent;
-            color: $bg-light;
             cursor: pointer;
 
             span {
@@ -97,10 +96,8 @@
                     opacity: 0;
                     visibility: hidden;
                 }
-            }
 
-            &.is-active {
-                a {
+                &.is-active {
                     color: $heading-color;
 
                     &::after {
@@ -110,6 +107,8 @@
                     }
                 }
             }
+
+
 
             &:hover {
                 a {
