@@ -383,20 +383,12 @@
             opacity: 0;
             visibility: hidden;
             @include transition(all .5s ease);
-
-            @media #{$breakpoint-xs} {
-                max-width: 280px;
-                min-width: 280px;
-            }
+            max-width: 280px;
+            min-width: 280px;
 
             @media #{$breakpoint-sm} {
                 max-width: 360px;
                 min-width: 360px;
-            }
-
-            @media #{$breakpoint-desktop} {
-                max-width: 576px;
-                min-width: 576px;
             }
 
             .popup-header {

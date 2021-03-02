@@ -12,6 +12,24 @@ footer {
         .footer-top {
             padding: 2rem 0;
             border-top: 1px solid $border-color;
+
+            form {
+                margin: 1rem 0;
+            }
+
+            .is-social-icons {
+                @include justify-content-center;
+            }
+
+            @media #{$breakpoint-md} {
+                form {
+                    margin: 0;
+                }
+
+                .is-social-icons {
+                    @include justify-content-end;
+                }
+            }
         }
 
         .footer-middle {

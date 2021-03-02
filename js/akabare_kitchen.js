@@ -129,6 +129,13 @@ Primary use: Ecommerce
     arrows: true,
     responsive: [
       {
+        breakpoint: 1024,
+        settings: {
+          arrows: true,
+          slidesToShow: 6,
+        },
+      },
+      {
         breakpoint: 768,
         settings: {
           arrows: false,

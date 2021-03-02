@@ -14,7 +14,6 @@ header {
             @include align-items-center;
             padding: 1rem 0;
 
-
             .site-logo {
                 padding-right: 2rem;
 
@@ -25,6 +24,7 @@ header {
 
             .header-search {
                 margin-left: 2rem;
+                @include order(1);
 
                 input {
                     &.form-control {
@@ -39,13 +39,22 @@ header {
                         }
                     }
                 }
+
             }
 
             .header-right {
                 @include display-flex(flex);
-                @include justify-content-end;
-                @include align-items-center;
+                @include flex-grow(1);
+                @include flex-wrap(wrap);
 
+                .header-dropdowns {
+                    @include display-flex(flex);
+                    @include justify-content-end;
+                    @include align-items-center;
+                    @include flex(0 0 100%);
+                    max-height: 100%;
+                    @include order(0);
+                }
 
                 .main-navigation-wrap {
                     @include flex-grow(1);
@@ -151,14 +160,37 @@ header {
                     }
                 }
             }
+
+            @media #{$breakpoint-lg} {
+
+                .header-right {
+                    @include flex-wrap(nowrap);
+
+                    .header-dropdowns {
+                        flex: unset;
+                        max-width: unset;
+                    }
+
+                    .header-dropdowns {
+                        @include order(1);
+                    }
+                }
+
+                .header-search {
+                    @include order(0);
+                }
+
+            }
         }
 
         a.logo {
-            @include flex(0 0 180px);
-            max-width: 180px;
+            @include flex(0 0 150px);
+            max-width: 150px;
 
             @media #{$breakpoint-xs} {
-                max-width: 150px;
+
+                @include flex(0 0 180px);
+                max-width: 180px;
             }
         }
 
@@ -167,12 +199,13 @@ header {
         }
 
         .bottom-header {
-            background-color: $primary-color;
+            border-top: 1px solid $border-color;
+            background-color: transparent;
         }
     }
 }
 
-@media #{$breakpoint-md} {
+@media #{$breakpoint-lg} {
     .Is-toggle {
         .site-header {
             .header-in {
