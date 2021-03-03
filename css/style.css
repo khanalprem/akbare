@@ -4965,7 +4965,8 @@ ul {
           color: #0D9344; }
     ul.is-list.is-before li {
       position: relative;
-      padding-left: 1.5rem; }
+      padding-left: 1.5rem;
+      font-size: .875rem; }
       ul.is-list.is-before li::before {
         content: '\eed6';
         font-size: 1.2rem;
