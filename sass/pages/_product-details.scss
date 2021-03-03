@@ -1,0 +1,105 @@
+.akabare-product-details {
+    background-color: $white-color;
+    padding: 1rem;
+    @include box-shadow(0 0 40px $shadow-color);
+    @include radius(5px);
+
+    .cart-buttons {
+        .common-button {
+            min-height: 40px;
+            min-width: 140px;
+        }
+    }
+
+    .akabare-slider-item {
+        img {
+            @include radius(5px);
+        }
+    }
+
+    .akabare-product-header {
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .akabare-product-price {
+        margin: .5rem 0;
+
+        b {
+            color: $primary-color;
+            font-size: 1rem;
+        }
+
+        span {
+            font-size: .875rem;
+
+            &.mrp {
+                &::after {
+                    content: ':';
+                    display: inline-flex;
+                    margin: 0 .25rem;
+                }
+            }
+
+            &.badge {
+                font-size: 11px;
+                padding: 7px 9px;
+                font-weight: 500;
+                background-color: rgba($secondary-color, .25);
+                color: $secondary-color;
+                @include radius(.25rem);
+                margin-left: .5rem;
+            }
+
+        }
+    }
+
+    .rating-stars {
+        i {
+            color: $orange-color;
+        }
+
+    }
+
+    .label-rating {
+        margin-left: .5rem;
+    }
+
+    .akabare-product-available {
+        margin: .6125rem 0;
+    }
+
+    .search-bar {
+        margin: 1rem auto;
+
+        .search-wrap {
+            span {
+                background-color: transparent;
+
+                i {
+                    color: $body-color;
+                }
+            }
+
+            input {
+                &:focus {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    .akabare-product-content {
+
+        h5 {
+            font-size: 1rem;
+
+        }
+
+        p {
+            margin-top: 1rem;
+            font-size: .875rem;
+        }
+    }
+}

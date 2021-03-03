@@ -74,6 +74,10 @@
     padding: 1rem;
     position: relative;
 
+    img {
+        @include radius(5px);
+    }
+
     .discount {
         position: absolute;
         top: 1rem;

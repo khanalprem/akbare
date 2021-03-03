@@ -62,6 +62,8 @@ Primary use: Ecommerce
   //   }
   // });
 
+  var winwidth = $(window).width();
+
   function customDropdown() {
     $('.custom-dropdown a')
       .mouseover(function (e) {
@@ -305,6 +307,7 @@ Primary use: Ecommerce
       toggleSwitch.checked = true;
     }
   }
+
   function switchTheme(e) {
     if (e.target.checked) {
       document.documentElement.setAttribute('class', 'dark');
@@ -320,7 +323,7 @@ Primary use: Ecommerce
 // Quantity JS
 jQuery(document).ready(function () {
   // This button will increment the value
-  $('.qtyplus').click(function (e) {
+  $('.cart-items-number .qtyplus').click(function (e) {
     // Stop acting like a button
     e.preventDefault();
     // Get the field name
@@ -337,7 +340,7 @@ jQuery(document).ready(function () {
     }
   });
   // This button will decrement the value till 0
-  $('.qtyminus').click(function (e) {
+  $('.cart-items-number .qtyminus').click(function (e) {
     // Stop acting like a button
     e.preventDefault();
     // Get the field name

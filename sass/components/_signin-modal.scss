@@ -1,4 +1,27 @@
 .sidebar-modal {
+
+
+    .popup-footer {
+        a {
+            @include flex(0 0 50%);
+            max-width: 50%;
+            margin: 0;
+            text-align: center;
+            text-transform: capitalize;
+            color: $heading-color;
+
+            &:not(:last-child) {
+                border-right: 1px solid $border-color;
+            }
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.signin-modal {
     .welcome-content {
         margin: 1rem 0;
 
@@ -39,25 +62,6 @@
                 &:hover {
                     color: $secondary-color;
                 }
-            }
-        }
-    }
-
-    .popup-footer {
-        a {
-            @include flex(0 0 50%);
-            max-width: 50%;
-            margin: 0;
-            text-align: center;
-            text-transform: capitalize;
-            color: $heading-color;
-
-            &:not(:last-child) {
-                border-right: 1px solid $border-color;
-            }
-
-            &:hover {
-                color: $primary-color;
             }
         }
     }

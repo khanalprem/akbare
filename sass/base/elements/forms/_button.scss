@@ -122,7 +122,7 @@
         background-color: transparent;
         color: $primary-color;
         border: 1px solid;
-        border-color: $primary-color;
+        border-color: $border-color;
 
         &.is-icon {
             @include display-flex(flex);
@@ -144,7 +144,7 @@
 
         &:hover {
             border-color: $secondary-color;
-            color: $secondary-color;
+            color: $primary-color;
         }
 
         &:disabled,
@@ -205,7 +205,7 @@
     }
 
     &.sm-button {
-        padding: .25rem .6125rem;
+        padding: .5rem .6125rem;
         font-size: .775rem;
     }
 
@@ -366,10 +366,10 @@ a.load-more-button {
 .close-icon {
     position: absolute;
     z-index: 2;
-    top: 1rem;
+    top: .5rem;
     right: 1rem;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     @include display-flex(flex);
     @include justify-content-center;
     @include align-items-center;

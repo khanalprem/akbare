@@ -48,6 +48,7 @@ ul {
             a {
                 color: $heading-color;
                 font-weight: 500;
+                font: .875rem;
 
 
             }
@@ -149,9 +150,7 @@ ul {
                 }
             }
 
-            &:not(:last-child) {
-                border-bottom: 1px solid $border-color;
-            }
+
 
             .list-content-wrapper {
                 @include display-flex(flex);
@@ -159,33 +158,6 @@ ul {
                 flex-grow: 1;
             }
 
-            .general-form-content {
-                .form-content-info {
-                    @include display-flex(flex);
-                    @include justify-content-start;
-                    @include align-items-start;
-                    margin-top: .35rem;
-
-                    p {
-                        @include display-flex(flex);
-                        @include justify-content-start;
-                        @include align-items-center;
-                        font-size: .775rem;
-
-                        b {
-                            font-weight: 500;
-                        }
-
-                        span {
-                            margin-right: .5rem;
-                        }
-
-                        &:not(:last-child) {
-                            margin-right: 2rem;
-                        }
-                    }
-                }
-            }
 
             &.list-header {
                 @include justify-content-between;
@@ -225,7 +197,11 @@ ul {
         }
 
         &.is-border {
-            border: 1px solid $border-color;
+            li {
+                &:not(:last-child) {
+                    border-bottom: 1px solid $border-color;
+                }
+            }
         }
 
         &.is-center {
@@ -241,12 +217,11 @@ ul {
                 position: relative;
 
                 &::after {
-                    content: 'expand_more';
+                    content: 'eed6';
                     margin-left: .6125rem;
-                    content: 'chevron_right';
                     font-size: 1.4rem;
-                    font-family: 'Material Icons';
-                    color: $body-color;
+                    font-family: 'IcoFont';
+                    color: $primary-color;
                     z-index: 99;
                     line-height: 1;
                     position: absolute;
@@ -282,6 +257,29 @@ ul {
 
                         }
                     }
+                }
+            }
+        }
+
+        &.is-before {
+            li {
+                position: relative;
+                padding-left: 1.5rem;
+
+                &::before {
+                    content: '\eed6';
+                    font-size: 1.2rem;
+                    font-family: 'IcoFont';
+                    color: $primary-color;
+                    z-index: 99;
+                    line-height: 1;
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                }
+
+                &:not(:last-child) {
+                    padding: .5rem 0 0 1.5rem;
                 }
             }
         }

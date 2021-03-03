@@ -1,8 +1,8 @@
 .search-bar {
     @include display-flex(flex);
-    @include justify-content-end;
+    @include justify-content-start;
     @include align-items-center;
-
+    position: relative;
     .search-wrap {
         @include display-flex(flex);
         @include justify-content-between;

@@ -1,0 +1,40 @@
+.filter-modal {
+    .popup-container {
+        .popup-body {
+            .popup-content {
+                padding: 0;
+            }
+        }
+    }
+
+    .custom-radio {
+        @include justify-content-between;
+
+        label {
+            font-weight: 400;
+        }
+    }
+
+    .filter-title {
+        background-color: $bg-color;
+        padding: .6125rem 1rem;
+
+        h6 {
+            text-transform: capitalize;
+        }
+    }
+
+    .filter-list {
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .popup-footer {
+        .common-buttons {
+            &.is-bg {
+                color: $white-color;
+            }
+        }
+    }
+}

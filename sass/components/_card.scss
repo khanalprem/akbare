@@ -1,4 +1,4 @@
-.zite-card {
+.custom-card {
     position: relative;
     @include display-flex(flex);
     @include flex-direction-column(column);
@@ -14,14 +14,10 @@
         padding-top: 0;
     }
 
-    .zite-body {
+    .custom-body {
         flex: 1 1 auto;
         min-height: 1px;
         padding: 1rem;
-
-        @media #{$breakpoint-desktop} {
-            padding: .775rem;
-        }
 
         &.pd-0 {
             padding: 0;
@@ -172,15 +168,6 @@
     }
 }
 
-.assign-new {
-    .zite-card {
-        &.assign-card {
-            .custom-select {
-                max-width: 100%;
-            }
-        }
-    }
-}
 
 .is-overflow {
     overflow-y: auto;

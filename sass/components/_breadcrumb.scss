@@ -1,0 +1,24 @@
+.custom-breadcrumb {
+    padding: .6125rem;
+    background-color: $grey-light;
+
+    ol {
+        li {
+            a {
+                color: $primary-color;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+
+            &:not(:last-child) {
+                &::after {
+                    content: '/';
+                    display: inline-flex;
+                    margin: 0 .5rem;
+                }
+            }
+        }
+    }
+}
