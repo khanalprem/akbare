@@ -4,6 +4,18 @@
     @include box-shadow(0 0 40px $shadow-color);
     @include radius(5px);
 
+    .akabare-product-slider {
+        padding: 1rem 2rem 0 2.5rem;
+
+        .slick-prev {
+            left: 15px;
+        }
+
+        .slick-next {
+            right: 0;
+        }
+    }
+
     .cart-buttons {
         .common-button {
             min-height: 40px;
@@ -15,6 +27,10 @@
         img {
             @include radius(5px);
         }
+    }
+
+    .akabare-product-info {
+        padding: 1rem 1.5rem;
     }
 
     .akabare-product-header {

@@ -10697,6 +10697,12 @@ footer.site-footer {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px; }
+  .akabare-product-details .akabare-product-slider {
+    padding: 1rem 2rem 0 2.5rem; }
+    .akabare-product-details .akabare-product-slider .slick-prev {
+      left: 15px; }
+    .akabare-product-details .akabare-product-slider .slick-next {
+      right: 0; }
   .akabare-product-details .cart-buttons .common-button {
     min-height: 40px;
     min-width: 140px; }
@@ -10705,6 +10711,8 @@ footer.site-footer {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     border-radius: 5px; }
+  .akabare-product-details .akabare-product-info {
+    padding: 1rem 1.5rem; }
   .akabare-product-details .akabare-product-header h2 {
     font-size: 1.5rem; }
   .akabare-product-details .akabare-product-price {

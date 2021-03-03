@@ -199,13 +199,13 @@ Primary use: Ecommerce
   });
 
   // Recommend Slider
-  $('.recommend-slider').slick({
+  $('.akabare-product-slider').slick({
     infinite: true,
     speed: 300,
     slidesToShow: 1,
     adaptiveHeight: true,
-    arrows: false,
-    dots: true,
+    arrows: true,
+    dots: false,
     autoplay: true,
   });
 
