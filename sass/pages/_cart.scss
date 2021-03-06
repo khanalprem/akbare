@@ -177,38 +177,66 @@
         }
     }
 
-    .akabare-payment {
-        padding: 1rem;
+}
 
-        .custom-radio {
-            margin-bottom: 0;
-            ;
+.akabare-payment {
+    padding: 1rem;
 
-            img {
-                max-height: 32px;
-            }
+    .custom-radio {
+        margin-bottom: 0;
+        width: initial;
 
-            &:not(:last-child) {
-                margin-right: 1rem;
-            }
+        img {
+            max-height: 32px;
+        }
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+            margin-bottom: .6125rem;
+        }
+    }
+}
+
+.checkout-summary {
+    p {
+        font-size: .875rem;
+
+        &:not(:last-child) {
+            margin-bottom: .25rem;
+        }
+    }
+}
+
+.checkout-summary-card {
+    .card-footer {
+        h4 {
+            color: $primary-color;
         }
     }
 
-    .checkout-summary {
-        p {
-            font-size: .875rem;
-
-            &:not(:last-child) {
-                margin-bottom: .25rem;
+    .buttons {
+        a {
+            &.common-button {
+                width: 100%;
             }
         }
     }
+}
 
-    .checkout-summary-card {
-        .card-footer {
-            h4 {
-                color: $primary-color;
-            }
+.custom-card {
+    &.checkout-card {
+        .card-header {
+            padding-top: .6125rem;
+            padding-bottom: .6125rem;
+        }
+
+        .selected-payment {
+            font-size: 1rem;
+            color: $primary-color;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
         }
     }
 }

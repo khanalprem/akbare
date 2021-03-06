@@ -208,10 +208,10 @@
                                 <a href="">Orders</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item">
-                                        <a href="cart.html">cart</a>
+                                        <a href="order.html">Order</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="checkout.html">checkout</a>
+                                        <a href="status.html">order status</a>
                                     </li>
                                 </ul>
                             </li>
@@ -240,7 +240,7 @@
         <div class="container">
             <ol class="is-flex is-start is-wrap">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active">Cart</li>
+                <li class="breadcrumb-item active">order</li>
             </ol>
         </div>
     </nav>
@@ -248,363 +248,44 @@
     <!-- site content -->
     <main class="site-content">
         <div class="container">
-            <div class="cart">
+            <div class="checkout">
                 <div class="row">
                     <div class="grid-lg-8">
-                        <div class="acc">
-                            <div class="acc-list is-active">
-                                <div class="acc-header is-start">
-                                    <span class="counter">1</span>
-                                    <h5>cart <span class="cart-count">(3 items)</span></h5>
-                                </div>
-                                <div class="acc-body">
-                                    <ul class="is-list is-border">
-                                        <li class="akabare-product">
-                                            <a href="#" class="is-cancel">
-                                                <i class="icofont-ui-delete"></i>
-                                            </a>
-                                            <figure class="mb-15">
-                                                <a href="#">
-                                                    <img src="img/listing/1.png" class="">
-                                                </a>
-                                                <a href="product_details.html" class="discount">
-                                                    <span class="badge">10%</span>
-                                                </a>
-
-                                            </figure>
-                                            <div class="product-content">
-                                                <h5><a href="#">Jhole:Momo</a></h5>
-                                                <div class="is-flex is-start is-discount">
-                                                    <h6 class="price">Rs.170/plate</h6>
-                                                    <h6 class="price is-strike">Rs.50/plate</h6>
-                                                </div>
-                                                <div class="is-flex is-between">
-                                                    <h6 class="price is-discounted-price">Rs.100/plate</h6>
-                                                    <div class="gridlapse qty_show">
-                                                        <div class="ml-auto" href="#">
-                                                            <form id='myform' class="cart-items-number is-flex"
-                                                                method='POST' action='#'>
-                                                                <input type='button' value='-' class='qtyminus btn '
-                                                                    field='quantity' />
-                                                                <input type='text' name='quantity' value='1'
-                                                                    class='qty form-control' />
-                                                                <input type='button' value='+' class='qtyplus btn '
-                                                                    field='quantity' />
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="akabare-product">
-
-                                            <a href="#" class="is-cancel">
-                                                <i class="icofont-ui-delete"></i>
-                                            </a>
-                                            <figure class="mb-15">
-                                                <a href="product_details.html" class="discount">
-                                                    <span class="badge">10%</span>
-                                                </a>
-                                                <a href="#">
-                                                    <img src="img/listing/1.png" class="">
-                                                </a>
-
-                                            </figure>
-                                            <div class="product-content">
-                                                <h5><a href="#">Jhole:Momo</a></h5>
-                                                <div class="is-flex is-start is-discount">
-                                                    <h6 class="price">Rs.170/plate</h6>
-                                                    <h6 class="price is-strike">Rs.50/plate</h6>
-                                                </div>
-                                                <div class="is-flex is-between">
-                                                    <h6 class="price is-discounted-price">Rs.100/plate</h6>
-                                                    <div class="gridlapse qty_show">
-                                                        <div class="ml-auto" href="#">
-                                                            <form id='myform' class="cart-items-number is-flex"
-                                                                method='POST' action='#'>
-                                                                <input type='button' value='-' class='qtyminus btn '
-                                                                    field='quantity' />
-                                                                <input type='text' name='quantity' value='1'
-                                                                    class='qty form-control' />
-                                                                <input type='button' value='+' class='qtyplus btn '
-                                                                    field='quantity' />
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="akabare-product">
-
-                                            <a href="#" class="is-cancel">
-                                                <i class="icofont-ui-delete"></i>
-                                            </a>
-                                            <figure class="mb-15">
-                                                <a href="product_details.html" class="discount">
-                                                    <span class="badge">10%</span>
-                                                </a>
-                                                <a href="#">
-                                                    <img src="img/listing/1.png" class="">
-                                                </a>
-
-                                            </figure>
-                                            <div class="product-content">
-                                                <h5><a href="#">Jhole:Momo</a></h5>
-                                                <div class="is-flex is-start is-discount">
-                                                    <h6 class="price">Rs.170/plate</h6>
-                                                    <h6 class="price is-strike">Rs.50/plate</h6>
-                                                </div>
-                                                <div class="is-flex is-between">
-                                                    <h6 class="price is-discounted-price">Rs.100/plate</h6>
-                                                    <div class="gridlapse qty_show">
-                                                        <div class="ml-auto" href="#">
-                                                            <form id='myform' class="cart-items-number is-flex"
-                                                                method='POST' action='#'>
-                                                                <input type='button' value='-' class='qtyminus btn '
-                                                                    field='quantity' />
-                                                                <input type='text' name='quantity' value='1'
-                                                                    class='qty form-control' />
-                                                                <input type='button' value='+' class='qtyplus btn '
-                                                                    field='quantity' />
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="akabare-product">
-                                            <a href="#" class="is-cancel">
-                                                <i class="icofont-ui-delete"></i>
-                                            </a>
-
-                                            <figure class="mb-15">
-                                                <a href="product_details.html" class="discount">
-                                                    <span class="badge">10%</span>
-                                                </a>
-                                                <a href="#">
-                                                    <img src="img/listing/1.png" class="">
-                                                </a>
-
-                                            </figure>
-                                            <div class="product-content">
-                                                <h5><a href="#">Jhole:Momo</a></h5>
-                                                <div class="is-flex is-start is-discount">
-                                                    <h6 class="price">Rs.170/plate</h6>
-                                                    <h6 class="price is-strike">Rs.50/plate</h6>
-                                                </div>
-                                                <div class="is-flex is-between">
-                                                    <h6 class="price is-discounted-price">Rs.100/plate</h6>
-                                                    <div class="gridlapse qty_show">
-                                                        <div class="ml-auto" href="#">
-                                                            <form id='myform' class="cart-items-number is-flex"
-                                                                method='POST' action='#'>
-                                                                <input type='button' value='-' class='qtyminus btn '
-                                                                    field='quantity' />
-                                                                <input type='text' name='quantity' value='1'
-                                                                    class='qty form-control' />
-                                                                <input type='button' value='+' class='qtyplus btn '
-                                                                    field='quantity' />
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="cart-footer">
-                                        <a href="#" class="is-flex is-between">
-                                            <div>
-                                                <h6>Sub Total</h6>
-                                                <p>Proceed to checkout</p>
-                                            </div>
-                                            <h5><span>Rs.</span>480</h5>
-                                        </a>
-                                    </div>
-                                </div>
+                        <div class="custom-card checkout-card">
+                            <div class="card-header">
+                                <h5>Address</h5>
+                                <a href="#" class="common-button no-border is-icon" popup-link="change-address"><i
+                                        class="icofont-location-arrow"></i><span>Change</span></a>
                             </div>
-                            <div class="acc-list ">
-                                <div class="acc-header is-start">
-                                    <span class="counter">2</span>
-                                    <h5>Order address</h5>
-                                </div>
-                                <div class="acc-body">
-                                    <div class="delivery-address ">
-                                        <div class="row">
-                                            <div class="grid-lg-6">
-                                                <div class="form-group">
-                                                    <label>Delivery area</label>
-                                                    <div class="custom-input-group">
-                                                        <input class="form-control" placeholder="Enter your city" />
-                                                        <span class="span-group"><i
-                                                                class="icofont-location-pin "></i></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="grid-lg-6">
-                                                <div class="form-group">
-                                                    <label>Complete address</label>
-                                                    <input class="form-control" placeholder="Complete address" />
-                                                </div>
-                                            </div>
-                                            <div class="grid-lg-12">
-                                                <div class="form-group">
-                                                    <label>Left of soltimode near petrol pump</label>
-                                                    <textarea class="form-control"
-                                                        placeholder="Enter your city"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cart-footer">
-                                        <a href="#" class="is-flex is-center">
-                                            <span>Continue</span>
-                                        </a>
-                                    </div>
-                                </div>
-
+                            <div class="custom-body">
+                                <p>Kathmandu , Nepal</p>
+                                <p>Putalisadak Online security opposite</p>
                             </div>
-                            <div class="acc-list ">
-                                <div class="acc-header is-start">
-                                    <span class="counter">3</span>
-                                    <h5>Delivery time</h5>
-                                </div>
-                                <div class="acc-body">
-                                    <div class="delivery-time">
-                                        <div class="delivery-header">
-                                            <i class="icofont-ui-calendar"></i>
-                                            <p>Your Current schedule:</p>
-                                            <h6>Tommorow, 6AM - 10AM</h6>
-                                        </div>
-                                        <div class="custom-tab">
-                                            <ul class="tab-list is-border">
-                                                <li><a href="#" class="is-active" data-tab="sun">
-                                                        <b>Sun</b>
-                                                        <time>7 Mar</time>
-                                                    </a>
-                                                </li>
-                                                <li><a href="#" class="" data-tab="mon">
-                                                        <b>mon</b>
-                                                        <time>8 Mar</time>
-                                                    </a>
-                                                </li>
-                                                <li><a href="#" class="" data-tab="tue">
-                                                        <b>Tue</b>
-                                                        <time>9 Mar</time>
-                                                    </a>
-                                                </li>
-                                                <li><a href="#" class="" data-tab="wed">
-                                                        <b>wed</b>
-                                                        <time>10 Mar</time>
-                                                    </a>
-                                                </li>
-                                                <li><a href="#" class="" data-tab="thu">
-                                                        <b>Thu</b>
-                                                        <time>11 Mar</time>
-                                                    </a>
-                                                </li>
-                                                <li><a href="#" class="" data-tab="fri">
-                                                        <b>Fri</b>
-                                                        <time>8 Mar</time>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                            <div class="custom-tab-content">
-                                                <div class="tab-item is-active" id="sun">
-                                                    <ul class="is-list is-border">
-                                                        <li>
-                                                            <div class="custom-radio">
-                                                                <input type="radio" id="khalti" name="rated"
-                                                                    class="custom-control-input">
-                                                                <label class="" for="customRadio2">
-                                                                    6-10 AM</label>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="custom-radio">
-                                                                <input type="radio" id="customRadio4" name="rated"
-                                                                    class="custom-control-input">
-                                                                <label class="" for="customRadio4">
-                                                                    10AM - 12 PM</label>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="custom-radio">
-                                                                <input type="radio" id="customRadio5" name="rated"
-                                                                    class="custom-control-input">
-                                                                <label class="" for="customRadio5">
-                                                                    12PM - 4 PM</label>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cart-footer">
-                                            <a href="#" class="is-flex is-center">
-                                                <span>schedule order</span>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                </div>
+                        </div>
+                        <div class="custom-card checkout-card">
+                            <div class="card-header">
+                                <h5>Payment Method</h5>
+                                <a href="#" class="common-button no-border is-icon" popup-link="change-payment"><i
+                                        class="icofont-location-arrow"></i><span>Change</span></a>
                             </div>
-                            <div class="acc-list ">
-                                <div class="acc-header is-start">
-                                    <span class="counter">4</span>
-                                    <h5>Payment</h5>
-                                </div>
-                                <div class="acc-body">
-                                    <div class="akabare-payment">
-                                        <div class="is-flex is-start is-wrap">
-                                            <div class="custom-radio">
-                                                <input type="radio" id="fonepay" name="payment"
-                                                    class="custom-control-input">
-                                                <label class="" for="fonepay">
-                                                    <img src="img/Fonepay-logo.svg" alt="fone pay" />
-                                                </label>
-                                            </div>
-                                            <div class="custom-radio">
-                                                <input type="radio" id="khalti" name="payment"
-                                                    class="custom-control-input">
-                                                <label class="" for="khalti">
-                                                    <img src="img/khalti-logo.svg" alt="fone pay" />
-                                                </label>
-                                            </div>
-                                            <div class="custom-radio">
-                                                <input type="radio" id="connectips" name="payment"
-                                                    class="custom-control-input">
-                                                <label class="" for="connectips">
-                                                    <img src="img/aaaa.png" alt="fone pay" />
-                                                </label>
-                                            </div>
-                                            <div class="custom-radio">
-                                                <input type="radio" id="imepay" name="payment"
-                                                    class="custom-control-input">
-                                                <label class="" for="imepay">
-                                                    <img src="img/ime-red.png" alt="fone pay" />
-                                                </label>
-                                            </div>
-                                            <div class="custom-radio">
-                                                <input type="radio" id="cash" name="payment"
-                                                    class="custom-control-input">
-                                                <label class="" for="cash">
-                                                    Cash
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cart-footer">
-                                        <a href="#" class="is-flex is-center">
-                                            <span>continue</span>
-                                        </a>
-                                    </div>
-                                </div>
+                            <div class="custom-body">
+                                <a class="is-flex is-icon is-start selected-payment" href="#">
+                                    <span class="is-icon"><i class="icofont-pay"></i></span>
+                                    <span>ConnectIps</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="custom-card checkout-card">
+                            <div class="card-header">
+                                <h5>add promo code </h5>
+                                <a href="#" class="common-button no-border is-icon" popup-link="add-promo"><i
+                                        class="icofont-plus"></i><span>add</span></a>
                             </div>
                         </div>
                     </div>
                     <div class=" grid-lg-4">
                         <div class="checkout-summary-card">
-                            <div class="custom-card ">
+                            <div class="custom-card">
                                 <div class="card-header">
                                     <h5>order summary</h5>
                                 </div>
@@ -628,6 +309,9 @@
                                     <h5>Total pay</h5>
                                     <h4 class="checkout-total-price">Rs.3090</h4>
                                 </div>
+                            </div>
+                            <div class="buttons is-center mt-15">
+                                <a href="#" class="common-button is-bg">Place order</a>
                             </div>
                         </div>
                     </div>
@@ -763,6 +447,132 @@
         </div>
 
     </footer>
+
+    <!-- change address -->
+    <div class="popup" id="change-address">
+        <div class="popup-container sm-popup">
+            <div class="popup-body">
+                <span class="close-icon"><i class="icofont-close-line"></i></span>
+                <div class="popup-header">
+                    <h3>Change Address</h3>
+                </div>
+                <div class="popup-content">
+                    <div class="row">
+                        <div class="grid-lg-6">
+                            <div class="form-group">
+                                <label>Delivery area</label>
+                                <div class="custom-input-group">
+                                    <input class="form-control" placeholder="Enter your city" />
+                                    <span class="span-group"><i class="icofont-location-pin "></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-lg-6">
+                            <div class="form-group">
+                                <label>Complete address</label>
+                                <input class="form-control" placeholder="Complete address" />
+                            </div>
+                        </div>
+                        <div class="grid-lg-12">
+                            <div class="form-group">
+                                <label>Left of soltimode near petrol pump</label>
+                                <textarea class="form-control" placeholder="Enter your city"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-footer buttons is-end">
+                    <a href="#" class="common-button is-border">Cancel</a>
+                    <a href="#" class="common-button is-bg">save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- change payment -->
+    <div class="popup" id="change-payment">
+        <div class="popup-container mediam-popup">
+            <div class="popup-body">
+                <span class="close-icon"><i class="icofont-close-line"></i></span>
+                <div class="popup-header">
+                    <h3>change payment</h3>
+                </div>
+                <div class="popup-content">
+                    <div class="akabare-payment">
+                        <div class="is-flex is-start is-wrap">
+                            <div class="custom-radio">
+                                <input type="radio" id="fonepay" name="payment" class="custom-control-input">
+                                <label class="" for="fonepay">
+                                    <img src="img/Fonepay-logo.svg" alt="fone pay" />
+                                </label>
+                            </div>
+                            <div class="custom-radio">
+                                <input type="radio" id="khalti" name="payment" class="custom-control-input">
+                                <label class="" for="khalti">
+                                    <img src="img/khalti-logo.svg" alt="fone pay" />
+                                </label>
+                            </div>
+                            <div class="custom-radio">
+                                <input type="radio" id="connectips" name="payment" class="custom-control-input">
+                                <label class="" for="connectips">
+                                    <img src="img/aaaa.png" alt="fone pay" />
+                                </label>
+                            </div>
+                            <div class="custom-radio">
+                                <input type="radio" id="imepay" name="payment" class="custom-control-input">
+                                <label class="" for="imepay">
+                                    <img src="img/ime-red.png" alt="fone pay" />
+                                </label>
+                            </div>
+                            <div class="custom-radio">
+                                <input type="radio" id="cash" name="payment" class="custom-control-input">
+                                <label class="" for="cash">
+                                    Cash
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-footer buttons is-end">
+                    <a href="#" class="common-button is-border">Cancel</a>
+                    <a href="#" class="common-button is-bg">save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- change promo -->
+    <div class="popup" id="add-promo">
+        <div class="popup-container sm-popup">
+            <div class="popup-body">
+                <span class="close-icon"><i class="icofont-close-line"></i></span>
+                <div class="popup-header">
+                    <h3>Apply Promo code</h3>
+                </div>
+                <div class="popup-content">
+                    <div class="row">
+                        <div class="grid-lg-12">
+                            <div class="form-group">
+                                <div class="custom-input-group">
+                                    <input class="form-control" placeholder="Promo code" />
+                                    <span class="span-group"><i class="icofont-location-arrow "></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-lg-12">
+                            <div class="form-group">
+                                <textarea class="form-control" placeholder="Any suggetion will pass it ?"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-footer buttons is-end">
+                    <a href="#" class="common-button is-border">Cancel</a>
+                    <a href="#" class="common-button is-bg">save</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Signup Modal -->
     <div class="sidebar-modal is-right signin-modal" id="right-modal">

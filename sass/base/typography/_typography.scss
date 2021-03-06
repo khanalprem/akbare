@@ -5,16 +5,13 @@ select,
 optgroup,
 textarea {
     font-size: $font-paragraph;
-    line-height: 1.5;
+    line-height: 1.6;
     font-weight: 400;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
     -webkit-font-smoothing: antialiased;
-
-    @media #{$breakpoint-md-desktop} {
-        font-size: .775rem;
-    }
+    font-size: .8125rem;
 }
 
 body {

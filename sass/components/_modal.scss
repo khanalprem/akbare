@@ -36,14 +36,16 @@
             @include transform(scale(0));
             @include transition(all .9s ease-in-out);
 
-            @media #{$breakpoint-sm} {
-                max-width: 360px;
-                min-width: 360px;
-            }
+
 
             @media #{$breakpoint-xs} {
                 max-width: 280px;
                 min-width: 280px;
+            }
+
+            @media #{$breakpoint-sm} {
+                max-width: 360px;
+                min-width: 360px;
             }
 
             @media #{$breakpoint-desktop} {
@@ -192,9 +194,9 @@
                 max-width: 576px;
                 min-width: 576px;
 
-                @media #{$breakpoint-desktop} {
-                    max-width: 480px;
-                    min-width: 480px;
+                @media #{$breakpoint-xs} {
+                    max-width: 280px;
+                    min-width: 280px;
                 }
 
                 @media #{$breakpoint-sm} {
@@ -202,9 +204,9 @@
                     min-width: 300px;
                 }
 
-                @media #{$breakpoint-xs} {
-                    max-width: 280px;
-                    min-width: 280px;
+                @media #{$breakpoint-desktop} {
+                    max-width: 480px;
+                    min-width: 480px;
                 }
             }
         }
@@ -223,17 +225,14 @@
                     }
                 }
 
-                @media #{$breakpoint-ls} {
-                    max-width: 768px;
-                    min-width: 768px;
-                    padding: 1.5rem;
+                @media #{$breakpoint-xs} {
+                    max-width: 300px;
+                    min-width: 300px;
+                }
 
-                    span {
-                        &.close-icon {
-                            right: 1.5rem;
-                            top: 1.5rem;
-                        }
-                    }
+                @media #{$breakpoint-sm} {
+                    max-width: 360px;
+                    min-width: 360px;
                 }
 
                 @media #{$breakpoint-pt} {
@@ -249,15 +248,19 @@
                     }
                 }
 
-                @media #{$breakpoint-sm} {
-                    max-width: 360px;
-                    min-width: 360px;
+                @media #{$breakpoint-ls} {
+                    max-width: 768px;
+                    min-width: 768px;
+                    padding: 1.5rem;
+
+                    span {
+                        &.close-icon {
+                            right: 1.5rem;
+                            top: 1.5rem;
+                        }
+                    }
                 }
 
-                @media #{$breakpoint-xs} {
-                    max-width: 300px;
-                    min-width: 300px;
-                }
             }
 
         }
@@ -276,30 +279,14 @@
                     }
                 }
 
-                @media #{$breakpoint-desktop} {
-                    max-width: 991px;
-                    min-width: 991px;
-                    padding: 1.5rem;
-
-                    span {
-                        &.close-icon {
-                            right: 1.5rem;
-                            top: 1.5rem;
-                        }
-                    }
+                @media #{$breakpoint-xs} {
+                    max-width: 300px;
+                    min-width: 300px;
                 }
 
-                @media #{$breakpoint-ls} {
-                    max-width: 768px;
-                    min-width: 768px;
-                    padding: 1rem;
-
-                    span {
-                        &.close-icon {
-                            right: 1rem;
-                            top: 1rem;
-                        }
-                    }
+                @media #{$breakpoint-sm} {
+                    max-width: 360px;
+                    min-width: 360px;
                 }
 
                 @media #{$breakpoint-pt} {
@@ -315,15 +302,41 @@
                     }
                 }
 
-                @media #{$breakpoint-sm} {
-                    max-width: 360px;
-                    min-width: 360px;
+
+
+                @media #{$breakpoint-ls} {
+                    max-width: 768px;
+                    min-width: 768px;
+                    padding: 1rem;
+
+                    span {
+                        &.close-icon {
+                            right: 1rem;
+                            top: 1rem;
+                        }
+                    }
                 }
 
-                @media #{$breakpoint-xs} {
-                    max-width: 300px;
-                    min-width: 300px;
+                @media #{$breakpoint-desktop} {
+                    max-width: 991px;
+                    min-width: 991px;
+                    padding: 1.5rem;
+
+                    span {
+                        &.close-icon {
+                            right: 1.5rem;
+                            top: 1.5rem;
+                        }
+                    }
                 }
+
+
+
+
+
+
+
+
             }
 
         }
@@ -379,7 +392,6 @@
             visibility: hidden;
             position: fixed;
             top: 0;
-
             max-width: 280px;
             min-width: 280px;
 

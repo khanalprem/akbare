@@ -871,6 +871,16 @@ ul {
         @include align-items-start;
     }
 
+    span {
+        &.is-icon {
+            margin-right: .5rem;
+        }
+    }
+
+    &.is-wrap {
+        @include flex-wrap(wrap);
+    }
+
 }
 
 .is-grow {
