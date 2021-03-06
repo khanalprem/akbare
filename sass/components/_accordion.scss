@@ -44,7 +44,7 @@
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
             -ms-overflow-style: -ms-autohiding-scrollbar;
-            max-height: 500px;
+            // max-height: 500px;
 
 
             &::-webkit-scrollbar {
@@ -181,7 +181,7 @@
             }
         }
 
-        &.active {
+        &.is-active {
             .acc-header {
                 h5 {
                     color: $primary-color;
@@ -189,8 +189,8 @@
             }
 
             .acc-body {
-                display: block;
-            }
+    display: block;
+}
         }
 
     }

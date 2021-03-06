@@ -140,46 +140,34 @@
 
 /* Dark Mode */
 .theme-switch-wrapper {
-  position: fixed;
-  bottom: 12px;
-  right: 12px;
-  z-index: 99999;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include display-flex(flex);
+  @include align-items-center;
+  @include justify-content-center;
   cursor: pointer;
+
+  .theme-switch {
+    background: $body-color;
+    color: $white-color;
+    font-size: 20px;
+    margin: 0px;
+    @include radius(50%);
+    @include display-flex(flex);
+    @include align-items-center;
+    @include justify-content-center;
+    cursor: pointer;
+  }
+
+  em,
+  #checkbox {
+    display: none;
+  }
 }
 
-.fixed-bottom-padding .theme-switch-wrapper {
-  bottom: 70px;
-}
-
-.theme-switch {
-  width: 40px;
-  height: 40px;
-  background: $body-color;
-  color: $white-color;
-  border-radius: 50px;
-  font-size: 20px;
-  margin: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.dark .theme-switch {
-  background: $white-color;
-  color: $heading-color;
-}
-
-.theme-switch-wrapper em {
-  display: none;
-}
-
-.theme-switch-wrapper #checkbox {
-  display: none;
+.dark {
+  .theme-switch-wrapper {
+    .theme-switch {
+      background: $white-color;
+      color: $body-color;
+    }
+  }
 }

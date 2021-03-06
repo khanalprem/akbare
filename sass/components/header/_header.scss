@@ -97,8 +97,8 @@ header {
                             padding-right: 4rem;
 
                             figure {
-                                @include flex(0 0 34px);
-                                max-width: 34px;
+                                @include flex(0 0 32px);
+                                max-width: 32px;
                                 @include radius(50%);
                                 height: 34px;
                                 position: relative;

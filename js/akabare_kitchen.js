@@ -124,6 +124,19 @@ Primary use: Ecommerce
   }
   customTab();
 
+  $('.acc-list > .acc-header').on('click', function (e) {
+    e.preventDefault();
+    if ($(this).next('.acc-body').is(':visible')) {
+      $(this).closest('.acc-list').removeClass('is-active');
+      $(this).closest('.acc-list').next('.acc-body').slideUp();
+    } else {
+      $('.acc-list').removeClass('is-active');
+      $(this).closest('.acc-list').addClass('is-active');
+      $('.acc-list').next('acc-body').slideUp();
+      $(this).closest('.acc-list').next('.acc-body').slideToggle();
+    }
+  });
+
   // Categories Slider
   $('.categories-slider').slick({
     slidesToScroll: 3,

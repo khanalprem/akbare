@@ -5,14 +5,22 @@
     @include radius(5px);
 
     .akabare-product-slider {
-        padding: 1rem 2rem 0 2.5rem;
+        padding: 0;
 
         .slick-prev {
-            left: 15px;
+            left: 0;
         }
 
         .slick-next {
             right: 0;
+        }
+
+        @media #{$breakpoint-md} {
+            padding: 1rem 2rem 0 2.5rem;
+
+            .slick-prev {
+                left: 15px;
+            }
         }
     }
 
@@ -30,7 +38,14 @@
     }
 
     .akabare-product-info {
-        padding: 1rem 1.5rem;
+        padding: 0;
+        margin-top: 2rem;
+
+        @media #{$breakpoint-md} {
+            padding: 1rem 1.5rem;
+            margin: 0;
+
+        }
     }
 
     .akabare-product-header {

@@ -208,7 +208,8 @@
             content: '';
             position: absolute;
             left: 5px;
-            top: 7px;
+            top: 50%;
+            @include transform(translateY(-50%));
             background: $primary-color;
             width: 8px;
             height: 8px;

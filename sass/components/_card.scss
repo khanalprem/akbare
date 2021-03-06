@@ -11,7 +11,13 @@
 
     .card-footer {
         padding: 1rem;
-        padding-top: 0;
+        padding-top: .6125rem;
+        border-top: 1px solid $border-color;
+    }
+
+    .card-header {
+        border-bottom: 1px solid $border-color;
+        padding-bottom: .6125rem;
     }
 
     .custom-body {

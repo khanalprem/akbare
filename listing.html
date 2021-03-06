@@ -43,16 +43,6 @@
 
 <body>
 
-    <!-- Theme switcher -->
-
-    <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div class="slider round"></div>
-            <i class="icofont-moon"></i>
-        </label>
-        <em>Enable Dark Mode!</em>
-    </div>
 
     <!-- site header -->
     <header class="site-header">
@@ -91,27 +81,7 @@
                         </div>
                     </div>
                     <div class="header-dropdowns is-flex is-right">
-                        <a href="#" class="circle-icon sidebar-modal-link" modal-link="right-modal">
-                            <i class="icofont-login"></i>
-                        </a>
-                        <div class="custom-dropdown is-right is-profile is-after">
-                            <a href="#" class="is-flex is-start">
-                                <figure>
-                                    <img src="img/user.png" alt="user" />
-                                </figure>
-                                <div class="dropdown-content">
-                                    <p>Ram</p>
-                                </div>
-                            </a>
-                            <ul class="custom-dropdown-menu">
-                                <li><a href="#">My account</a></li>
-                                <li><a href="#">Promos</a></li>
-                                <li><a href="#">My address</a></li>
-                                <li><a href="#">Term & conditions</a></li>
-                                <li><a href="#">support</a></li>
-                                <li><a href="#">Log out</a></li>
-                            </ul>
-                        </div>
+
                         <div class="custom-dropdown is-right is-notification">
                             <a href="#">
                                 <span class="circle-icon">
@@ -161,6 +131,39 @@
                                 </span>
                             </a>
                         </div>
+
+                        <!-- Theme switcher -->
+                        <div class="theme-switch-wrapper  ">
+                            <label class="theme-switch circle-icon" for="checkbox">
+                                <input type="checkbox" id="checkbox" />
+                                <i class="icofont-moon"></i>
+                            </label>
+                            <em>Enable Dark Mode!</em>
+                        </div>
+
+                        <div class="custom-dropdown is-right is-profile is-after">
+                            <a href="#" class="is-flex is-start">
+                                <figure>
+                                    <img src="img/user.png" alt="user" />
+                                </figure>
+                                <div class="dropdown-content">
+                                    <p>Ram</p>
+                                </div>
+                            </a>
+                            <ul class="custom-dropdown-menu">
+                                <li><a href="#">My account</a></li>
+                                <li><a href="#">Promos</a></li>
+                                <li><a href="#">My address</a></li>
+                                <li><a href="#">Term & conditions</a></li>
+                                <li><a href="#">support</a></li>
+                                <li><a href="#">Log out</a></li>
+                            </ul>
+                        </div>
+
+                        <a href="#" class="circle-icon sidebar-modal-link" modal-link="right-modal">
+                            <i class="icofont-login"></i>
+                        </a>
+
                     </div>
                 </div>
             </div>
@@ -246,285 +249,263 @@
     <!-- site content -->
     <main class="site-content">
         <div class="container">
-            <div class="row">
-                <div class="grid-lg-12">
-                    <!-- Pick today -->
-                    <div class="akabare-listing">
-                        <div class="is-flex is-between is-title">
-                            <h5>pick today </h5>
-                            <div class="buttons is-end">
-                                <a href="#" class="common-buttons is-bg is-icon sm-button sidebar-modal-link"
-                                    modal-link="filter-modal">
-                                    <i class="icofont-filter"></i><span>filter</span>
+            <!-- Pick today -->
+            <div class="akabare-listing">
+                <div class="is-flex is-between is-title">
+                    <h5>pick today </h5>
+                    <div class="buttons is-end">
+                        <a href="#" class="common-buttons is-bg is-icon sm-button sidebar-modal-link"
+                            modal-link="filter-modal">
+                            <i class="icofont-filter"></i><span>filter</span>
+                        </a>
+                        <a href="#" class="common-buttons is-bg is-icon sm-button sidebar-modal-link"
+                            modal-link="filter-modal">
+                            <i class="icofont-signal"></i>
+                            <span>Sort</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="grid-6 grid-xl-3 grid-lg-4 mb-30">
+                        <div class="akabare-product">
+
+                            <figure class="mb-15">
+                                <a href="product_details.html" class="discount">
+                                    <span class="badge ">10%</span>
                                 </a>
-                                <a href="#" class="common-buttons is-bg is-icon sm-button sidebar-modal-link"
-                                    modal-link="filter-modal">
-                                    <i class="icofont-signal"></i>
-                                    <span>Sort</span>
+                                <a href="#">
+                                    <img src="img/listing/1.png" class="">
                                 </a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="grid-6 grid-xl-3 grid-lg-4 mb-30">
-                                <div class="akabare-product">
-                                    <a href="product_details.html" class="discount">
-                                        <div class=""><span class="badge">10%</span></div>
-                                    </a>
-                                    <figure class="mb-15">
-                                        <a href="#">
-                                            <img src="img/listing/1.png" class="">
-                                        </a>
 
-                                    </figure>
-                                    <div class="product-content">
-                                        <h5><a href="#">Chilli</a></h5>
-                                        <div class="is-flex is-between">
-                                            <h6 class="price">$0.8/kg</h6>
-                                            <div class="gridlapse qty_show">
-                                                <div class="ml-auto" href="#">
-                                                    <form id='myform' class="cart-items-number is-flex" method='POST'
-                                                        action='#'>
-                                                        <input type='button' value='-' class='qtyminus btn '
-                                                            field='quantity' />
-                                                        <input type='text' name='quantity' value='1'
-                                                            class='qty form-control' />
-                                                        <input type='button' value='+' class='qtyplus btn '
-                                                            field='quantity' />
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-6 grid-xl-3 grid-lg-4 mb-30">
-                                <div class="akabare-product">
-                                    <a href="product_details.html" class="discount">
-                                        <div class=""><span class="badge ">10%</span></div>
-                                    </a>
-                                    <figure class="mb-15">
-                                        <a href="#">
-                                            <img src="img/listing/2.png" class="">
-                                        </a>
-
-                                    </figure>
-                                    <div class="product-content">
-                                        <h5><a href="#">Onion</a></h5>
-                                        <div class="is-flex is-between">
-                                            <h6 class="price">$0.8/kg</h6>
-                                            <div class="gridlapse qty_show">
-                                                <div class="ml-auto" href="#">
-                                                    <form id='myform' class="cart-items-number is-flex" method='POST'
-                                                        action='#'>
-                                                        <input type='button' value='-' class='qtyminus btn '
-                                                            field='quantity' />
-                                                        <input type='text' name='quantity' value='1'
-                                                            class='qty form-control' />
-                                                        <input type='button' value='+' class='qtyplus btn '
-                                                            field='quantity' />
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-6 grid-xl-3 grid-lg-4 mb-30">
-                                <div class="akabare-product">
-                                    <a href="product_details.html" class="discount">
-                                        <div class=""><span class="badge">10%</span></div>
-                                    </a>
-                                    <figure class="mb-15">
-                                        <a href="#">
-                                            <img src="img/listing/3.png" class="">
-                                        </a>
-
-                                    </figure>
-                                    <div class="product-content">
-                                        <h5><a href="#">Couliflower</a></h5>
-                                        <div class="is-flex is-between">
-                                            <h6 class="price">$0.8/kg</h6>
-                                            <div class="gridlapse qty_show">
-                                                <div class="ml-auto" href="#">
-                                                    <form id='myform' class="cart-items-number is-flex" method='POST'
-                                                        action='#'>
-                                                        <input type='button' value='-' class='qtyminus btn '
-                                                            field='quantity' />
-                                                        <input type='text' name='quantity' value='1'
-                                                            class='qty form-control' />
-                                                        <input type='button' value='+' class='qtyplus btn '
-                                                            field='quantity' />
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-6 grid-xl-3 grid-lg-4 mb-30">
-                                <div class="akabare-product">
-                                    <a href="product_details.html" class="discount">
-                                        <div class=""><span class="badge">10%</span></div>
-                                    </a>
-                                    <figure class="mb-15">
-                                        <a href="#">
-                                            <img src="img/listing/4.png" class="">
-                                        </a>
-
-                                    </figure>
-                                    <div class="product-content">
-                                        <h5><a href="#">Cabbage</a></h5>
-                                        <div class="is-flex is-between">
-                                            <h6 class="price">$0.8/kg</h6>
-                                            <div class="gridlapse qty_show">
-                                                <div class="ml-auto" href="#">
-                                                    <form id='myform' class="cart-items-number is-flex" method='POST'
-                                                        action='#'>
-                                                        <input type='button' value='-' class='qtyminus btn '
-                                                            field='quantity' />
-                                                        <input type='text' name='quantity' value='1'
-                                                            class='qty form-control' />
-                                                        <input type='button' value='+' class='qtyplus btn '
-                                                            field='quantity' />
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-6 grid-xl-3 grid-lg-4 mb-30">
-                                <div class="akabare-product">
-                                    <a href="product_details.html" class="discount">
-                                        <div class=""><span class="badge">10%</span></div>
-                                    </a>
-                                    <figure class="mb-15">
-                                        <a href="#">
-                                            <img src="img/listing/5.png" class="">
-                                        </a>
-
-                                    </figure>
-                                    <div class="product-content">
-                                        <h5><a href="#">Cabbage</a></h5>
-                                        <div class="is-flex is-between">
-                                            <h6 class="price">$0.8/kg</h6>
-                                            <div class="gridlapse qty_show">
-                                                <div class="ml-auto" href="#">
-                                                    <form id='myform' class="cart-items-number is-flex" method='POST'
-                                                        action='#'>
-                                                        <input type='button' value='-' class='qtyminus btn '
-                                                            field='quantity' />
-                                                        <input type='text' name='quantity' value='1'
-                                                            class='qty form-control' />
-                                                        <input type='button' value='+' class='qtyplus btn '
-                                                            field='quantity' />
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-6 grid-xl-3 grid-lg-4 mb-30">
-                                <div class="akabare-product">
-                                    <a href="product_details.html" class="discount">
-                                        <div class=""><span class="badge">10%</span></div>
-                                    </a>
-                                    <figure class="mb-15">
-                                        <a href="#">
-                                            <img src="img/listing/6.png" class="">
-                                        </a>
-
-                                    </figure>
-                                    <div class="product-content">
-                                        <h5><a href="#">Carrot</a></h5>
-                                        <div class="is-flex is-between">
-                                            <h6 class="price">$0.8/kg</h6>
-                                            <div class="gridlapse qty_show">
-                                                <div class="ml-auto" href="#">
-                                                    <form id='myform' class="cart-items-number is-flex" method='POST'
-                                                        action='#'>
-                                                        <input type='button' value='-' class='qtyminus btn '
-                                                            field='quantity' />
-                                                        <input type='text' name='quantity' value='1'
-                                                            class='qty form-control' />
-                                                        <input type='button' value='+' class='qtyplus btn '
-                                                            field='quantity' />
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-6 grid-xl-3 grid-lg-4 mb-30">
-                                <div class="akabare-product">
-                                    <a href="product_details.html" class="discount">
-                                        <div class=""><span class="badge">10%</span></div>
-                                    </a>
-                                    <figure class="mb-15">
-                                        <a href="#">
-                                            <img src="img/listing/7.png" class="">
-                                        </a>
-
-                                    </figure>
-                                    <div class="product-content">
-                                        <h5><a href="#">Tomato</a></h5>
-                                        <div class="is-flex is-between">
-                                            <h6 class="price">$0.8/kg</h6>
-                                            <div class="gridlapse qty_show">
-                                                <div class="ml-auto" href="#">
-                                                    <form id='myform' class="cart-items-number is-flex" method='POST'
-                                                        action='#'>
-                                                        <input type='button' value='-' class='qtyminus btn '
-                                                            field='quantity' />
-                                                        <input type='text' name='quantity' value='1'
-                                                            class='qty form-control' />
-                                                        <input type='button' value='+' class='qtyplus btn '
-                                                            field='quantity' />
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-6 grid-xl-3 grid-lg-4 mb-30">
-                                <div class="akabare-product">
-                                    <a href="product_details.html" class="discount">
-                                        <div class=""><span class="badge">10%</span></div>
-                                    </a>
-                                    <figure class="mb-15">
-                                        <a href="#">
-                                            <img src="img/listing/8.png" class="">
-                                        </a>
-
-                                    </figure>
-                                    <div class="product-content">
-                                        <h5><a href="#">Cabbage</a></h5>
-                                        <div class="is-flex is-between">
-                                            <h6 class="price">$0.8/kg</h6>
-                                            <div class="gridlapse qty_show">
-                                                <div class="ml-auto" href="#">
-                                                    <form id='myform' class="cart-items-number is-flex" method='POST'
-                                                        action='#'>
-                                                        <input type='button' value='-' class='qtyminus btn '
-                                                            field='quantity' />
-                                                        <input type='text' name='quantity' value='1'
-                                                            class='qty form-control' />
-                                                        <input type='button' value='+' class='qtyplus btn '
-                                                            field='quantity' />
-                                                    </form>
-                                                </div>
-                                            </div>
+                            </figure>
+                            <div class="product-content">
+                                <h5><a href="#">Chilli</a></h5>
+                                <div class="is-flex is-between">
+                                    <h6 class="price">$0.8/kg</h6>
+                                    <div class="gridlapse qty_show">
+                                        <div class="ml-auto" href="#">
+                                            <form id='myform' class="cart-items-number is-flex" method='POST'
+                                                action='#'>
+                                                <input type='button' value='-' class='qtyminus btn ' field='quantity' />
+                                                <input type='text' name='quantity' value='1' class='qty form-control' />
+                                                <input type='button' value='+' class='qtyplus btn ' field='quantity' />
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="grid-6 grid-xl-3 grid-lg-4 mb-30">
+                        <div class="akabare-product">
 
+                            <figure class="mb-15">
+                                <a href="product_details.html" class="discount">
+                                    <span class="badge ">10%</span>
+                                </a>
+                                <a href="#">
+                                    <img src="img/listing/2.png" class="">
+                                </a>
 
+                            </figure>
+                            <div class="product-content">
+                                <h5><a href="#">Onion</a></h5>
+                                <div class="is-flex is-between">
+                                    <h6 class="price">$0.8/kg</h6>
+                                    <div class="gridlapse qty_show">
+                                        <div class="ml-auto" href="#">
+                                            <form id='myform' class="cart-items-number is-flex" method='POST'
+                                                action='#'>
+                                                <input type='button' value='-' class='qtyminus btn ' field='quantity' />
+                                                <input type='text' name='quantity' value='1' class='qty form-control' />
+                                                <input type='button' value='+' class='qtyplus btn ' field='quantity' />
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-6 grid-xl-3 grid-lg-4 mb-30">
+                        <div class="akabare-product">
+
+                            <figure class="mb-15">
+                                <a href="product_details.html" class="discount">
+                                    <span class="badge ">10%</span>
+                                </a>
+                                <a href="#">
+                                    <img src="img/listing/3.png" class="">
+                                </a>
+
+                            </figure>
+                            <div class="product-content">
+                                <h5><a href="#">Couliflower</a></h5>
+                                <div class="is-flex is-between">
+                                    <h6 class="price">$0.8/kg</h6>
+                                    <div class="gridlapse qty_show">
+                                        <div class="ml-auto" href="#">
+                                            <form id='myform' class="cart-items-number is-flex" method='POST'
+                                                action='#'>
+                                                <input type='button' value='-' class='qtyminus btn ' field='quantity' />
+                                                <input type='text' name='quantity' value='1' class='qty form-control' />
+                                                <input type='button' value='+' class='qtyplus btn ' field='quantity' />
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-6 grid-xl-3 grid-lg-4 mb-30">
+                        <div class="akabare-product">
+
+                            <figure class="mb-15">
+                                <a href="product_details.html" class="discount">
+                                    <span class="badge ">10%</span>
+                                </a>
+                                <a href="#">
+                                    <img src="img/listing/4.png" class="">
+                                </a>
+
+                            </figure>
+                            <div class="product-content">
+                                <h5><a href="#">Cabbage</a></h5>
+                                <div class="is-flex is-between">
+                                    <h6 class="price">$0.8/kg</h6>
+                                    <div class="gridlapse qty_show">
+                                        <div class="ml-auto" href="#">
+                                            <form id='myform' class="cart-items-number is-flex" method='POST'
+                                                action='#'>
+                                                <input type='button' value='-' class='qtyminus btn ' field='quantity' />
+                                                <input type='text' name='quantity' value='1' class='qty form-control' />
+                                                <input type='button' value='+' class='qtyplus btn ' field='quantity' />
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-6 grid-xl-3 grid-lg-4 mb-30">
+                        <div class="akabare-product">
+
+                            <figure class="mb-15">
+                                <a href="product_details.html" class="discount">
+                                    <span class="badge ">10%</span>
+                                </a>
+                                <a href="#">
+                                    <img src="img/listing/5.png" class="">
+                                </a>
+
+                            </figure>
+                            <div class="product-content">
+                                <h5><a href="#">Cabbage</a></h5>
+                                <div class="is-flex is-between">
+                                    <h6 class="price">$0.8/kg</h6>
+                                    <div class="gridlapse qty_show">
+                                        <div class="ml-auto" href="#">
+                                            <form id='myform' class="cart-items-number is-flex" method='POST'
+                                                action='#'>
+                                                <input type='button' value='-' class='qtyminus btn ' field='quantity' />
+                                                <input type='text' name='quantity' value='1' class='qty form-control' />
+                                                <input type='button' value='+' class='qtyplus btn ' field='quantity' />
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-6 grid-xl-3 grid-lg-4 mb-30">
+                        <div class="akabare-product">
+
+                            <figure class="mb-15">
+                                <a href="product_details.html" class="discount">
+                                    <span class="badge ">10%</span>
+                                </a>
+                                <a href="#">
+                                    <img src="img/listing/6.png" class="">
+                                </a>
+
+                            </figure>
+                            <div class="product-content">
+                                <h5><a href="#">Carrot</a></h5>
+                                <div class="is-flex is-between">
+                                    <h6 class="price">$0.8/kg</h6>
+                                    <div class="gridlapse qty_show">
+                                        <div class="ml-auto" href="#">
+                                            <form id='myform' class="cart-items-number is-flex" method='POST'
+                                                action='#'>
+                                                <input type='button' value='-' class='qtyminus btn ' field='quantity' />
+                                                <input type='text' name='quantity' value='1' class='qty form-control' />
+                                                <input type='button' value='+' class='qtyplus btn ' field='quantity' />
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-6 grid-xl-3 grid-lg-4 mb-30">
+                        <div class="akabare-product">
+
+                            <figure class="mb-15">
+                                <a href="product_details.html" class="discount">
+                                    <span class="badge ">10%</span>
+                                </a>
+                                <a href="#">
+                                    <img src="img/listing/7.png" class="">
+                                </a>
+
+                            </figure>
+                            <div class="product-content">
+                                <h5><a href="#">Tomato</a></h5>
+                                <div class="is-flex is-between">
+                                    <h6 class="price">$0.8/kg</h6>
+                                    <div class="gridlapse qty_show">
+                                        <div class="ml-auto" href="#">
+                                            <form id='myform' class="cart-items-number is-flex" method='POST'
+                                                action='#'>
+                                                <input type='button' value='-' class='qtyminus btn ' field='quantity' />
+                                                <input type='text' name='quantity' value='1' class='qty form-control' />
+                                                <input type='button' value='+' class='qtyplus btn ' field='quantity' />
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-6 grid-xl-3 grid-lg-4 mb-30">
+                        <div class="akabare-product">
+
+                            <figure class="mb-15">
+                                <a href="product_details.html" class="discount">
+                                    <span class="badge ">10%</span>
+                                </a>
+                                <a href="#">
+                                    <img src="img/listing/8.png" class="">
+                                </a>
+
+                            </figure>
+                            <div class="product-content">
+                                <h5><a href="#">Cabbage</a></h5>
+                                <div class="is-flex is-between">
+                                    <h6 class="price">$0.8/kg</h6>
+                                    <div class="gridlapse qty_show">
+                                        <div class="ml-auto" href="#">
+                                            <form id='myform' class="cart-items-number is-flex" method='POST'
+                                                action='#'>
+                                                <input type='button' value='-' class='qtyminus btn ' field='quantity' />
+                                                <input type='text' name='quantity' value='1' class='qty form-control' />
+                                                <input type='button' value='+' class='qtyplus btn ' field='quantity' />
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -792,6 +773,7 @@
                                                 Sandheko</label>
                                         </div>
                                     </li>
+                                </ul>
                             </div>
                         </div>
                         <div class="filter-list">
@@ -832,6 +814,7 @@
                                                 Chilli Momo</label>
                                         </div>
                                     </li>
+                                </ul>
                             </div>
                         </div>
                     </div>

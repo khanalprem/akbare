@@ -71,17 +71,36 @@
     background-color: $white-color;
     @include box-shadow (0 .125rem .25rem rgba(0, 0, 0, .075));
     @include radius(.40rem);
-    padding: 1rem;
+    padding: .6125rem;
     position: relative;
 
-    img {
-        @include radius(5px);
+    a {
+        &.is-cancel {
+            position: absolute;
+            right: 1rem;
+            top: .6125rem;
+            z-index: 1;
+            color: $border-dark;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
     }
+
+    figure {
+        position: relative;
+
+        img {
+            @include radius(5px);
+        }
+    }
+
 
     .discount {
         position: absolute;
-        top: 1rem;
-        left: 1rem;
+        top: .6125rem;
+        left: .6125rem;
 
         .badge {
             font-size: 11px;
@@ -105,11 +124,27 @@
         .price {
             color: $primary-color;
             font-weight: 500;
+
+            &.is-strike {
+                text-decoration: line-through;
+                color: $body-color;
+                margin-left: .6125rem;
+            }
+
+            &.is-discounted-price {
+                color: $heading-color;
+                margin-top: 1rem;
+                font-weight: 600;
+            }
         }
     }
 
     .recommend-item {
         margin: .5rem;
+    }
+
+    @media #{$breakpoint-md} {
+        padding: 1rem;
     }
 }
 
