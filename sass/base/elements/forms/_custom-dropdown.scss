@@ -57,8 +57,8 @@
             padding-right: 2rem;
 
             &::after {
-                content: 'arrow_drop_down';
-                font-family: 'Material Icons';
+                content: '\ea67';
+                font-family: 'IcoFont';
                 position: absolute;
                 top: 50%;
                 @include transform(translateY(-50%));

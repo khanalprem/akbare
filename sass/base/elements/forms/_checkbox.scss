@@ -5,22 +5,6 @@
     position: relative;
     width: 100%;
 
-    // &::before {
-    //     z-index: 1;
-    //     position: absolute;
-    //     border-radius: 50%;
-    //     opacity: 0;
-    //     pointer-events: none;
-    //     content: "";
-    //     width:30px;
-    //     height: 30px;
-    //     background-color:$blue-light;
-    //     left:-6px;
-    //     top:-5px;
-    //     bottom:-5px;
-    //     @include transition(all .5s linear);
-    //     visibility: hidden;
-    // }
     label {
         margin: 0;
         font-weight: 500;
@@ -81,30 +65,21 @@
 
         // Checkmark. Could be replaced with an image
         &:checked+label:after {
-            content: 'check';
+            content: '\eed6';
             position: absolute;
-            left: 2.5px;
-            top: 3.5px;
+            left: 1.5px;
+            top: 55%;
+            @include transform(translateY(-50%));
             line-height: 1;
-
-            // background: $primary-color;
-            font-family: 'Material Icons';
+            font-family: 'IcoFont';
             color: $white-color;
             text-transform: none;
-            // width: 2px;
-            // height: 2px;
-            // box-shadow:
-            //     2px 0 0 $white-color,
-            //     4px 0 0 $white-color,
-            //     4px -2px 0 $white-color,
-            //     4px -4px 0 $white-color,
-            //     4px -6px 0 $white-color,
-            //     4px -8px 0 $white-color;
-            // transform: rotate(45deg);
+            font-size: 1rem;
         }
 
         &:checked+label:before {
             border-color: $primary-color;
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
         }
 
         &:checked+label {
@@ -112,12 +87,6 @@
         }
     }
 
-    // &:hover{
-    //     &::before{
-    //         opacity: 1;
-    //         visibility: visible;
-    //     }
-    // }
 }
 
 .custom-radio {

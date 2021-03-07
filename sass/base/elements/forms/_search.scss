@@ -3,6 +3,7 @@
     @include justify-content-start;
     @include align-items-center;
     position: relative;
+
     .search-wrap {
         @include display-flex(flex);
         @include justify-content-between;
@@ -90,6 +91,52 @@
     &.is-full {
         .search-wrap {
             max-width: 100%;
+        }
+    }
+}
+
+.akabare-search {
+    max-width: 768px;
+    margin: 1rem auto;
+
+    .search-bar {
+        .search-wrap {
+
+            input {
+                &.form-control {
+                    height: calc(2.5rem + .75rem + 2px);
+
+                    @include input-placeholder {
+                        color: $heading-color;
+                    }
+
+                    &:focus {
+                        background-color: $primary-light;
+                    }
+                }
+            }
+
+            span {
+                width: 60px;
+                background-color: $white-color;
+
+                i {
+                    font-size: 1.5rem;
+                    color: $secondary-color;
+                }
+            }
+
+            &:focus-within {
+                background-color: $primary-light;
+
+                span {
+                    background-color: $primary-light;
+
+                    i {
+                        color: $primary-color;
+                    }
+                }
+            }
         }
     }
 }

@@ -182,17 +182,59 @@
 .akabare-payment {
     padding: 1rem;
 
-    .custom-radio {
+    .payment-item {
         margin-bottom: 0;
         width: initial;
+        padding: 1.5rem;
+        border: 1px solid $bg-color;
+        @include radius(5px);
+        @include display-flex(flex);
+        @include justify-content-center;
+        @include align-items-center;
+        @include flex-direction-column(column);
+        min-height: 90px;
+        min-width: 120px;
+        margin-bottom: .6125rem;
+        position: relative;
+        cursor: pointer;
+        @include transition(all .5s ease-in-out);
 
         img {
             max-height: 32px;
         }
 
+        span.cash {
+            i {
+                font-size: 3rem;
+            }
+        }
+
+        span {
+            &.check-icon {
+                position: absolute;
+                right: .5rem;
+                top: .15rem;
+                color: $border-color;
+                z-index: 1;
+                display: block;
+                font-size: 1.5rem;
+            }
+        }
+
         &:not(:last-child) {
             margin-right: 1rem;
-            margin-bottom: .6125rem;
+
+        }
+
+        &.is-active,
+        &:hover {
+            border-color: $primary-color;
+
+            span {
+                &.check-icon {
+                    color: $primary-color;
+                }
+            }
         }
     }
 }

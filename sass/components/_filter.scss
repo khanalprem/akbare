@@ -49,3 +49,26 @@
   }
 
 }
+
+.akabare-filter {
+
+  .custom-radio,
+  .custom-checkbox {
+    margin-bottom: 0;
+  }
+
+  .filter-title {
+    background-color: $bg-color;
+    padding: .6125rem 1rem;
+
+    h6 {
+      text-transform: capitalize;
+    }
+  }
+
+  .filter-list {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}
