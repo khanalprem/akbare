@@ -34,16 +34,10 @@
         box-shadow: none;
     }
 
-    &.assign-card {
-        position: absolute;
-        right: 0;
-        top: 100%;
-        min-width: 600px;
-        background-color: $white-color;
-        z-index: 2;
-
-
-
+    &.is-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
     }
 }
 

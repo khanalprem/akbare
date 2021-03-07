@@ -9080,13 +9080,10 @@ footer.site-footer {
       padding: 0; }
   .custom-card.no-boxshadow {
     box-shadow: none; }
-  .custom-card.assign-card {
-    position: absolute;
-    right: 0;
-    top: 100%;
-    min-width: 600px;
-    background-color: #ffffff;
-    z-index: 2; }
+  .custom-card.is-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; }
 
 .card-header,
 .card-footer {
