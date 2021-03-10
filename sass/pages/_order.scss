@@ -1,0 +1,82 @@
+.custom-tab {
+    &.order-tab {
+
+
+        ul {
+            &.tab-list {
+                li {
+                    width: 100%;
+
+                    a {
+                        @include display-flex(flex);
+                        @include justify-content-start;
+                        @include align-items-center;
+                        font-size: .875rem;
+                        font-weight: 400;
+                        color: $heading-color;
+
+                        span {
+                            &.circle-icon {
+                                border: none;
+                                background-color: $white-color;
+                            }
+                        }
+
+                        &.is-active,
+                        &:hover {
+                            background-color: $bg-light;
+                            color: $heading-color;
+
+                            span {
+                                &.circle-icon {
+                                    background-color: $primary-color;
+                                    color: $white-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .custom-tab-content {
+            padding: 0;
+        }
+
+        .order-col {
+            b {
+                color: $heading-color;
+            }
+
+
+        }
+
+        .order-list {
+            .custom-card {
+                .card-header {
+                    .common-button {
+                        min-width: unset;
+                        min-height: unset;
+                        padding: .25rem .6125rem;
+                    }
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: .6125rem;
+                }
+            }
+        }
+
+        .custom-card {
+            .card-header {
+                .is-flex {
+                    &.is-end {
+                        time {
+                            margin-left: .25rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

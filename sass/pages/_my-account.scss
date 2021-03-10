@@ -1,0 +1,60 @@
+.my-account {
+    .myaccount-sidebar {
+        .profile-figure {
+            text-align: center;
+            padding: 2rem 1rem;
+
+            figure {
+                position: relative;
+                max-width: 120px;
+                width: 100%;
+                height: 120px;
+                overflow: hidden;
+                @include radius(50%);
+                margin: 0 auto;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    @include radius(50%);
+                }
+            }
+        }
+
+        ul {
+            &.is-list {
+                li {
+                    padding: .775rem 1rem;
+
+                    a {
+                        @include display-flex(flex);
+                        @include justify-content-start;
+                        @include align-items-center;
+                        text-transform: capitalize;
+                        width: 100%;
+
+                        .circle-icon {
+                            color: $secondary-color;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: $primary-light;
+                    }
+                }
+
+                &.is-after {
+                    li {
+                        &::after {
+                            top: 50%;
+                            @include transform(translateY(-50%));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -45,18 +45,6 @@
             }
         }
 
-        &.is-light {
-            background-color: $primary-light;
-            color: $heading-color;
-            @include radius(5px);
-            box-shadow: none;
-            min-width: 124px;
-
-            i {
-                color: $primary-color;
-            }
-        }
-
         &:hover {
             background-color: rgba($primary-color, .9);
             border-color: rgba($primary-color, .9);
@@ -64,6 +52,30 @@
 
             i {
                 color: $white-color;
+            }
+        }
+
+        &.is-deliverd {
+            background-color: $primary-color;
+
+            &:hover {
+                background-color: rgba($primary-color, .9);
+            }
+        }
+
+        &.is-progress {
+            background-color: $orange-color;
+
+            &:hover {
+                background-color: rgba($orange-color, .9);
+            }
+        }
+
+        &.is-cancel {
+            background-color: $secondary-color;
+
+            &:hover {
+                background-color: rgba($secondary-color, .9);
             }
         }
 
@@ -298,6 +310,7 @@ a.load-more-button {
             background-color: $primary-color;
             color: $white-color;
         }
+
     }
 
     &.is-shadow {
