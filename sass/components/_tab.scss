@@ -37,7 +37,7 @@
                 &.counter {
                     padding: 0 6px;
                     @include radius(50%);
-                    background-color: $secondary-thin-light;
+                    background-color: $secondary-light;
                     color: $white-color;
                     font-weight: 500;
                     margin-left: .5rem;
@@ -89,9 +89,9 @@
                     position: absolute;
                     width: 0;
                     left: 0;
-                    bottom: 0;
+                    bottom: -2px;
                     height: 2px;
-                    background-color: $primary-color;
+                    background-color: $secondary-color;
                     @include transition(width .3s linear);
                     opacity: 0;
                     visibility: hidden;

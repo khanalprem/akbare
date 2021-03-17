@@ -132,7 +132,7 @@
 
     &.is-border {
         background-color: transparent;
-        color: $primary-color;
+        color: $heading-color;
         border: 1px solid;
         border-color: $border-color;
 
@@ -140,7 +140,7 @@
             @include display-flex(flex);
             @include justify-content-start;
             @include align-items-center;
-            color: $primary-color;
+            color: $heading-color;
             font-size: .875rem;
 
             i {
@@ -164,8 +164,8 @@
         }
 
         &:hover {
-            border-color: $secondary-color;
             color: $primary-color;
+            background-color: $white-color;
         }
 
         &:disabled,
@@ -250,7 +250,6 @@ a.load-more-button {
 
     i {
         text-transform: initial;
-        color: $primary-dark;
         margin-left: .5rem;
     }
 }
@@ -304,7 +303,7 @@ a.load-more-button {
 
     &.is-bg {
         background-color: $primary-light;
-        color: $primary-dark;
+        color: $primary-color;
 
         &:hover {
             background-color: $primary-color;
@@ -319,6 +318,10 @@ a.load-more-button {
 
     &.is-border {
         border: 1px solid $border-color;
+    }
+
+    &:hover {
+        background-color: $primary-light;
     }
 
     &:not(:last-child) {
@@ -370,12 +373,9 @@ a.load-more-button {
     cursor: pointer;
     @include transition(all .4s ease-in-out);
 
-    &.is-blue {
-        background-color: $blue-light;
-    }
 
     &.is-red {
-        background-color: $red-light;
+        background-color: $secondary-light;
     }
 
     &.is-green {
@@ -404,8 +404,8 @@ a.load-more-button {
     cursor: pointer;
 
     &:hover {
-        color: $red-color;
-        border-color: $red-color;
+        color: $secondary-color;
+        border-color: $secondary-color;
     }
 }
 

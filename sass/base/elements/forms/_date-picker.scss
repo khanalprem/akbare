@@ -18,7 +18,7 @@
             content: 'arrow_drop_down';
             font-family: 'Material Icons';
             font-size: 1.5rem;
-            color: $primary-dark;
+            color: $primary-color;
             top:50%;
             position: absolute;
             @include transform(translateY(-50%));
@@ -28,7 +28,7 @@
         i {
             @include transform(translateY(-50%));
             left: .6125rem;
-            color: $primary-dark;
+            color: $primary-color;
             font-size: 1rem;
         }
 
@@ -103,7 +103,7 @@
                     padding:.5rem;
                     min-height: auto;
                     &:hover{
-                        background-color: $primary-dark;
+                        background-color: $primary-color;
                         
                     }
                 }
@@ -120,7 +120,7 @@
                 &.react-calendar__tile--active:enabled:hover,
                 &.react-calendar__tile--active:enabled:focus,
                 &.react-calendar__tile--active {
-                    background-color: $primary-dark;
+                    background-color: $primary-color;
                 }
 
                 &:hover {
@@ -150,7 +150,7 @@
                             right: 0;
                             font-family: 'Material Icons';
                             font-size:1rem;
-                            color:$primary-dark;
+                            color:$primary-color;
                         }
 
                         &.react-calendar__navigation__prev2-button {

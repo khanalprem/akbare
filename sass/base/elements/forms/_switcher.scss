@@ -146,7 +146,7 @@
   cursor: pointer;
 
   .theme-switch {
-    background: $body-color;
+    background: $heading-color;
     color: $white-color;
     font-size: 20px;
     margin: 0px;
@@ -155,6 +155,16 @@
     @include align-items-center;
     @include justify-content-center;
     cursor: pointer;
+
+    i {
+      &.icofont-sun {
+        display: none;
+      }
+
+      &.icofont-moon {
+        display: block;
+      }
+    }
   }
 
   em,
@@ -168,6 +178,16 @@
     .theme-switch {
       background: $white-color;
       color: $body-color;
+
+      i {
+        &.icofont-sun {
+          display: block;
+        }
+
+        &.icofont-moon {
+          display: none;
+        }
+      }
     }
   }
 }

@@ -41,16 +41,22 @@
             @include align-items-center;
             @include flex-direction-column(column);
             cursor: pointer;
-            background-color: $primary-color;
+            color: $primary-color;
+
 
             i {
                 font-size: 1rem;
-                color: $white-color;
+                font-weight: 700;
+
             }
 
             &.is-right {
                 padding-right: .5rem;
                 padding-left: 0;
+            }
+
+            &:hover {
+                color: $secondary-color;
             }
         }
     }
@@ -60,7 +66,7 @@
         width: 40px;
         height: 37px;
         min-width: initial;
-        border-color: $border-dark;
+        border-color: $grey-color;
         @include radius(8px);
         margin-left: .6125rem;
         background-color: $white-color;

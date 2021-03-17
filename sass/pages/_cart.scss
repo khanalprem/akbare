@@ -22,7 +22,7 @@
                         @include align-items-center;
                         @include flex-direction-column(column);
                         border: 1px solid $border-color;
-                        color: $primary-color;
+                        color: $secondary-color;
                         @include radius(50%);
                         font-size: 1rem;
                         margin-right: .6125rem;
@@ -37,9 +37,13 @@
 
             &.is-active {
                 .acc-header {
+                    h5 {
+                        color: $heading-color;
+                    }
+
                     span {
                         &.counter {
-                            border-color: $primary-color;
+                            border-color: $secondary-color;
                         }
                     }
                 }
@@ -82,6 +86,11 @@
 
                         .badge {
                             left: .6125rem;
+                        }
+
+                        &:hover {
+                            @include box-shadow (0 15px 50px rgba(0, 0, 0, .075));
+                            @include transform(translateY(0));
                         }
                     }
                 }
@@ -164,7 +173,7 @@
 
             i {
                 font-size: 4rem;
-                color: $primary-color
+                color: $secondary-color
             }
 
             p {

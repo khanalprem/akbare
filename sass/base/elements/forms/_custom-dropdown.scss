@@ -85,6 +85,18 @@
             @include radius(8px);
             @include box-shadow(0px 6px 10px rgba(0, 0, 0, .1));
 
+            .search-bar {
+                padding: 0 1rem;
+
+                .search-wrap {
+                    span {
+                        @include flex-direction-column(column);
+                        @include align-items-center;
+                        @include justify-content-center;
+                    }
+                }
+            }
+
             li {
                 margin: 0;
 

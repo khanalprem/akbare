@@ -64,8 +64,8 @@
             span {
                 &.close-icon {
                     &:hover {
-                        color: $red-color;
-                        border-color: $red-color;
+                        color: $secondary-color;
+                        border-color: $secondary-color;
                     }
                 }
             }
@@ -155,7 +155,7 @@
 
                 &::-webkit-scrollbar-thumb {
                     @include radius(4px);
-                    background: $border-dark;
+                    background: $grey-color;
                 }
 
                 &.is-center {
@@ -465,7 +465,7 @@
 
                 &::-webkit-scrollbar-thumb {
                     @include radius(4px);
-                    background: $border-dark;
+                    background: $grey-color;
                 }
 
                 &.is-center {

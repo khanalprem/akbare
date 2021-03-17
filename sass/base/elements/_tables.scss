@@ -107,7 +107,7 @@
   border: 0;
 }
 
-.zite-table {
+.akabare-table {
   display: block;
   width: 100%;
   overflow-y: scroll;
@@ -117,9 +117,6 @@
     h6 {
       font-size: .8125rem;
 
-      @media #{$breakpoint-desktop} {
-        font-size: .775rem;
-      }
     }
 
     th {
@@ -173,15 +170,6 @@
         }
       }
 
-      .org {
-        @extend .site-progress;
-
-        .org-text {
-          h6 {
-            @include trim(1);
-          }
-        }
-      }
 
       figure {
         @include flex(0 0 40px);
@@ -193,19 +181,6 @@
           height: 28px;
           width: 100%;
           @include radius(100%);
-        }
-      }
-
-      span {
-        &.form-guide {
-          i {
-            color: $body-color;
-            font-size: 1rem;
-          }
-        }
-
-        &.serial-no {
-          font-weight: 600;
         }
       }
 
@@ -223,122 +198,6 @@
       }
     }
 
-    tr {
-      @include radius(5px);
-
-      &.form-header {
-        h5 {
-          @include display-flex(flex);
-          @include justify-content-start;
-          @include align-items-center;
-
-          span {
-            padding-left: .5rem;
-          }
-        }
-
-        &.active {
-
-          h5 {
-            color: $primary-color;
-
-            i {
-              @include transform(rotate(180deg));
-            }
-          }
-        }
-      }
-    }
-
-    tr {
-      &.row-form-header {
-        td {
-          h6 {
-            color: $primary-color;
-            position: relative;
-            @include display-flex(flex);
-            @include justify-content-start;
-            @include align-items-center;
-
-            &::before {
-              content: 'arrow_drop_down';
-              font-family: 'Material Icons';
-              display: inline-block;
-              margin-right: .5rem;
-              font-size: 1.4rem;
-            }
-          }
-        }
-
-        &.is-active {
-          td {
-            h6 {
-              &::before {
-                content: 'arrow_drop_up';
-                font-family: 'Material Icons';
-                display: inline-block;
-                margin-right: .5rem;
-                font-size: 1.4rem;
-              }
-            }
-          }
-        }
-      }
-
-      &.row-form-header-2 {
-        td {
-          &:first-child {
-            padding-left: 2rem;
-          }
-
-          h6 {
-            color: $heading-color;
-            position: relative;
-            @include display-flex(flex);
-            @include justify-content-start;
-            @include align-items-center;
-
-            &::before {
-              content: 'arrow_drop_down';
-              font-family: 'Material Icons';
-              display: inline-block;
-              margin-right: .5rem;
-              font-size: 1.4rem;
-            }
-          }
-        }
-      }
-
-      &.row-form-header-3 {
-        td {
-          &:first-child {
-            padding-left: 3.5rem;
-          }
-        }
-      }
-
-      .custom-checkbox {
-        label {
-          color: $heading-color;
-          font-weight: 600;
-          font-size: .875rem;
-        }
-
-        .check-content {
-          b {
-            color: $heading-color;
-            font-weight: 600;
-            font-size: .875rem;
-          }
-
-          .drag-icon {
-            max-width: 20px;
-            margin-right: .6125rem;
-            cursor: move;
-          }
-        }
-      }
-    }
 
     .inline-row {
       .custom-select {
@@ -381,16 +240,7 @@
     }
   }
 
-  &.project-summary-table {
-    table {
-      thead {
-        th {
-          min-width: 120px;
-          ;
-        }
-      }
-    }
-  }
+
 
   &.is-sticky {
     overflow-x: unset;
@@ -443,14 +293,10 @@
       text-transform: capitalize;
     }
 
-    &.is-blue {
-      background-color: $blue-light;
-      color: $blue-color;
-    }
 
     &.is-red {
-      background-color: $red-light;
-      color: $red-color;
+      background-color: $secondary-light;
+      color: $secondary-color;
     }
 
     &.is-green {

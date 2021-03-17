@@ -8,27 +8,26 @@
 @import "custom-dropdown";
 @import "custom-select";
 @import "custom-upload";
-@import "progress";
 @import "./date-picker";
 @import "qty";
 
 // .close-icon {
-    //     width: 34px;
-    //     height: 34px;
-    //     @include display-flex(flex);
-    //     @include justify-content-center;
-    //     @include align-items-center;
-    //     @include flex-direction-column(column);
-    //     border: 1px solid $border-color;
-    //     @include radius(100%);
-    //     cursor: pointer;
-    //     @include transition(all .5s ease-in-out);
+//     width: 34px;
+//     height: 34px;
+//     @include display-flex(flex);
+//     @include justify-content-center;
+//     @include align-items-center;
+//     @include flex-direction-column(column);
+//     border: 1px solid $border-color;
+//     @include radius(100%);
+//     cursor: pointer;
+//     @include transition(all .5s ease-in-out);
 
-    //     &:hover {
-    //         color: $red-color;
-    //         border-color: $red-color;
-    //     }
-    // }
+//     &:hover {
+//         color: $red-color;
+//         border-color: $red-color;
+//     }
+// }
 
 .form-group {
     select {

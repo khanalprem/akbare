@@ -13,6 +13,11 @@ header {
             @include justify-content-between;
             @include align-items-center;
             padding: 1rem 0;
+            @include flex-wrap(wrap);
+
+            .header-left {
+                @include order(0);
+            }
 
             .site-logo {
                 padding-right: 2rem;
@@ -20,11 +25,19 @@ header {
                 img {
                     max-height: 50px;
                 }
+
+
+            }
+
+            .header-middle {
+                @include order(2);
+                @include flex(0 0 100%);
+                max-width: 100%;
+                @include justify-content-between;
             }
 
             .header-search {
-                margin-left: 2rem;
-                @include order(1);
+                padding-left: 2rem;
 
                 input {
                     &.form-control {
@@ -43,17 +56,12 @@ header {
             }
 
             .header-right {
-                @include display-flex(flex);
-                @include flex-grow(1);
                 @include flex-wrap(wrap);
 
                 .header-dropdowns {
                     @include display-flex(flex);
                     @include justify-content-end;
                     @include align-items-center;
-                    @include flex(0 0 100%);
-                    max-height: 100%;
-                    @include order(0);
                 }
 
                 .main-navigation-wrap {
@@ -162,22 +170,26 @@ header {
             }
 
             @media #{$breakpoint-lg} {
+                @include flex-wrap(nowrap);
 
-                .header-right {
-                    @include flex-wrap(nowrap);
+                .header-left {
+                    @include order(0)
+                }
 
-                    .header-dropdowns {
-                        flex: unset;
-                        max-width: unset;
-                    }
+                .header-middle {
+                    @include order(1);
+                    flex: unset;
+                    max-width: unset;
+                    @include flex-grow(1);
+                    @include justify-content-start;
 
-                    .header-dropdowns {
-                        @include order(1);
+                    .search-bar {
+                        padding: 0 2rem;
                     }
                 }
 
-                .header-search {
-                    @include order(0);
+                .header-right {
+                    @include order(2);
                 }
 
             }

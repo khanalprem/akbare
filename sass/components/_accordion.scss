@@ -60,7 +60,7 @@
 
             &::-webkit-scrollbar-thumb {
                 @include radius(4px);
-                background: $border-dark;
+                background: $grey-color;
             }
 
             ul {
