@@ -69,9 +69,16 @@ footer {
             @include justify-content-center;
             @include align-items-center;
             @include flex-direction-column(column);
+            @include transition(all .5s ease-in-out);
 
             &:not(:last-child) {
                 margin-right: .6125rem;
+            }
+
+            &:hover {
+                background-color: $secondary-light;
+                color: $secondary-color;
+
             }
         }
 
@@ -97,5 +104,20 @@ footer {
                 }
             }
         }
+    }
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    z-index: 1011;
+    background-color: $primary-color;
+    color: $white-color;
+    @include transition(all .5s ease-in-out);
+
+    &:hover {
+        background-color: $secondary-color;
+        color: $white-color
     }
 }

@@ -1,0 +1,42 @@
+.success-card {
+    max-width: 600px;
+    margin: 4rem auto;
+    text-align: center;
+
+    .custom-body {
+        padding: 4rem 2rem;
+    }
+
+    .circle-icon {
+        &.success-icon {
+
+            margin: 0 auto;
+            background-color: $primary-color;
+            color: $white-color;
+            width: 70px;
+            height: 70px;
+            margin-bottom: 2rem;
+
+            i {
+                font-size: 2rem;
+            }
+
+            @include box-shadow(0 15px 30px rgba($primary-color, .5));
+        }
+    }
+
+    h2 {
+        color: $secondary-color;
+        font-size: 3rem;
+    }
+
+    h3 {
+        color: $primary-color;
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .buttons {
+        margin-top: 3rem;
+    }
+}

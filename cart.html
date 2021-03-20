@@ -34,16 +34,10 @@
 
     <link href="vendor/icons/icofont.min.css" rel="stylesheet" type="text/css">
 
-    <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
-
     <link href="css/style.css" rel="stylesheet">
-
-    <link href="vendor/sidebar/demo.css" rel="stylesheet">
 </head>
 
 <body>
-
-
     <!-- site header -->
     <header class="site-header">
         <div class="container">
@@ -54,6 +48,7 @@
                     </a>
                 </div>
                 <div class="header-middle is-flex is-start">
+
                     <div class="custom-dropdown is-left location-dropdown">
                         <a href="#" class="is-flex is-start is-icon">
                             <span class="circle-icon is-shadow">
@@ -84,6 +79,17 @@
                             <span>
                                 <i class="icofont-search"></i>
                             </span>
+                        </div>
+                    </div>
+                    <div class="mobile-menu">
+                        <div class="mobile-menu-button">
+                            <a href="#" class="toggle-button">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                            <b>Menu</b>
                         </div>
                     </div>
                 </div>
@@ -151,16 +157,18 @@
                         </div>
 
                         <div class="custom-dropdown is-right is-profile is-after">
-                            <a href="#" class="is-flex is-start">
-                                <figure>
-                                    <img src="img/user.png" alt="user" />
-                                </figure>
-                                <div class="dropdown-content">
-                                    <p>Ram</p>
+                            <a href="#" class="">
+                                <div class="is-flex is-start">
+                                    <figure>
+                                        <img src="img/user.png" alt="user" />
+                                    </figure>
+                                    <div class="dropdown-content">
+                                        <p>Ram</p>
+                                    </div>
                                 </div>
                             </a>
                             <ul class="custom-dropdown-menu">
-                                <li><a href="#">My account</a></li>
+                                <li><a href="my_account.html">My account</a></li>
                                 <li><a href="#">Promos</a></li>
                                 <li><a href="#">My address</a></li>
                                 <li><a href="#">Term & conditions</a></li>
@@ -179,73 +187,66 @@
         </div>
         <div class="bottom-header">
             <div class="container">
-                <div class="main-navigation-wrap">
-                    <a href="#" class="toggle-button">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </a>
-                    <nav class="main-navigation">
+                <nav class="main-navigation">
+                    <ul class="menu">
+                        <li class="menu-item menu-item-has-current">
+                            <a href="">Home</a>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="">Products</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="listing.html">listings</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="details.html">Details</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="">Checkout process</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="cart.html">cart</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="checkout.html">checkout</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="">Orders</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="order.html">My order</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="status.html">status</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="">pages</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="search.html">search</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="success.html">payment success</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="my_account.html">My account</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
 
-                        <ul class="menu">
-                            <li class="menu-item menu-item-has-current">
-                                <a href="">Home</a>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="">Products</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item">
-                                        <a href="listing.html">listings</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="details.html">Details</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="">Checkout process</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item">
-                                        <a href="cart.html">cart</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="checkout.html">checkout</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="">Orders</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item">
-                                        <a href="order.html">My order</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="status.html">status</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="">pages</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item">
-                                        <a href="policy.html">policy</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="search.html">search</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="profile.html">login</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    </nav>
-                </div>
+                </nav>
             </div>
         </div>
     </header>
+
+    <!-- Breadcrumb -->
     <nav class="custom-breadcrumb mb-30">
         <div class="container">
             <ol class="is-flex is-start is-wrap">
@@ -275,7 +276,7 @@
                                             </a>
                                             <figure class="mb-15">
                                                 <a href="#">
-                                                    <img src="img/listing/1.png" class="">
+                                                    <img src="img/listing/momo.png" class="">
                                                 </a>
                                                 <a href="product_details.html" class="discount">
                                                     <span class="badge">10%</span>
@@ -316,12 +317,12 @@
                                                     <span class="badge">10%</span>
                                                 </a>
                                                 <a href="#">
-                                                    <img src="img/listing/1.png" class="">
+                                                    <img src="img/listing/pizza.png" class="">
                                                 </a>
 
                                             </figure>
                                             <div class="product-content">
-                                                <h5><a href="#">Jhole:Momo</a></h5>
+                                                <h5><a href="#">Pizza</a></h5>
                                                 <div class="is-flex is-start is-discount">
                                                     <h6 class="price">Rs.170/plate</h6>
                                                     <h6 class="price is-strike">Rs.50/plate</h6>
@@ -354,12 +355,12 @@
                                                     <span class="badge">10%</span>
                                                 </a>
                                                 <a href="#">
-                                                    <img src="img/listing/1.png" class="">
+                                                    <img src="img/listing/french-fries.png" class="">
                                                 </a>
 
                                             </figure>
                                             <div class="product-content">
-                                                <h5><a href="#">Jhole:Momo</a></h5>
+                                                <h5><a href="#">french-fries</a></h5>
                                                 <div class="is-flex is-start is-discount">
                                                     <h6 class="price">Rs.170/plate</h6>
                                                     <h6 class="price is-strike">Rs.50/plate</h6>
@@ -392,7 +393,7 @@
                                                     <span class="badge">10%</span>
                                                 </a>
                                                 <a href="#">
-                                                    <img src="img/listing/1.png" class="">
+                                                    <img src="img/listing/biryani.png" class="">
                                                 </a>
 
                                             </figure>
@@ -850,8 +851,6 @@
     <script src="vendor/jquery/jquery.min.js"></script>
 
     <script src="vendor/slick/slick.min.js"></script>
-
-    <script src="vendor/sidebar/hc-offcanvas-nav.js"></script>
 
     <script src="js/akabare_kitchen.js"></script>
 </body>

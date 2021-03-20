@@ -37,12 +37,20 @@
                         width: 100%;
 
                         .circle-icon {
-                            color: $secondary-color;
+                            color: $primary-color;
                         }
                     }
 
                     &:hover {
                         background-color: $primary-light;
+
+                        a {
+
+                            .circle-icon {
+                                background-color: $secondary-light;
+                                color: $secondary-color
+                            }
+                        }
                     }
                 }
 

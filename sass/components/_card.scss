@@ -6,7 +6,6 @@
     word-wrap: break-word;
     background-color: $white-color;
     background-clip: border-box;
-    @include box-shadow(0 0 40px $shadow-color);
     @include radius(5px);
 
     .card-footer {

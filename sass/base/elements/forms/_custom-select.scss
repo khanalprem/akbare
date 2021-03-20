@@ -1,4 +1,4 @@
-.custom-select {
+.akabare-select {
   position: relative;
   min-width: 70px;
   width: 100%;
@@ -45,13 +45,13 @@
       }
 
       &::after {
-        content: "arrow_drop_down";
-        font-family: "Material Icons";
+        content: "\ea67";
+        font-family: "IcoFont";
         position: absolute;
         right: .5rem;
         top: 0;
         font-size: 1.3rem;
-        color: $body-color;
+        color: $primary-color;
         z-index: 99;
       }
     }
@@ -70,6 +70,10 @@
     @include box-shadow(0 5px 15px rgba(0, 0, 0, 0.15));
     max-height: 300px;
     display: none;
+    opacity: 0;
+    visibility: hidden;
+    @include transform(translateY(10px));
+    @include transition (.5s ease);
 
     &::-webkit-scrollbar {
       width: 4px;
@@ -118,11 +122,11 @@
       }
     }
 
-    &.right-dropdown {
+    &.right-select {
       right: 0;
     }
 
-    &.left-dropdown {
+    &.left-select {
       left: 0;
     }
   }
@@ -136,15 +140,20 @@
     }
   }
 
-  &.show-dropdown {
+  &.is-inline {
+    display: inline-block;
+    width: auto;
+  }
+
+  &.show-select {
     p {
       &.selected-item {
         border-color: $primary-color;
         color: $primary-color;
 
         &::after {
-          content: "arrow_drop_up";
-          font-family: "Material Icons";
+          content: "\ea6a";
+          font-family: "IcoFont";
           float: right;
           font-size: 1.3rem;
           color: $primary-color;
@@ -154,6 +163,9 @@
 
     .select-list {
       display: block;
+      opacity: 1;
+      visibility: visible;
+      @include transform(translateY(0));
     }
   }
 
@@ -180,6 +192,4 @@
   border: 1px solid $border-color;
   border-radius: .25rem;
   background: $white-color url("data:image/svg+xml,%3csvg xmlns='http: //www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e ") no-repeat right .75rem center/8px 10px;
-
-
 }

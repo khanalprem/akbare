@@ -39,10 +39,10 @@
             a {
                 color: $heading-color;
                 padding: 1rem 0;
-                font-size: .8125rem;
+                font-size: .775rem;
                 font-weight: 500;
                 @include transition(all .5s ease-in-out);
-                text-transform: capitalize;
+                text-transform: uppercase;
                 display: block;
                 font-family: $heading-fonts;
                 text-decoration: none;
@@ -200,14 +200,15 @@
         b {
             margin-left: .5rem;
             margin-top: -5px;
+            color: $primary-color;
         }
     }
 }
 
 a.toggle-button {
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 21px;
     @include transition(all .5s ease-in-out);
 
     span {
@@ -215,7 +216,7 @@ a.toggle-button {
         height: 3px;
         border-radius: 4px;
         width: 100%;
-        background-color: $body-color;
+        background-color: $secondary-color;
         top: 0;
         transition: transform .2s ease-in-out, opacity .2s ease-in-out;
         z-index: 1101;
@@ -226,11 +227,11 @@ a.toggle-button {
 
         &:nth-child(2),
         &:nth-child(3) {
-            top: 10px;
+            top: 7px;
         }
 
         &:nth-child(4) {
-            top: 20px;
+            top: 14px;
         }
     }
 

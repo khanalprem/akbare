@@ -7,6 +7,9 @@ header {
         width: 100%;
         margin: 0 auto;
         background-color: $white-color;
+        @include transition(height .5s ease-in-out);
+        min-height: 134px;
+        transform-origin: top;
 
         .header-in {
             @include display-flex(flex);
@@ -34,21 +37,60 @@ header {
                 @include flex(0 0 100%);
                 max-width: 100%;
                 @include justify-content-between;
+                margin-top: .6125rem;
             }
 
             .header-search {
                 padding-left: 2rem;
 
-                input {
-                    &.form-control {
-                        min-width: unset;
+                .search-wrap {
+                    input {
+                        &.form-control {
+                            min-width: unset;
+                            display: none;
+                            opacity: 0;
+                            visibility: hidden;
 
-                        @media screen and(min-width:1280px) {
-                            min-width: 350px;
+                        }
+                    }
+
+                    span {
+                        height: 36px;
+                    }
+
+
+                    @media #{$breakpoint-pt} {
+
+                        input {
+                            &.form-control {
+                                display: block;
+                                opacity: 1;
+                                visibility: visible;
+                            }
                         }
 
-                        @media screen and(min-width:1440px) {
-                            min-width: 450px;
+                        span {
+                            height: auto;
+                        }
+                    }
+
+
+
+                    @media #{$breakpoint-xl} {
+                        input {
+                            &.form-control {
+                                min-width: 350px;
+                            }
+                        }
+
+                    }
+
+                    @media #{$breakpoint-desktop} {
+
+                        input {
+                            &.form-control {
+                                min-width: 450px;
+                            }
                         }
                     }
                 }
@@ -100,9 +142,11 @@ header {
 
                     a {
                         width: 100%;
+                        padding-right: 1rem;
+                        display: inline-flex;
+                        min-width: 80px;
 
-                        &.is-flex {
-                            padding-right: 4rem;
+                        .is-flex {
 
                             figure {
                                 @include flex(0 0 32px);
@@ -182,6 +226,7 @@ header {
                     max-width: unset;
                     @include flex-grow(1);
                     @include justify-content-start;
+                    margin: 0;
 
                     .search-bar {
                         padding: 0 2rem;
@@ -206,18 +251,38 @@ header {
             }
         }
 
-        &.sticky {
-            z-index: 1011 !important;
-        }
+
 
         .bottom-header {
             border-top: 1px solid $border-color;
             background-color: transparent;
+
+        }
+
+        &.is-sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1011;
         }
     }
 }
 
-@media #{$breakpoint-lg} {
+@media screen and (max-width:992px) {
+    header {
+        &.site-header {
+            .header-in {
+                padding-bottom: 0;
+            }
+
+            .bottom-header {
+                border: none;
+            }
+        }
+    }
+
     .Is-toggle {
         .site-header {
             .header-in {

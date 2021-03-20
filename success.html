@@ -251,7 +251,7 @@
         <div class="container">
             <ol class="is-flex is-start is-wrap">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active">order</li>
+                <li class="breadcrumb-item active">Successful</li>
             </ol>
         </div>
     </nav>
@@ -259,71 +259,20 @@
     <!-- site content -->
     <main class="site-content">
         <div class="container">
-            <div class="checkout">
-                <div class="row">
-                    <div class="grid-lg-8">
-                        <div class="custom-card checkout-card">
-                            <div class="card-header">
-                                <h5>Address</h5>
-                                <a href="#" class="common-button no-border is-icon" popup-link="change-address"><i
-                                        class="icofont-location-arrow"></i><span>Change</span></a>
-                            </div>
-                            <div class="custom-body">
-                                <p>Kathmandu , Nepal</p>
-                                <p>Putalisadak Online security opposite</p>
-                            </div>
+            <div class="success-card">
+                <div class="custom-card">
+
+                    <div class="custom-body">
+                        <div class="circle-icon success-icon">
+                            <i class="icofont-tick-mark"></i>
                         </div>
-                        <div class="custom-card checkout-card">
-                            <div class="card-header">
-                                <h5>Payment Method</h5>
-                                <a href="#" class="common-button no-border is-icon" popup-link="change-payment"><i
-                                        class="icofont-location-arrow"></i><span>Change</span></a>
-                            </div>
-                            <div class="custom-body">
-                                <a class="is-flex is-icon is-start selected-payment" href="#">
-                                    <span class="is-icon"><i class="icofont-pay"></i></span>
-                                    <span>ConnectIps</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="custom-card checkout-card">
-                            <div class="card-header">
-                                <h5>add promo code </h5>
-                                <a href="#" class="common-button no-border is-icon" popup-link="add-promo"><i
-                                        class="icofont-plus"></i><span>add</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" grid-lg-4">
-                        <div class="checkout-summary-card">
-                            <div class="custom-card">
-                                <div class="card-header">
-                                    <h5>order summary</h5>
-                                </div>
-                                <div class="custom-body">
-                                    <div class="checkout-summary">
-                                        <p class="is-flex is-between">
-                                            <span>Total item</span>
-                                            <span class="summary-price">Rs.3140</span>
-                                        </p>
-                                        <p class="is-flex is-between">
-                                            <span>Total Discount</span>
-                                            <span class="summary-price">Rs.100</span>
-                                        </p>
-                                        <p class="is-flex is-between">
-                                            <span>shipping Fee</span>
-                                            <span class="summary-price">Rs.50</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="card-footer is-flex is-between">
-                                    <h5>Total pay</h5>
-                                    <h4 class="checkout-total-price">Rs.3090</h4>
-                                </div>
-                            </div>
-                            <div class="buttons is-center mt-15">
-                                <a href="#" class="common-button is-bg">Place order</a>
-                            </div>
+                        <h2>Thank you</h2>
+                        <h3>Your order has been successfull</h3>
+                        <p>To track your order please anter your Order ID in the box below and press the "Track" button.
+                            This was given to you on your receipt and in the confirmation email you should have receied.
+                        </p>
+                        <div class="buttons is-center">
+                            <a href="order.html" class="common-button is-bg ">My order</a>
                         </div>
                     </div>
                 </div>
@@ -458,122 +407,6 @@
         </div>
 
     </footer>
-
-    <!-- change address -->
-    <div class="popup" id="change-address">
-        <div class="popup-container sm-popup">
-            <div class="popup-body">
-                <span class="close-icon"><i class="icofont-close-line"></i></span>
-                <div class="popup-header">
-                    <h3>Change Address</h3>
-                </div>
-                <div class="popup-content">
-                    <div class="row">
-                        <div class="grid-lg-6">
-                            <div class="form-group">
-                                <label>Delivery area</label>
-                                <div class="custom-input-group">
-                                    <input class="form-control" placeholder="Enter your city" />
-                                    <span class="span-group"><i class="icofont-location-pin "></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-lg-6">
-                            <div class="form-group">
-                                <label>Complete address</label>
-                                <input class="form-control" placeholder="Complete address" />
-                            </div>
-                        </div>
-                        <div class="grid-lg-12">
-                            <div class="form-group">
-                                <label>Left of soltimode near petrol pump</label>
-                                <textarea class="form-control" placeholder="Enter your city"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="popup-footer buttons is-end">
-                    <a href="#" class="common-button is-border">Cancel</a>
-                    <a href="#" class="common-button is-bg">save</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- change payment -->
-    <div class="popup" id="change-payment">
-        <div class="popup-container mediam-popup">
-            <div class="popup-body">
-                <span class="close-icon"><i class="icofont-close-line"></i></span>
-                <div class="popup-header">
-                    <h3>change payment</h3>
-                </div>
-                <div class="popup-content">
-                    <div class="akabare-payment">
-                        <div class="is-flex is-start is-wrap">
-                            <div class="payment-item is-active">
-                                <img src="img/Fonepay-logo.svg" alt="fone pay" />
-                                <span class="check-icon"><i class="icofont-check-circled"></i></span>
-                            </div>
-                            <div class="payment-item">
-                                <img src="img/khalti-logo.svg" alt="fone pay" />
-                                <span class="check-icon"><i class="icofont-check-circled"></i></span>
-                            </div>
-                            <div class="payment-item">
-                                <img src="img/aaaa.png" alt="fone pay" />
-                                <span class="check-icon"><i class="icofont-check-circled"></i></span>
-                            </div>
-                            <div class="payment-item">
-                                <img src="img/ime-red.png" alt="fone pay" />
-                                <span class="check-icon"><i class="icofont-check-circled"></i></span>
-                            </div>
-                            <div class="payment-item">
-                                <span class="cash"><i class="icofont-bank"></i></span>
-                                <span class="check-icon"><i class="icofont-check-circled"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="popup-footer buttons is-end">
-                    <a href="#" class="common-button is-border">Cancel</a>
-                    <a href="#" class="common-button is-bg">save</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- change promo -->
-    <div class="popup" id="add-promo">
-        <div class="popup-container sm-popup">
-            <div class="popup-body">
-                <span class="close-icon"><i class="icofont-close-line"></i></span>
-                <div class="popup-header">
-                    <h3>Apply Promo code</h3>
-                </div>
-                <div class="popup-content">
-                    <div class="row">
-                        <div class="grid-lg-12">
-                            <div class="form-group">
-                                <div class="custom-input-group">
-                                    <input class="form-control" placeholder="Promo code" />
-                                    <span class="span-group"><i class="icofont-location-arrow "></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-lg-12">
-                            <div class="form-group">
-                                <textarea class="form-control" placeholder="Any suggetion will pass it ?"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="popup-footer buttons is-end">
-                    <a href="#" class="common-button is-border">Cancel</a>
-                    <a href="#" class="common-button is-bg">save</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Signup Modal -->
     <div class="sidebar-modal is-right signin-modal" id="right-modal">

@@ -34,16 +34,10 @@
 
     <link href="vendor/icons/icofont.min.css" rel="stylesheet" type="text/css">
 
-    <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
-
     <link href="css/style.css" rel="stylesheet">
-
-    <link href="vendor/sidebar/demo.css" rel="stylesheet">
 </head>
 
 <body>
-
-
     <!-- site header -->
     <header class="site-header">
         <div class="container">
@@ -54,6 +48,7 @@
                     </a>
                 </div>
                 <div class="header-middle is-flex is-start">
+
                     <div class="custom-dropdown is-left location-dropdown">
                         <a href="#" class="is-flex is-start is-icon">
                             <span class="circle-icon is-shadow">
@@ -84,6 +79,17 @@
                             <span>
                                 <i class="icofont-search"></i>
                             </span>
+                        </div>
+                    </div>
+                    <div class="mobile-menu">
+                        <div class="mobile-menu-button">
+                            <a href="#" class="toggle-button">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                            <b>Menu</b>
                         </div>
                     </div>
                 </div>
@@ -151,16 +157,18 @@
                         </div>
 
                         <div class="custom-dropdown is-right is-profile is-after">
-                            <a href="#" class="is-flex is-start">
-                                <figure>
-                                    <img src="img/user.png" alt="user" />
-                                </figure>
-                                <div class="dropdown-content">
-                                    <p>Ram</p>
+                            <a href="#" class="">
+                                <div class="is-flex is-start">
+                                    <figure>
+                                        <img src="img/user.png" alt="user" />
+                                    </figure>
+                                    <div class="dropdown-content">
+                                        <p>Ram</p>
+                                    </div>
                                 </div>
                             </a>
                             <ul class="custom-dropdown-menu">
-                                <li><a href="#">My account</a></li>
+                                <li><a href="my_account.html">My account</a></li>
                                 <li><a href="#">Promos</a></li>
                                 <li><a href="#">My address</a></li>
                                 <li><a href="#">Term & conditions</a></li>
@@ -179,73 +187,66 @@
         </div>
         <div class="bottom-header">
             <div class="container">
-                <div class="main-navigation-wrap">
-                    <a href="#" class="toggle-button">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </a>
-                    <nav class="main-navigation">
+                <nav class="main-navigation">
+                    <ul class="menu">
+                        <li class="menu-item menu-item-has-current">
+                            <a href="">Home</a>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="">Products</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="listing.html">listings</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="details.html">Details</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="">Checkout process</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="cart.html">cart</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="checkout.html">checkout</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="">Orders</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="order.html">My order</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="status.html">status</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="">pages</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="search.html">search</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="success.html">payment success</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="my_account.html">My account</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
 
-                        <ul class="menu">
-                            <li class="menu-item menu-item-has-current">
-                                <a href="">Home</a>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="">Products</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item">
-                                        <a href="listing.html">listings</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="details.html">Details</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="">Checkout process</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item">
-                                        <a href="cart.html">cart</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="checkout.html">checkout</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="">Orders</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item">
-                                        <a href="order.html">My order</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="status.html">status</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="">pages</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item">
-                                        <a href="policy.html">policy</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="search.html">search</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="profile.html">login</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    </nav>
-                </div>
+                </nav>
             </div>
         </div>
     </header>
+
+    <!-- site header -->
     <nav class="custom-breadcrumb mb-30">
         <div class="container">
             <ol class="is-flex is-start is-wrap">
@@ -259,6 +260,20 @@
     <main class="site-content">
         <div class="container">
             <div class="custom-tab order-tab">
+                <div class="is-flex is-end mb-15">
+                    <div class="is-flex is-end">
+                        <span class="mr-15">Sort By</span>
+                        <div class="akabare-select is-inline">
+                            <p class="selected-item ">Select</p>
+                            <ul class="select-list">
+                                <li class="is-active" data-value="Recent"><a href="javascript:void(0);">Recent</a></li>
+                                <li class="" data-value="Approved"><a href="javascript:void(0);">Approved</a>
+                                </li>
+                                <li class="" data-value="Pending"><a href="javascript:void(0);">Pending</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="grid-xl-3 grid-lg-4">
                         <div class="custom-card mb-30 is-sticky">
@@ -284,6 +299,7 @@
                         </div>
                     </div>
                     <div class="grid-xl-9 grid-lg-8">
+
                         <div class="custom-tab-content">
                             <div class="tab-item is-active" id="is-complete">
                                 <div class="order-list">
@@ -835,8 +851,6 @@
     <script src="vendor/jquery/jquery.min.js"></script>
 
     <script src="vendor/slick/slick.min.js"></script>
-
-    <script src="vendor/sidebar/hc-offcanvas-nav.js"></script>
 
     <script src="js/akabare_kitchen.js"></script>
 </body>

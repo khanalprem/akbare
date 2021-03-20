@@ -1,6 +1,6 @@
 /*
 Template Name: Akabare Kitchen;
-Template URI:http://akabarekitchen.com/
+Template URI:http://akabarekitchen.com.np/
 Author: Prem Prasad Khanal
 Author URI: http://premkhanal.com.np/
 Description: Akabare Kitchend: Food Delivery Service in Kathmandu and Pokhara. 
@@ -11,61 +11,10 @@ Primary use: Ecommerce
 (function ($) {
   'use strict'; // Start of use strict
 
-  // $('body').on('contextmenu', function (e) {
-  //   return false;
-  // });
-  // $(document).keydown(function (e) {
-  //   if (
-  //     e.ctrlKey &&
-  //     (e.keyCode === 67 ||
-  //       e.keyCode === 86 ||
-  //       e.keyCode === 85 ||
-  //       e.keyCode === 117)
-  //   ) {
-  //     return false;
-  //   }
-  //   if (e.which === 123) {
-  //     return false;
-  //   }
-  //   if (e.metaKey) {
-  //     return false;
-  //   }
-  //   //document.onkeydown = function(e) {
-  //   // "I" key
-  //   if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-  //     return false;
-  //   }
-  //   // "J" key
-  //   if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-  //     return false;
-  //   }
-  //   // "S" key + macOS
-  //   if (
-  //     e.keyCode == 83 &&
-  //     (navigator.platform.match('Mac') ? e.metaKey : e.ctrlKey)
-  //   ) {
-  //     return false;
-  //   }
-  //   if (
-  //     e.keyCode == 224 &&
-  //     (navigator.platform.match('Mac') ? e.metaKey : e.ctrlKey)
-  //   ) {
-  //     return false;
-  //   }
-  //   // "U" key
-  //   if (e.ctrlKey && e.keyCode == 85) {
-  //     return false;
-  //   }
-  //   // "F12" key
-  //   if (event.keyCode == 123) {
-  //     return false;
-  //   }
-  // });
-
   var winwidth = $(window).width();
 
   function customDropdown() {
-    $('.custom-dropdown a')
+    $('.custom-dropdown')
       .mouseover(function (e) {
         e.preventDefault();
         $(this).closest('.custom-dropdown').addClass('show-dropdown');
@@ -137,6 +86,41 @@ Primary use: Ecommerce
     }
   });
 
+  function currencyGetValue() {
+    $('.currency-item').on('click', function (e) {
+      $('.currency-item').removeClass('active');
+      var value = $(this).attr('data-value');
+      $(this).addClass('active');
+      $('.current-currency').html(value);
+    });
+  }
+  function languageGetValue() {
+    $('.language-item').on('click', function (e) {
+      $('.language-item').removeClass('active');
+      var value = $(this).attr('data-value');
+      $(this).addClass('active');
+      $('.current-languages').html(value);
+    });
+  }
+
+  // akabare-select
+
+  function akabareSelect() {
+    $('.akabare-select').on('click', function (e) {
+      $(this).toggleClass('show-select');
+    });
+    $('.akabare-select li').on('click', function (e) {
+      $(this).removeClass('is-active');
+      var value = $(this).attr('data-value');
+      $(this)
+        .closest('.akabare-select')
+        .find('.selected-item')
+        .addClass('is-active');
+      $(this).closest('.akabare-select').find('.selected-item').html(value);
+    });
+  }
+  akabareSelect();
+
   // Categories Slider
   $('.categories-slider').slick({
     slidesToScroll: 3,
@@ -153,7 +137,7 @@ Primary use: Ecommerce
       {
         breakpoint: 768,
         settings: {
-          arrows: false,
+          arrows: true,
           centerMode: true,
           centerPadding: '40px',
           slidesToShow: 3,
@@ -162,10 +146,10 @@ Primary use: Ecommerce
       {
         breakpoint: 480,
         settings: {
-          arrows: false,
+          arrows: true,
           centerMode: true,
           centerPadding: '40px',
-          slidesToShow: 3,
+          slidesToShow: 2,
         },
       },
     ],
@@ -290,23 +274,29 @@ Primary use: Ecommerce
     });
   }
 
-  // Sidebar
-  var $main_nav = $('#main-nav');
-  var $toggle = $('.toggle');
+  function stickyMenu() {
+    $(window).scroll(function (event) {
+      var scroll = $(window).scrollTop();
 
-  var defaultOptions = {
-    disableAt: false,
-    customToggle: $toggle,
-    levelSpacing: 40,
-    navTitle: 'Akabare Kitchen',
-    levelTitles: true,
-    levelTitleAsBack: true,
-    pushContent: '#container',
-    insertClose: 2,
-  };
+      if (scroll > 130) {
+        $('.site-header').addClass('is-sticky');
+      } else {
+        $('.site-header').removeClass('is-sticky');
+      }
 
-  // call our plugin
-  var Nav = $main_nav.hcOffcanvasNav(defaultOptions);
+      if (scroll > 130) {
+        $('.scroll-top').show();
+      } else {
+        $('.scroll-top').hide();
+      }
+    });
+
+    $('.scroll-top').on('click', function (e) {
+      e.preventDefault();
+      $('html,body').animate({ scrollTop: 0 }, 500);
+    });
+  }
+  stickyMenu();
 
   // Dark Mode
   const toggleSwitch = document.querySelector(

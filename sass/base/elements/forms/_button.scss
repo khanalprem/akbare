@@ -145,7 +145,7 @@
 
             i {
                 margin-right: .5rem;
-                color: $secondary-color;
+                color: $primary-color;
                 font-size: 1.2rem;
             }
 
@@ -166,6 +166,10 @@
         &:hover {
             color: $primary-color;
             background-color: $white-color;
+
+            i {
+                color: $secondary-color;
+            }
         }
 
         &:disabled,
@@ -230,6 +234,7 @@
     &.sm-button {
         padding: .5rem .6125rem;
         font-size: .775rem;
+        min-width: 108px;
     }
 
 
@@ -289,7 +294,7 @@ a.load-more-button {
     @include justify-content-center;
     @include align-items-center;
     @include flex-direction-column(column);
-    color: $body-color;
+    color: $shadow-color;
     @include radius(100%);
     min-height: 32px;
     cursor: pointer;
@@ -321,7 +326,8 @@ a.load-more-button {
     }
 
     &:hover {
-        background-color: $primary-light;
+        background-color: $secondary-light;
+        color: $secondary-color;
     }
 
     &:not(:last-child) {
