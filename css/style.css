@@ -10223,10 +10223,14 @@ footer.site-footer {
   display: none; }
 
 @media only screen and (min-width: 768px) {
-  .slick-prev {
+  .slick-prev,
+  .slick-prev:hover,
+  .slick-prev:focus {
     left: -25px; }
 
-  .slick-next {
+  .slick-next,
+  .slick-next:hover,
+  .slick-next:focus {
     right: -25px; } }
 /* Signin Modal
 --------------------------------------------- */
@@ -10443,8 +10447,8 @@ footer.site-footer {
       font-size: 11px;
       padding: 7px 9px;
       font-weight: 500;
-      background-color: rgba(237, 28, 36, 0.25);
-      color: #ED1C24;
+      background-color: #ED1C24;
+      color: #ffffff;
       -webkit-border-radius: 0.25rem;
       -moz-border-radius: 0.25rem;
       -ms-border-radius: 0.25rem;

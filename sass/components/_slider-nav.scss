@@ -38,11 +38,16 @@
 
 
 @media #{$breakpoint-pt} {
-    .slick-prev {
+
+    .slick-prev,
+    .slick-prev:hover,
+    .slick-prev:focus {
         left: -25px;
     }
 
-    .slick-next {
+    .slick-next,
+    .slick-next:hover,
+    .slick-next:focus {
         right: -25px;
     }
 }
