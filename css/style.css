@@ -10483,8 +10483,6 @@ footer.site-footer {
 .akabare-product-details {
   background-color: #ffffff;
   padding: 1rem;
-  -webkit-box-shadow: 0 0 40px #707070;
-  box-shadow: 0 0 40px #707070;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -10562,13 +10560,106 @@ footer.site-footer {
   .akabare-product-details .akabare-product-available {
     margin: .6125rem 0; }
   .akabare-product-details .search-bar {
-    margin: 1rem auto; }
+    margin: 1rem auto;
+    position: relative; }
     .akabare-product-details .search-bar .search-wrap span {
       background-color: transparent; }
       .akabare-product-details .search-bar .search-wrap span i {
         color: #212529; }
     .akabare-product-details .search-bar .search-wrap input:focus {
       background-color: transparent; }
+    .akabare-product-details .search-bar ul {
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 1000;
+      min-width: 150px;
+      background-color: #ffffff;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      border-radius: 8px;
+      -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+      width: 100%; }
+      .akabare-product-details .search-bar ul li {
+        margin: 0; }
+        .akabare-product-details .search-bar ul li a {
+          padding: .5rem .6125rem;
+          color: #3F403F;
+          -webkit-transition: all 0.4s ease-in-out;
+          -moz-transition: all 0.4s ease-in-out;
+          -o-transition: all 0.4s ease-in-out;
+          -ms-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
+          justify-content: flex-start;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          font-weight: 400; }
+          .akabare-product-details .search-bar ul li a i,
+          .akabare-product-details .search-bar ul li a svg {
+            margin-right: .6125rem;
+            font-size: 1rem;
+            color: #212529; }
+            .akabare-product-details .search-bar ul li a i img,
+            .akabare-product-details .search-bar ul li a svg img {
+              max-width: 16px; }
+          .akabare-product-details .search-bar ul li a::after {
+            content: none; }
+          .akabare-product-details .search-bar ul li a:hover {
+            background-color: #FCDFE0; }
+        .akabare-product-details .search-bar ul li span {
+          color: #3F403F;
+          -webkit-transition: all 0.4s ease-in-out;
+          -moz-transition: all 0.4s ease-in-out;
+          -o-transition: all 0.4s ease-in-out;
+          -ms-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
+          justify-content: flex-start;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          font-weight: 600; }
+          .akabare-product-details .search-bar ul li span i,
+          .akabare-product-details .search-bar ul li span svg {
+            margin-right: .6125rem;
+            font-size: 1rem;
+            color: #212529; }
+            .akabare-product-details .search-bar ul li span i img,
+            .akabare-product-details .search-bar ul li span svg img {
+              max-width: 16px; }
+          .akabare-product-details .search-bar ul li span::after {
+            content: none; }
+          .akabare-product-details .search-bar ul li span:hover {
+            background-color: #EDF4E4; }
+        .akabare-product-details .search-bar ul li:not(:last-child) {
+          border-bottom: 1px solid #E2E2E2; }
+    .akabare-product-details .search-bar.show-dropdown ul.custom-dropdown-menu {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      top: 100%;
+      transform: translateY(0); }
   .akabare-product-details .akabare-product-content h5 {
     font-size: 1rem; }
   .akabare-product-details .akabare-product-content p {

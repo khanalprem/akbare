@@ -104,6 +104,14 @@ Primary use: Ecommerce
   }
   akabareSelect();
 
+  function searchDropdown() {
+    $('.search-dropdown input').on('click', function (e) {
+      e.preventDefault();
+      $(this).closest('.search-dropdown').addClass('show-dropdown');
+    });
+  }
+  searchDropdown();
+
   // Categories Slider
   $('.categories-slider').slick({
     slidesToScroll: 3,
@@ -178,78 +186,6 @@ Primary use: Ecommerce
     autoplay: true,
   });
 
-  // Recommend Slider
-  // $('.akabare-product-slider').slick({
-  //   infinite: true,
-  //   speed: 300,
-  //   slidesToShow: 1,
-  //   adaptiveHeight: true,
-  //   arrows: true,
-  //   dots: false,
-  //   autoplay: true,
-  // });
-
-  function slickConfig() {
-    var product = $('.ps-product--detail');
-    if (product.length > 0) {
-      var primary = product.find('.ps-product__gallery'),
-        second = product.find('.ps-product__variants'),
-        vertical = product.find('.ps-product__thumbnail').data('vertical');
-      primary.slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        asNavFor: '.ps-product__variants',
-        fade: true,
-        dots: false,
-        infinite: false,
-        arrows: primary.data('arrow'),
-        prevArrow: "<a href='#'><i class='fa fa-angle-left'></i></a>",
-        nextArrow: "<a href='#'><i class='fa fa-angle-right'></i></a>",
-      });
-      second.slick({
-        slidesToShow: second.data('item'),
-        slidesToScroll: 1,
-        infinite: false,
-        arrows: second.data('arrow'),
-        focusOnSelect: true,
-        prevArrow: "<a href='#'><i class='fa fa-angle-up'></i></a>",
-        nextArrow: "<a href='#'><i class='fa fa-angle-down'></i></a>",
-        asNavFor: '.ps-product__gallery',
-        vertical: vertical,
-        responsive: [
-          {
-            breakpoint: 1200,
-            settings: {
-              arrows: second.data('arrow'),
-              slidesToShow: 4,
-              vertical: false,
-              prevArrow: "<a href='#'><i class='fa fa-angle-left'></i></a>",
-              nextArrow: "<a href='#'><i class='fa fa-angle-right'></i></a>",
-            },
-          },
-          {
-            breakpoint: 992,
-            settings: {
-              arrows: second.data('arrow'),
-              slidesToShow: 4,
-              vertical: false,
-              prevArrow: "<a href='#'><i class='fa fa-angle-left'></i></a>",
-              nextArrow: "<a href='#'><i class='fa fa-angle-right'></i></a>",
-            },
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 3,
-              vertical: false,
-              prevArrow: "<a href='#'><i class='fa fa-angle-left'></i></a>",
-              nextArrow: "<a href='#'><i class='fa fa-angle-right'></i></a>",
-            },
-          },
-        ],
-      });
-    }
-  }
   function slickConfig() {
     $('.akabare-product-gallery').slick({
       slidesToShow: 1,
@@ -284,6 +220,20 @@ Primary use: Ecommerce
     });
   }
   slickConfig();
+
+  function ratingStarProduct() {
+    $('.rating-stars').each((index, value) => {
+      var rate = $(value).attr('value');
+      if ($(value).attr('value') === 0) {
+        rate = '0';
+      }
+      $(value).barrating({
+        theme: 'icofont-stars',
+        initialRating: rate,
+      });
+    });
+  }
+  ratingStarProduct();
   // Trending Slider
   $('.trending-slider').slick({
     centerPadding: '30px',
@@ -321,10 +271,10 @@ Primary use: Ecommerce
   });
 
   function mainnavButton() {
-    $('.open-button').clone().appendTo('.main-navigation .mobile-menu-toggle');
-    $('.main-navigation .open-button').addClass('active');
+    $('.open-button').clone().appendTo('.bottom-header .mobile-menu-toggle');
+    $('.bottom-header .open-button').addClass('active');
     $('.active').on('click', function () {
-      $('.main-navigation').hide(300);
+      $('.bottom-header').hide(300);
     });
   }
   mainnavButton();
