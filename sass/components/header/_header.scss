@@ -255,7 +255,6 @@ header {
 
         .bottom-header {
             border-top: 1px solid $border-color;
-            background-color: transparent;
 
         }
 
@@ -284,10 +283,11 @@ header {
     }
 
     .Is-toggle {
-        .site-header {
-            .header-in {
-                .main-navigation {
+        header {
+            &.site-header {
+                .bottom-header {
                     right: 0;
+                    background-color: $heading-color;
                 }
             }
         }

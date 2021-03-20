@@ -86,23 +86,6 @@ Primary use: Ecommerce
     }
   });
 
-  function currencyGetValue() {
-    $('.currency-item').on('click', function (e) {
-      $('.currency-item').removeClass('active');
-      var value = $(this).attr('data-value');
-      $(this).addClass('active');
-      $('.current-currency').html(value);
-    });
-  }
-  function languageGetValue() {
-    $('.language-item').on('click', function (e) {
-      $('.language-item').removeClass('active');
-      var value = $(this).attr('data-value');
-      $(this).addClass('active');
-      $('.current-languages').html(value);
-    });
-  }
-
   // akabare-select
 
   function akabareSelect() {
@@ -237,9 +220,9 @@ Primary use: Ecommerce
   /*==================================
    Toggle Button
  ==================================*/
-  $('a.open-button').on('click', function (e) {
+  $('.mobile-menu-button a').on('click', function (e) {
     e.preventDefault();
-    $('.main-navigation').show(300);
+    $('.bottom-header').show(300);
   });
 
   function mainnavButton() {
