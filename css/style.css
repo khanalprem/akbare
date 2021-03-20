@@ -10489,6 +10489,9 @@ footer.site-footer {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px; }
+  @media only screen and (min-width: 768px) {
+    .akabare-product-details {
+      padding: 2rem; } }
   .akabare-product-details .akabare-product-slider {
     padding: 0; }
     .akabare-product-details .akabare-product-slider .slick-prev {
@@ -10508,6 +10511,19 @@ footer.site-footer {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     border-radius: 5px; }
+  .akabare-product-details .akabare-product-thumbnail {
+    margin-top: 1rem; }
+    .akabare-product-details .akabare-product-thumbnail .akabare-slider-item {
+      background-color: #ffffff;
+      padding: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px;
+      border: 1px solid #E2E2E2;
+      margin: 0 5px; }
+    .akabare-product-details .akabare-product-thumbnail .slick-list {
+      margin: 0 -5px; }
   .akabare-product-details .akabare-product-info {
     padding: 0;
     margin-top: 2rem; }

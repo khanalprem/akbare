@@ -4,6 +4,10 @@
     @include box-shadow(0 0 40px $shadow-color);
     @include radius(5px);
 
+    @media #{$breakpoint-pt} {
+        padding: 2rem;
+    }
+
     .akabare-product-slider {
         padding: 0;
 
@@ -35,6 +39,23 @@
         img {
             @include radius(5px);
         }
+    }
+
+    .akabare-product-thumbnail {
+        margin-top: 1rem;
+
+        .akabare-slider-item {
+            background-color: $white-color;
+            padding: 5px;
+            @include radius(5px);
+            border: 1px solid $border-color;
+            margin: 0 5px;
+        }
+
+        .slick-list {
+            margin: 0 -5px;
+        }
+
     }
 
     .akabare-product-info {
