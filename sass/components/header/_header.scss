@@ -255,6 +255,12 @@ header {
         .bottom-header {
             border-top: 1px solid $border-color;
 
+            .close-icon {
+                visibility: hidden;
+                opacity: 0;
+                color: $secondary-color;
+                top: 1rem;
+            }
         }
 
         &.is-sticky {
@@ -277,6 +283,11 @@ header {
 
             .bottom-header {
                 border: none;
+
+                .close-icon {
+                    visibility: visible;
+                    opacity: 1;
+                }
             }
         }
     }
@@ -285,7 +296,10 @@ header {
         header {
             &.site-header {
                 .bottom-header {
+                    visibility: visible;
+                    opacity: 1;
                     right: 0;
+                    @include transform(translateX(0));
                     background-color: $heading-color;
                 }
             }

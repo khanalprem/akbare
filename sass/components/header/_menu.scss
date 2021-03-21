@@ -263,6 +263,9 @@ a.toggle-button {
 @media screen and(max-width:992px) {
     .bottom-header {
         position: fixed;
+        visibility: hidden;
+        opacity: 0;
+        @include transform(translateX(280px));
         height: 100%;
         max-width: 280px;
         padding-top: 40px;
@@ -270,10 +273,9 @@ a.toggle-button {
         background-color: $heading-color;
         z-index: 999999;
         top: 0;
-        right: 0;
+        right: -100%;
         left: auto;
         bottom: 0;
-        display: none;
         @include transition(all 0.5s ease-in-out);
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;

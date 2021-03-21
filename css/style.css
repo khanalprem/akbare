@@ -7312,11 +7312,11 @@ ul.social-list {
   left: 50%;
   top: 50%;
   margin: -20px 0 0 -20px;
-  -webkit-animation: rotated 1s infinite ease-out;
-  animation: rotated 1s infinite ease-out; }
+  -webkit-animation: rotate3d 1s infinite ease-out;
+  animation: rotate3d 1s infinite ease-out; }
 
 .pulse {
-  background: rgba(130, 176, 64, 0.4);
+  background: rgba(237, 28, 36, 0.4);
   border-radius: 50%;
   height: 14px;
   width: 14px;
@@ -7345,9 +7345,23 @@ ul.social-list {
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
-    -webkit-box-shadow: 0 0 1px 2px #82B040;
-    box-shadow: 0 0 1px 2px #82B040; }
+    -webkit-box-shadow: 0 0 1px 2px #ED1C24;
+    box-shadow: 0 0 1px 2px #ED1C24; }
 
+@-webkit-keyframes rotate3d {
+  0% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg); } }
+@keyframes rotate3d {
+  0% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg); } }
 @-moz-keyframes pulsate {
   0% {
     -webkit-transform: scale(0.1, 0.1);
@@ -7667,6 +7681,13 @@ a.toggle-button {
 @media screen and (max-width: 992px) {
   .bottom-header {
     position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: translateX(280px);
+    -moz-transform: translateX(280px);
+    -ms-transform: translateX(280px);
+    -o-transform: translateX(280px);
+    transform: translateX(280px);
     height: 100%;
     max-width: 280px;
     padding-top: 40px;
@@ -7674,10 +7695,9 @@ a.toggle-button {
     background-color: #3F403F;
     z-index: 999999;
     top: 0;
-    right: 0;
+    right: -100%;
     left: auto;
     bottom: 0;
-    display: none;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
@@ -8011,6 +8031,11 @@ header.site-header {
         max-width: 180px; } }
   header.site-header .bottom-header {
     border-top: 1px solid #E2E2E2; }
+    header.site-header .bottom-header .close-icon {
+      visibility: hidden;
+      opacity: 0;
+      color: #ED1C24;
+      top: 1rem; }
   header.site-header.is-sticky {
     position: fixed;
     top: 0;
@@ -8024,9 +8049,19 @@ header.site-header {
     padding-bottom: 0; }
   header.site-header .bottom-header {
     border: none; }
+    header.site-header .bottom-header .close-icon {
+      visibility: visible;
+      opacity: 1; }
 
   .Is-toggle header.site-header .bottom-header {
+    visibility: visible;
+    opacity: 1;
     right: 0;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
     background-color: #3F403F; } }
 /* Footer
 --------------------------------------------- */

@@ -13,6 +13,13 @@ Primary use: Ecommerce
 
   var winwidth = $(window).width();
 
+  function preloader() {
+    $(document).ready(function () {
+      $('.preloader').fadeOut(5000);
+    });
+  }
+  preloader();
+
   function customDropdown() {
     $('.custom-dropdown')
       .mouseover(function (e) {
@@ -234,6 +241,7 @@ Primary use: Ecommerce
   //   });
   // }
   // ratingStarProduct();
+
   // Trending Slider
   $('.trending-slider').slick({
     centerPadding: '30px',
@@ -267,17 +275,16 @@ Primary use: Ecommerce
  ==================================*/
   $('.mobile-menu-button a').on('click', function (e) {
     e.preventDefault();
-    $('.bottom-header').show(300);
+    $('body').addClass('Is-toggle');
   });
 
-  function mainnavButton() {
-    $('.open-button').clone().appendTo('.bottom-header .mobile-menu-toggle');
-    $('.bottom-header .open-button').addClass('active');
-    $('.active').on('click', function () {
-      $('.bottom-header').hide(300);
+  function mobileMenuClose() {
+    $('.bottom-header .close-icon').on('click', function (e) {
+      e.preventDefault();
+      $('body').removeClass('Is-toggle');
     });
   }
-  mainnavButton();
+  mobileMenuClose();
 
   /*==================================
   Responsive menu
