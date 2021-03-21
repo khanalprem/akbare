@@ -36,6 +36,14 @@
     display: none;
 }
 
+.slick-slider {
+    .slick-slide {
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
 
 @media #{$breakpoint-pt} {
 

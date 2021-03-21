@@ -58,44 +58,7 @@
             }
         }
 
-        ul {
-            &.is-list {
-                li {
-                    &.akabare-product {
-                        box-shadow: none;
-                        padding: 1rem;
-                        @include radius(0);
 
-                        figure {
-                            @include flex(0 0 120px);
-                            max-width: 120px;
-                            @include radius(5px);
-
-                            img {
-                                max-width: 100%;
-                                height: auto;
-                                width: 100%;
-                                @include radius(5px);
-                            }
-                        }
-
-                        .product-content {
-                            @include flex-grow(1);
-                            padding-left: 1rem;
-                        }
-
-                        .badge {
-                            left: .6125rem;
-                        }
-
-                        &:hover {
-                            @include box-shadow (0 15px 50px rgba(0, 0, 0, .075));
-                            @include transform(translateY(0));
-                        }
-                    }
-                }
-            }
-        }
     }
 
     .cart-footer {
@@ -186,6 +149,49 @@
         }
     }
 
+}
+
+ul {
+    &.is-list {
+        li {
+            &.akabare-product {
+                box-shadow: none;
+                padding: 1rem;
+                @include radius(0);
+
+                figure {
+                    @include flex(0 0 120px);
+                    max-width: 120px;
+                    @include radius(5px);
+
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                        width: 100%;
+                        @include radius(5px);
+                    }
+                }
+
+                .product-content {
+                    @include flex-grow(1);
+                    padding-left: 1rem;
+                }
+
+                .badge {
+                    left: .6125rem;
+                }
+
+                &:hover {
+                    @include box-shadow (0 15px 50px rgba(0, 0, 0, .075));
+                    @include transform(translateY(0));
+                }
+
+                &.pd-0 {
+                    padding: 0;
+                }
+            }
+        }
+    }
 }
 
 .akabare-payment {

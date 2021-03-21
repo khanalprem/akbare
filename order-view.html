@@ -221,7 +221,7 @@
                                     <a href="order.html">My order</a>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="order-view.html">order view</a>
+                                    <a href="order-view.html">Order view</a>
                                 </li>
                             </ul>
                         </li>
@@ -246,12 +246,12 @@
         </div>
     </header>
 
-    <!-- Breadcrumb -->
+    <!-- site header -->
     <nav class="custom-breadcrumb mb-30">
         <div class="container">
             <ol class="is-flex is-start is-wrap">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active">Listing</li>
+                <li class="breadcrumb-item active">My order</li>
             </ol>
         </div>
     </nav>
@@ -259,272 +259,328 @@
     <!-- site content -->
     <main class="site-content">
         <div class="container">
-            <!-- Pick today -->
-            <div class="akabare-listing">
-                <div class="is-flex is-between is-title">
-                    <h5>Product listing </h5>
-                    <div class="buttons is-end">
-                        <a href="#" class="common-buttons is-bg is-icon sm-button sidebar-modal-link"
-                            modal-link="filter-modal">
-                            <i class="icofont-filter"></i><span>filter</span>
-                        </a>
-                        <a href="#" class="common-buttons is-bg is-icon sm-button sidebar-modal-link"
-                            modal-link="filter-modal">
-                            <i class="icofont-signal"></i>
-                            <span>Sort</span>
-                        </a>
-                    </div>
-                </div>
+            <div class="custom-tab order-tab">
                 <div class="row">
-                    <div class="grid-sm-6 grid-xl-3 grid-lg-4 mb-30">
-                        <div class="akabare-product">
+                    <div class="grid-xl-3 grid-lg-4">
+                        <div class="custom-card mb-30 is-sticky">
+                            <div class="custom-body">
+                                <ul class="tab-list is-bg">
+                                    <li class="">
+                                        <a href="#" class="is-active" data-tab="is-complete"><span
+                                                class="circle-icon is-shadow"><i
+                                                    class="icofont-check-circled "></i></span><span>Completed</span></a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="" data-tab="is-progress"><span
+                                                class="circle-icon is-shadow"><i
+                                                    class="icofont-wall-clock"></i></span><span>On
+                                                progress</span></a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="" data-tab="is-cancel"><span class="circle-icon is-shadow"><i
+                                                    class="icofont-close "></i></span><span>Cancel</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-xl-9 grid-lg-8">
 
-                            <figure class="mb-15">
-                                <a href="product_details.html" class="discount">
-                                    <span class="badge ">10%</span>
-                                </a>
-                                <a href="#">
-                                    <img src="img/listing/momo.png" class="">
-                                </a>
+                        <div class="custom-tab-content">
+                            <div class="tab-item is-active" id="is-complete">
+                                <div class="order-list">
+                                    <div class="custom-card">
+                                        <div class="card-header is-start">
+                                            <div class="is-flex is-start is-date">
+                                                <i class="icofont-ui-calendar"></i>
+                                                <span>06/04/2021</span>
+                                                <time>10:00 AM</time>
+                                            </div>
 
-                            </figure>
-                            <div class="product-content">
-                                <h5><a href="#">MoMo</a></h5>
-                                <div class="is-flex is-between">
-                                    <h6 class="price">$0.8/Plate</h6>
-                                    <div class="gridlapse qty_show">
-                                        <div class="ml-auto" href="#">
-                                            <form id='myform' class="cart-items-number is-flex" method='POST'
-                                                action='#'>
-                                                <input type='button' value='-' class='qtyminus btn ' field='quantity' />
-                                                <input type='text' name='quantity' value='1' class='qty form-control' />
-                                                <input type='button' value='+' class='qtyplus btn ' field='quantity' />
-                                            </form>
+                                        </div>
+                                        <div class="custom-body">
+                                            <ul class="is-list is-border">
+                                                <li class="akabare-product pd-0">
+                                                    <a href="#" class="is-cancel">
+                                                        <i class="icofont-ui-delete"></i>
+                                                    </a>
+                                                    <figure class="mb-15">
+                                                        <a href="#">
+                                                            <img src="img/listing/momo.png" class="">
+                                                        </a>
+                                                        <a href="product_details.html" class="discount">
+                                                            <span class="badge">10%</span>
+                                                        </a>
+
+                                                    </figure>
+                                                    <div class="product-content">
+                                                        <h5><a href="#">Jhole:Momo</a></h5>
+                                                        <div class="is-flex is-start is-discount">
+                                                            <h6 class="price">Rs.170/plate</h6>
+                                                            <h6 class="price is-strike">Rs.50/plate</h6>
+                                                        </div>
+                                                        <div class="is-flex is-between">
+                                                            <h6 class="price is-discounted-price">Rs.100/plate</h6>
+
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="order-dsc">
+                                            <div class="card-header">
+                                                <h4 class="">Order status</h4>
+                                            </div>
+                                            <div class="custom-body">
+                                                <ul class="is-list is-before">
+                                                    <li>Preparing Order.</li>
+                                                    <li>Ready to collect</li>
+                                                    <li>On the way</li>
+                                                    <li>Delivered ordered</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="order-dsc">
+                                            <div class="card-header">
+                                                <h4 class="">Description</h4>
+                                            </div>
+                                            <div class="custom-body">
+                                                <p>Nagarjun 16 Kathmandu , Nepal</p>
+                                            </div>
+                                        </div>
+                                        <div class="order-dsc is-order-total">
+                                            <div class="card-header is-between">
+                                                <h4 class="">total-cost</h4>
+                                                <b>$80.00</b>
+                                            </div>
+                                            <div class="custom-body">
+                                                <p>You can check your order details here</p>
+                                                <p>Thank you</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-item " id="is-progress">
+                                <div class="order-list">
+                                    <div class="custom-card">
+                                        <div class="card-header is-between">
+                                            <a href="#" class="common-button is-bg is-progress">progress</a>
+                                            <div class="is-flex is-end">
+                                                <i class="icofont-clock-time"></i>
+                                                <time> 06/04/2021</time>
+                                            </div>
+
+                                        </div>
+                                        <div class="custom-body">
+                                            <div class="is-flex is-between">
+                                                <div class="order-col">
+                                                    <p>Transaction iD :</p>
+                                                    <b>#456ERG</b>
+                                                </div>
+                                                <div class="order-col">
+                                                    <p>Delivery To :</p>
+                                                    <b>Office</b>
+                                                </div>
+                                                <div class="order-col">
+                                                    <p>Total Payment :</p>
+                                                    <b>Rs.883</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="custom-card">
+                                        <div class="card-header is-between">
+                                            <a href="#" class="common-button is-bg is-progress">progress</a>
+                                            <div class="is-flex is-end">
+                                                <i class="icofont-clock-time"></i>
+                                                <time> 06/04/2021</time>
+                                            </div>
+
+                                        </div>
+                                        <div class="custom-body">
+                                            <div class="is-flex is-between">
+                                                <div class="order-col">
+                                                    <p>Transaction iD :</p>
+                                                    <b>#456ERG</b>
+                                                </div>
+                                                <div class="order-col">
+                                                    <p>Delivery To :</p>
+                                                    <b>Office</b>
+                                                </div>
+                                                <div class="order-col">
+                                                    <p>Total Payment :</p>
+                                                    <b>Rs.883</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="custom-card">
+                                        <div class="card-header is-between">
+                                            <a href="#" class="common-button is-bg is-progress">progress</a>
+                                            <div class="is-flex is-end">
+                                                <i class="icofont-clock-time"></i>
+                                                <time> 06/04/2021</time>
+                                            </div>
+
+                                        </div>
+                                        <div class="custom-body">
+                                            <div class="is-flex is-between">
+                                                <div class="order-col">
+                                                    <p>Transaction iD :</p>
+                                                    <b>#456ERG</b>
+                                                </div>
+                                                <div class="order-col">
+                                                    <p>Delivery To :</p>
+                                                    <b>Office</b>
+                                                </div>
+                                                <div class="order-col">
+                                                    <p>Total Payment :</p>
+                                                    <b>Rs.883</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="custom-card">
+                                        <div class="card-header is-between">
+                                            <a href="#" class="common-button is-bg is-progress">progress</a>
+                                            <div class="is-flex is-end">
+                                                <i class="icofont-clock-time"></i>
+                                                <time> 06/04/2021</time>
+                                            </div>
+
+                                        </div>
+                                        <div class="custom-body">
+                                            <div class="is-flex is-between">
+                                                <div class="order-col">
+                                                    <p>Transaction iD :</p>
+                                                    <b>#456ERG</b>
+                                                </div>
+                                                <div class="order-col">
+                                                    <p>Delivery To :</p>
+                                                    <b>Office</b>
+                                                </div>
+                                                <div class="order-col">
+                                                    <p>Total Payment :</p>
+                                                    <b>Rs.883</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-item " id="is-cancel">
+                                <div class="order-list">
+                                    <div class="custom-card">
+                                        <div class="card-header is-between">
+                                            <a href="#" class="common-button is-bg is-cancel">cancel</a>
+                                            <div class="is-flex is-end">
+                                                <i class="icofont-clock-time"></i>
+                                                <time> 06/04/2021</time>
+                                            </div>
+
+                                        </div>
+                                        <div class="custom-body">
+                                            <div class="is-flex is-between">
+                                                <div class="order-col">
+                                                    <p>Transaction iD :</p>
+                                                    <b>#456ERG</b>
+                                                </div>
+                                                <div class="order-col">
+                                                    <p>Delivery To :</p>
+                                                    <b>Office</b>
+                                                </div>
+                                                <div class="order-col">
+                                                    <p>Total Payment :</p>
+                                                    <b>Rs.883</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="custom-card">
+                                        <div class="card-header is-between">
+                                            <a href="#" class="common-button is-bg is-cancel">cancel</a>
+                                            <div class="is-flex is-end">
+                                                <i class="icofont-clock-time"></i>
+                                                <time> 06/04/2021</time>
+                                            </div>
+
+                                        </div>
+                                        <div class="custom-body">
+                                            <div class="is-flex is-between">
+                                                <div class="order-col">
+                                                    <p>Transaction iD :</p>
+                                                    <b>#456ERG</b>
+                                                </div>
+                                                <div class="order-col">
+                                                    <p>Delivery To :</p>
+                                                    <b>Office</b>
+                                                </div>
+                                                <div class="order-col">
+                                                    <p>Total Payment :</p>
+                                                    <b>Rs.883</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="custom-card">
+                                        <div class="card-header is-between">
+                                            <a href="#" class="common-button is-bg is-cancel">cancel</a>
+                                            <div class="is-flex is-end">
+                                                <i class="icofont-clock-time"></i>
+                                                <time> 06/04/2021</time>
+                                            </div>
+
+                                        </div>
+                                        <div class="custom-body">
+                                            <div class="is-flex is-between">
+                                                <div class="order-col">
+                                                    <p>Transaction iD :</p>
+                                                    <b>#456ERG</b>
+                                                </div>
+                                                <div class="order-col">
+                                                    <p>Delivery To :</p>
+                                                    <b>Office</b>
+                                                </div>
+                                                <div class="order-col">
+                                                    <p>Total Payment :</p>
+                                                    <b>Rs.883</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="custom-card">
+                                        <div class="card-header is-between">
+                                            <a href="#" class="common-button is-bg is-cancel">cancel</a>
+                                            <div class="is-flex is-end">
+                                                <i class="icofont-clock-time"></i>
+                                                <time> 06/04/2021</time>
+                                            </div>
+
+                                        </div>
+                                        <div class="custom-body">
+                                            <div class="is-flex is-between">
+                                                <div class="order-col">
+                                                    <p>Transaction iD :</p>
+                                                    <b>#456ERG</b>
+                                                </div>
+                                                <div class="order-col">
+                                                    <p>Delivery To :</p>
+                                                    <b>Office</b>
+                                                </div>
+                                                <div class="order-col">
+                                                    <p>Total Payment :</p>
+                                                    <b>Rs.883</b>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="grid-sm-6 grid-xl-3 grid-lg-4 mb-30">
-                        <div class="akabare-product">
-
-                            <figure class="mb-15">
-                                <a href="product_details.html" class="discount">
-                                    <span class="badge ">10%</span>
-                                </a>
-                                <a href="#">
-                                    <img src="img/listing/pizza.png" class="">
-                                </a>
-
-                            </figure>
-                            <div class="product-content">
-                                <h5><a href="#">Pizza</a></h5>
-                                <div class="is-flex is-between">
-                                    <h6 class="price">$20/Plate</h6>
-                                    <div class="gridlapse qty_show">
-                                        <div class="ml-auto" href="#">
-                                            <form id='myform' class="cart-items-number is-flex" method='POST'
-                                                action='#'>
-                                                <input type='button' value='-' class='qtyminus btn ' field='quantity' />
-                                                <input type='text' name='quantity' value='1' class='qty form-control' />
-                                                <input type='button' value='+' class='qtyplus btn ' field='quantity' />
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-sm-6 grid-xl-3 grid-lg-4 mb-30">
-                        <div class="akabare-product">
-
-                            <figure class="mb-15">
-                                <a href="product_details.html" class="discount">
-                                    <span class="badge ">10%</span>
-                                </a>
-                                <a href="#">
-                                    <img src="img/listing/sandwiches.png" class="">
-                                </a>
-
-                            </figure>
-                            <div class="product-content">
-                                <h5><a href="#">Sandwich</a></h5>
-                                <div class="is-flex is-between">
-                                    <h6 class="price">$0.8/Plate</h6>
-                                    <div class="gridlapse qty_show">
-                                        <div class="ml-auto" href="#">
-                                            <form id='myform' class="cart-items-number is-flex" method='POST'
-                                                action='#'>
-                                                <input type='button' value='-' class='qtyminus btn ' field='quantity' />
-                                                <input type='text' name='quantity' value='1' class='qty form-control' />
-                                                <input type='button' value='+' class='qtyplus btn ' field='quantity' />
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-sm-6 grid-xl-3 grid-lg-4 mb-30">
-                        <div class="akabare-product">
-
-                            <figure class="mb-15">
-                                <a href="product_details.html" class="discount">
-                                    <span class="badge ">10%</span>
-                                </a>
-                                <a href="#">
-                                    <img src="img/listing/burger.png" class="">
-                                </a>
-
-                            </figure>
-                            <div class="product-content">
-                                <h5><a href="#">Burger</a></h5>
-                                <div class="is-flex is-between">
-                                    <h6 class="price">$0.8/plate</h6>
-                                    <div class="gridlapse qty_show">
-                                        <div class="ml-auto" href="#">
-                                            <form id='myform' class="cart-items-number is-flex" method='POST'
-                                                action='#'>
-                                                <input type='button' value='-' class='qtyminus btn ' field='quantity' />
-                                                <input type='text' name='quantity' value='1' class='qty form-control' />
-                                                <input type='button' value='+' class='qtyplus btn ' field='quantity' />
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-sm-6 grid-xl-3 grid-lg-4 grid-lg-4 mb-30">
-                        <div class="akabare-product">
-
-                            <figure class="mb-15">
-                                <a href="product_details.html" class="discount">
-                                    <span class="badge ">10%</span>
-                                </a>
-                                <a href="#">
-                                    <img src="img/listing/french-fries.png" class="">
-                                </a>
-
-                            </figure>
-                            <div class="product-content">
-                                <h5><a href="#">French Fries</a></h5>
-                                <div class="is-flex is-between">
-                                    <h6 class="price">$0.8/kg</h6>
-                                    <div class="gridlapse qty_show">
-                                        <div class="ml-auto" href="#">
-                                            <form id='myform' class="cart-items-number is-flex" method='POST'
-                                                action='#'>
-                                                <input type='button' value='-' class='qtyminus btn ' field='quantity' />
-                                                <input type='text' name='quantity' value='1' class='qty form-control' />
-                                                <input type='button' value='+' class='qtyplus btn ' field='quantity' />
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-sm-6 grid-xl-3 grid-lg-4 mb-30">
-                        <div class="akabare-product">
-
-                            <figure class="mb-15">
-                                <a href="product_details.html" class="discount">
-                                    <span class="badge ">10%</span>
-                                </a>
-                                <a href="#">
-                                    <img src="img/listing/salad.png" class="">
-                                </a>
-
-                            </figure>
-                            <div class="product-content">
-                                <h5><a href="#">Salad</a></h5>
-                                <div class="is-flex is-between">
-                                    <h6 class="price">$0.8/kg</h6>
-                                    <div class="gridlapse qty_show">
-                                        <div class="ml-auto" href="#">
-                                            <form id='myform' class="cart-items-number is-flex" method='POST'
-                                                action='#'>
-                                                <input type='button' value='-' class='qtyminus btn ' field='quantity' />
-                                                <input type='text' name='quantity' value='1' class='qty form-control' />
-                                                <input type='button' value='+' class='qtyplus btn ' field='quantity' />
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-sm-6 grid-xl-3 grid-lg-4 mb-30">
-                        <div class="akabare-product">
-
-                            <figure class="mb-15">
-                                <a href="product_details.html" class="discount">
-                                    <span class="badge ">10%</span>
-                                </a>
-                                <a href="#">
-                                    <img src="img/listing/biryani.png" class="">
-                                </a>
-
-                            </figure>
-                            <div class="product-content">
-                                <h5><a href="#">Biryani</a></h5>
-                                <div class="is-flex is-between">
-                                    <h6 class="price">$0.8/kg</h6>
-                                    <div class="gridlapse qty_show">
-                                        <div class="ml-auto" href="#">
-                                            <form id='myform' class="cart-items-number is-flex" method='POST'
-                                                action='#'>
-                                                <input type='button' value='-' class='qtyminus btn ' field='quantity' />
-                                                <input type='text' name='quantity' value='1' class='qty form-control' />
-                                                <input type='button' value='+' class='qtyplus btn ' field='quantity' />
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-sm-6 grid-xl-3 grid-lg-4 mb-30">
-                        <div class="akabare-product">
-
-                            <figure class="mb-15">
-                                <a href="product_details.html" class="discount">
-                                    <span class="badge ">10%</span>
-                                </a>
-                                <a href="#">
-                                    <img src="img/listing/rosted-chicken.png" class="">
-                                </a>
-
-                            </figure>
-                            <div class="product-content">
-                                <h5><a href="#">Rosted Chicken</a></h5>
-                                <div class="is-flex is-between">
-                                    <h6 class="price">$0.8/kg</h6>
-                                    <div class="gridlapse qty_show">
-                                        <div class="ml-auto" href="#">
-                                            <form id='myform' class="cart-items-number is-flex" method='POST'
-                                                action='#'>
-                                                <input type='button' value='-' class='qtyminus btn ' field='quantity' />
-                                                <input type='text' name='quantity' value='1' class='qty form-control' />
-                                                <input type='button' value='+' class='qtyplus btn ' field='quantity' />
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="is-pagination is-flex is-center is-wrap">
-                    <a href="#" class="is-link is-prev is-flex"><i class="icofont-rounded-double-left"></i></a>
-                    <a href="#" class="is-link "><span>1</span></a>
-                    <a href="#" class="is-link is-active"><span>2</span></a>
-                    <a href="#" class="is-link "><span>3</span></a>
-                    <a href="#" class="is-link "><span>4</span></a>
-                    <a href="#" class="is-link "><span>5</span></a>
-                    <a href="#" class="is-link is-next"><i class="icofont-rounded-double-right"></i></a>
                 </div>
             </div>
         </div>
@@ -744,108 +800,6 @@
         </div>
     </div>
 
-    <!-- filter Modal -->
-    <div class="sidebar-modal is-right filter-modal" id="filter-modal">
-        <div class="popup-container ">
-            <div class="popup-body">
-                <span class="close-icon"><i class="icofont-close-line"></i></span>
-                <div class="popup-header ">
-                    <h3 class="">Filter</h3>
-                </div>
-                <div class="popup-content">
-                    <div class="akabare-filter">
-                        <div class="filter-list">
-                            <div class="filter-title">
-                                <h6>Starters</h6>
-                            </div>
-                            <div class="filter-body">
-                                <ul class="is-list is-border">
-                                    <li>
-                                        <div class="custom-checkbox">
-                                            <input type="radio" id="customRadio1" name="rated"
-                                                class="custom-control-input">
-                                            <label class="" for="customRadio1">
-                                                Aalu Dum</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-radio">
-                                            <input type="radio" id="customRadio2" name="rated"
-                                                class="custom-control-input">
-                                            <label class="" for="customRadio2">
-                                                Vage Chillis Potato</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-radio">
-                                            <input type="radio" id="customRadio4" name="rated"
-                                                class="custom-control-input">
-                                            <label class="" for="customRadio4">
-                                                Non vage chillis</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-radio">
-                                            <input type="radio" id="customRadio5" name="rated"
-                                                class="custom-control-input">
-                                            <label class="" for="customRadio5">
-                                                Sandheko</label>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="filter-list">
-                            <div class="filter-title">
-                                <h6>Momos</h6>
-                            </div>
-                            <div class="filter-body">
-                                <ul class="is-list is-border">
-                                    <li>
-                                        <div class="custom-checkbox">
-                                            <input type="checkbox" id="customcheckbox1" name="rated"
-                                                class="custom-control-input">
-                                            <label class="" for="customcheckbox1">Top
-                                                Steam momo</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-checkbox">
-                                            <input type="checkbox" id="customcheckbox2" name="rated"
-                                                class="custom-control-input">
-                                            <label class="" for="customcheckbox2">Top
-                                                Deep fried</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-checkbox">
-                                            <input type="checkbox" id="customcheckbox4" name="rated"
-                                                class="custom-control-input">
-                                            <label class="" for="customcheckbox4">
-                                                Jhol Momo</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-checkbox">
-                                            <input type="checkbox" id="customcheckbox5" name="rated"
-                                                class="custom-control-input">
-                                            <label class="" for="customcheckbox5">
-                                                Chilli Momo</label>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="popup-footer buttons is-center">
-                    <a href="#" class="close-modal">close</a>
-                    <a href="#" class="common-buttons is-bg">Apply</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
 
     <!-- All imported js files -->
     <script src="vendor/jquery/jquery.min.js"></script>

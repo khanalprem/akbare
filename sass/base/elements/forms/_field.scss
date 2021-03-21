@@ -62,14 +62,15 @@ textarea {
 
 }
 
-input[type="date"].form-control,
-input[type="datetime-local"].form-control,
-input[type="month"].form-control,
-input[type="time"].form-control {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+input,
+textarea,
+button,
+a,
+select {
+    outline: none;
 }
+
+
 
 .form-group {
     margin-bottom: 1rem;
@@ -111,12 +112,6 @@ textarea {
     }
 }
 
-[role='menuitem'],
-[role='button']:focus {
-    cursor: pointer;
-    border-color: $primary-color;
-    outline: none;
-}
 
 .custom-input-group {
     @include display-flex(flex);

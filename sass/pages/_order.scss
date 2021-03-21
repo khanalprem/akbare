@@ -44,6 +44,11 @@
         }
 
         .order-col {
+            p {
+                color: $shadow-color;
+                margin-bottom: .25rem;
+            }
+
             b {
                 color: $heading-color;
             }
@@ -59,10 +64,54 @@
                         min-height: unset;
                         padding: .25rem .6125rem;
                     }
+
+                    .is-date {
+                        color: $shadow-color;
+
+                        i {
+                            margin-right: .25rem;
+                        }
+
+                        span {
+                            margin: 0 .25rem;
+                        }
+                    }
                 }
 
                 &:not(:last-child) {
                     margin-bottom: .6125rem;
+                }
+
+                .custom-body {
+                    h4 {
+                        text-transform: capitalize;
+                    }
+
+                    p {
+                        color: $shadow-color;
+                    }
+
+
+                }
+
+                .order-dsc {
+                    border-top: 1px solid $border-color;
+
+                    .card-header {
+                        border: none;
+
+                        h4 {
+                            text-transform: capitalize;
+                        }
+
+                        b {
+                            font-size: 1.2rem;
+                        }
+                    }
+
+                    .custom-body {
+                        padding-top: 0;
+                    }
                 }
             }
         }

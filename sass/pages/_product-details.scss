@@ -49,6 +49,10 @@
             @include radius(5px);
             border: 1px solid $border-color;
             margin: 0 5px;
+
+            &.slick-active.slick-current {
+                border-color: $primary-color;
+            }
         }
 
         .slick-list {

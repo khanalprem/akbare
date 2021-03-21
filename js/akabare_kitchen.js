@@ -221,19 +221,19 @@ Primary use: Ecommerce
   }
   slickConfig();
 
-  function ratingStarProduct() {
-    $('.rating-stars').each((index, value) => {
-      var rate = $(value).attr('value');
-      if ($(value).attr('value') === 0) {
-        rate = '0';
-      }
-      $(value).barrating({
-        theme: 'icofont-stars',
-        initialRating: rate,
-      });
-    });
-  }
-  ratingStarProduct();
+  // function ratingStarProduct() {
+  //   $('.rating-stars').each((index, value) => {
+  //     var rate = $(value).attr('value');
+  //     if ($(value).attr('value') === 0) {
+  //       rate = '0';
+  //     }
+  //     $(value).barrating({
+  //       theme: 'icofont-stars',
+  //       initialRating: rate,
+  //     });
+  //   });
+  // }
+  // ratingStarProduct();
   // Trending Slider
   $('.trending-slider').slick({
     centerPadding: '30px',
