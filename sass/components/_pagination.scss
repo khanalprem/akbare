@@ -6,9 +6,9 @@
             @include radius(50%);
             height: 34px;
             margin: 0 8px;
-            background-color: $white-color;
+            background-color: var(--white-color);
             box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
-            border: 1px solid $border-color;
+            border: 1px solid var(--border-color);
             @include display-flex(flex);
             @include align-items-center;
             @include justify-content-center;
@@ -16,13 +16,13 @@
             @include transition(all .5s ease-in-out);
 
             &.is-active {
-                background-color: $primary-color;
-                color: $white-color;
+                background-color: var(--primary-color);
+                color: var(--white-color);
             }
 
             &:hover {
-                background-color: $secondary-light;
-                color: $secondary-color;
+                background-color: var(--secondary-light);
+                color: var(--secondary-color);
             }
         }
     }

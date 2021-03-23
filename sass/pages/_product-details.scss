@@ -1,5 +1,5 @@
 .akabare-product-details {
-    background-color: $white-color;
+    background-color: var(--white-color);
     padding: 1rem;
     @include radius(5px);
 
@@ -44,14 +44,14 @@
         margin-top: 1rem;
 
         .akabare-slider-item {
-            background-color: $white-color;
+            background-color: var(--white-color);
             padding: 5px;
             @include radius(5px);
-            border: 1px solid $border-color;
+            border: 1px solid var(--border-color);
             margin: 0 5px;
 
             &.slick-active.slick-current {
-                border-color: $primary-color;
+                border-color: var(--primary-color);
             }
         }
 
@@ -82,7 +82,7 @@
         margin: .5rem 0;
 
         b {
-            color: $primary-color;
+            color: var(--primary-color);
             font-size: 1rem;
         }
 
@@ -101,8 +101,8 @@
                 font-size: 11px;
                 padding: 7px 9px;
                 font-weight: 500;
-                background-color: rgba($secondary-color, .25);
-                color: $secondary-color;
+                background-color: rgba(var(--secondary-color), .25);
+                color: var(--secondary-color);
                 @include radius(.25rem);
                 margin-left: .5rem;
             }
@@ -112,7 +112,7 @@
 
     .rating-stars {
         i {
-            color: $orange-color;
+            color: var(--orange-color);
         }
 
     }
@@ -134,7 +134,7 @@
                 background-color: transparent;
 
                 i {
-                    color: $body-color;
+                    color: var(--body-color);
                 }
             }
 
@@ -156,7 +156,7 @@
             left: 0;
             z-index: 1000;
             min-width: 150px;
-            background-color: $white-color;
+            background-color: var(--white-color);
             @include radius(8px);
             @include box-shadow(0px 6px 10px rgba(0, 0, 0, .1));
             width: 100%;
@@ -166,7 +166,7 @@
 
                 a {
                     padding: .5rem .6125rem;
-                    color: $heading-color;
+                    color: var(--heading-color);
                     @include transition(all .4s ease-in-out);
                     @include display-flex(flex);
                     @include justify-content-start;
@@ -177,7 +177,7 @@
                     svg {
                         margin-right: .6125rem;
                         font-size: 1rem;
-                        color: $body-color;
+                        color: var(--body-color);
 
                         img {
                             max-width: 16px;
@@ -189,13 +189,13 @@
                     }
 
                     &:hover {
-                        background-color: $secondary-light;
+                        background-color: var(--secondary-light);
                     }
                 }
 
                 span {
                     // padding:.5rem .6125rem;
-                    color: $heading-color;
+                    color: var(--heading-color);
                     @include transition(all .4s ease-in-out);
                     @include display-flex(flex);
                     @include justify-content-start;
@@ -206,7 +206,7 @@
                     svg {
                         margin-right: .6125rem;
                         font-size: 1rem;
-                        color: $body-color;
+                        color: var(--body-color);
 
                         img {
                             max-width: 16px;
@@ -218,12 +218,12 @@
                     }
 
                     &:hover {
-                        background-color: $primary-light;
+                        background-color: var(--primary-light);
                     }
                 }
 
                 &:not(:last-child) {
-                    border-bottom: 1px solid $border-color;
+                    border-bottom: 1px solid var(--border-color);
                 }
             }
         }

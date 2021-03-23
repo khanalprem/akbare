@@ -16,7 +16,7 @@
             &::before {
                 font-size: 1.4rem;
                 font-family: 'Material Icons';
-                color: $body-color;
+                color: var(--body-color);
                 z-index: 99;
                 line-height: 1;
                 @include display-flex(flex);
@@ -49,18 +49,18 @@
 
             &::-webkit-scrollbar {
                 width: 4px;
-                background: $border-color;
+                background: var(--border-color);
                 @include radius(4px);
             }
 
             &::-webkit-scrollbar-track {
-                background-color: $border-color;
+                background-color: var(--border-color);
                 @include radius(4px);
             }
 
             &::-webkit-scrollbar-thumb {
                 @include radius(4px);
-                background: $grey-color;
+                background: var(--grey-color);
             }
 
             ul {
@@ -79,11 +79,11 @@
                             @include justify-content-between;
                             @include align-items-center;
                             font-weight: 500;
-                            color: $body-color;
+                            color: var(--body-color);
                             padding: .35rem .6125rem;
 
                             &:hover {
-                                background-color: $secondary-light;
+                                background-color: var(--secondary-light);
                             }
 
                             .custom-checkbox {
@@ -113,7 +113,7 @@
 
                             span {
                                 &.counter {
-                                    color: $body-color;
+                                    color: var(--body-color);
                                 }
                             }
                         }
@@ -122,14 +122,14 @@
 
                 &.list {
                     li {
-                        background-color: $white-color;
+                        background-color: var(--white-color);
                         @include radius(5px);
                         @include transition(all .5s ease-in-out);
 
 
                         &:hover,
                         &.active {
-                            background-color: $primary-light;
+                            background-color: var(--primary-light);
                             cursor: pointer;
                         }
                     }
@@ -142,10 +142,10 @@
                         &.is-check {
                             li {
                                 &.is-active {
-                                    background-color: $primary-light;
+                                    background-color: var(--primary-light);
 
                                     a {
-                                        color: $heading-color;
+                                        color: var(--heading-color);
                                     }
                                 }
                             }
@@ -162,7 +162,7 @@
         }
 
         &.is-bg {
-            background-color: $bg-color;
+            background-color: var(--bg-color);
             @include radius(5px);
 
             .acc-header {
@@ -173,8 +173,8 @@
                 padding: 0 .6125rem .6125rem .6125rem;
 
                 &.is-bg {
-                    background-color: $white-color;
-                    border: 1px solid $border-color;
+                    background-color: var(--white-color);
+                    border: 1px solid var(--border-color);
                     @include radius(5px);
                     padding-top: 10px;
                 }
@@ -184,7 +184,7 @@
         &.is-active {
             .acc-header {
                 h5 {
-                    color: $primary-color;
+                    color: var(--primary-color);
                 }
             }
 
@@ -234,7 +234,7 @@
                     content: 'expand_more';
                     width: 24px;
                     height: 24px;
-                    border: 1px solid $border-color;
+                    border: 1px solid var(--border-color);
                     margin-left: .6125rem;
                     font-size: 1rem;
                 }
@@ -245,8 +245,8 @@
 
                     &::after {
                         content: 'expand_less';
-                        background-color: $primary-light;
-                        border-color: $primary-color;
+                        background-color: var(--primary-light);
+                        border-color: var(--primary-color);
                     }
                 }
 
@@ -281,7 +281,7 @@
                         height: 28px;
                         width: 100%;
                         @include radius(100%);
-                        border: 1px solid $border-color;
+                        border: 1px solid var(--border-color);
                     }
                 }
 
@@ -302,7 +302,7 @@
                 display: inline-flex;
 
                 i {
-                    color: $body-color;
+                    color: var(--body-color);
                     font-size: 1rem;
                 }
             }
@@ -343,7 +343,7 @@
                 .org {
                     .org-text {
                         h5 {
-                            color: $heading-color;
+                            color: var(--heading-color);
                         }
                     }
                 }
@@ -353,13 +353,13 @@
     }
 
     &.is-border {
-        border: 1px solid $border-color;
+        border: 1px solid var(--border-color);
         @include radius(4px);
 
         .acc-list {
 
             .acc-header {
-                border-bottom: 1px solid $border-color;
+                border-bottom: 1px solid var(--border-color);
                 padding: .5rem .6125rem;
             }
 
@@ -378,7 +378,7 @@
             }
 
             &:not(:last-child) {
-                border-bottom: 1px solid $border-color;
+                border-bottom: 1px solid var(--border-color);
             }
         }
     }

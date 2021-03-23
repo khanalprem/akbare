@@ -6,13 +6,15 @@ h5,
 h6 {
     @include clear;
     font-family: $heading-fonts;
-    color: $heading-color;
+    color: var(--heading-color);
     font-weight: 600;
     margin: 0;
     position: relative;
     line-height: 1.5;
     background: none;
 }
+
+
 
 h1 {
     font-size: $font-size-h1;

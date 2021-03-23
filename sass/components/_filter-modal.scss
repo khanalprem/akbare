@@ -20,7 +20,7 @@
     .popup-footer {
         .common-buttons {
             &.is-bg {
-                color: $white-color;
+                color: var(--white-color);
             }
         }
     }

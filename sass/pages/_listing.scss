@@ -2,14 +2,14 @@
     .is-title {
         .common-buttons {
             &.is-bg {
-                background-color: $white-color;
-                color: $body-color;
+                background-color: var(--white-color);
+                color: var(--body-color);
 
                 &:hover {
-                    color: $primary-color;
+                    color: var(--primary-color);
 
                     i {
-                        color: $primary-color;
+                        color: var(--primary-color);
                     }
                 }
             }

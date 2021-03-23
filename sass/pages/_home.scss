@@ -9,6 +9,10 @@
             text-transform: capitalize;
         }
     }
+
+    .common-buttons {
+        margin-left: 1rem;
+    }
 }
 
 .akabare-categories {
@@ -17,7 +21,7 @@
 
 .categories-slider {
     .categories-slider-item {
-        background-color: $white-color;
+        background-color: var(--white-color);
         @include box-shadow (0 .125rem .25rem rgba(0, 0, 0, .075));
         @include radius(.40rem);
         padding: 1rem .5rem;
@@ -74,7 +78,7 @@
 }
 
 .akabare-product {
-    background-color: $white-color;
+    background-color: var(--white-color);
     @include box-shadow (0 .125rem .25rem rgba(0, 0, 0, .075));
     @include radius(.40rem);
     padding: .6125rem;
@@ -85,13 +89,13 @@
     a {
         &.is-cancel {
             position: absolute;
-            right: 1rem;
+            right: .5rem;
             top: .6125rem;
             z-index: 1;
-            color: $grey-color;
+            color: var(--secondary-color);
 
             &:hover {
-                color: $secondary-color;
+                color: var(--secondary-color);
             }
         }
     }
@@ -108,15 +112,15 @@
 
     .discount {
         position: absolute;
-        top: .6125rem;
-        left: .6125rem;
+        top: 0rem;
+        left: 0rem;
 
         .badge {
             font-size: 11px;
             padding: 7px 9px;
             font-weight: 500;
-            background-color: $secondary-color;
-            color: $white-color;
+            background-color: var(--secondary-color);
+            color: var(--white-color);
             @include radius(.25rem);
         }
     }
@@ -126,22 +130,22 @@
             font-size: 1rem;
 
             a {
-                color: initial;
+                color: var(--heading-color);
             }
         }
 
         .price {
-            color: $primary-color;
+            color: var(--primary-color);
             font-weight: 500;
 
             &.is-strike {
                 text-decoration: line-through;
-                color: $secondary-color;
+                color: var(--shadow-color);
                 margin-left: .6125rem;
             }
 
             &.is-discounted-price {
-                color: $heading-color;
+                color: var(--heading-color);
                 margin-top: 1rem;
                 font-weight: 600;
             }

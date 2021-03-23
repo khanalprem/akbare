@@ -8,14 +8,14 @@
             margin: 0;
             text-align: center;
             text-transform: capitalize;
-            color: $heading-color;
+            color: var(--heading-color);
 
             &:not(:last-child) {
-                border-right: 1px solid $border-color;
+                border-right: 1px solid var(--border-color);
             }
 
             &:hover {
-                color: $primary-color;
+                color: var(--primary-color);
             }
         }
     }
@@ -57,10 +57,10 @@
         p {
             a {
                 margin-left: .5rem;
-                color: $primary-color;
+                color: var(--primary-color);
 
                 &:hover {
-                    color: $secondary-color;
+                    color: var(--secondary-color);
                 }
             }
         }

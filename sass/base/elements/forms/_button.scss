@@ -20,76 +20,76 @@
     border: none;
 
     &:focus {
-        border-color: $primary-color;
+        border-color: var(--primary-color);
     }
 
 
 
     &.is-bg {
-        color: $white-color;
-        background-color: $primary-color;
-        border-color: $primary-color;
+        color: var(--white-color);
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
 
         &:disabled,
         &.is-disable {
-            color: $body-color;
+            color: var(--body-color);
             background-color: transparent;
-            border: 1px solid $border-color;
+            border: 1px solid var(--border-color);
             cursor: not-allowed;
             box-shadow: none;
 
             &:hover {
                 background-color: transparent;
-                color: $body-color;
-                border-color: $border-color;
+                color: var(--body-color);
+                border-color: var(--border-color);
             }
         }
 
         &:hover {
-            background-color: rgba($primary-color, .9);
-            border-color: rgba($primary-color, .9);
-            color: $white-color;
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: var(--white-color);
 
             i {
-                color: $white-color;
+                color: var(--white-color);
             }
         }
 
         &.is-deliverd {
-            background-color: $primary-color;
+            background-color: var(--primary-color);
 
             &:hover {
-                background-color: rgba($primary-color, .9);
+                background-color: rgba(var(--primary-color), .9);
             }
         }
 
         &.is-progress {
-            background-color: $orange-color;
+            background-color: var(--orange-color);
 
             &:hover {
-                background-color: rgba($orange-color, .9);
+                background-color: rgba(var(--orange-color), .9);
             }
         }
 
         &.is-cancel {
-            background-color: $secondary-color;
+            background-color: var(--secondary-color);
 
             &:hover {
-                background-color: rgba($secondary-color, .9);
+                background-color: rgba(var(--secondary-color), .9);
             }
         }
 
     }
 
     &.is-google {
-        background-color: $bg-color;
-        border: 1px solid $border-color;
+        background-color: var(--bg-color);
+        border: 1px solid var(--border-color);
 
         &.is-icon {
             margin-right: .5rem;
 
             i {
-                color: $secondary-color;
+                color: var(--secondary-color);
             }
         }
     }
@@ -110,7 +110,7 @@
         @include display-flex(flex);
         @include justify-content-start;
         @include align-items-center;
-        color: $heading-color;
+        color: var(--heading-color);
         font-size: .9375rem;
         padding: 0;
         min-height: initial;
@@ -122,7 +122,7 @@
         }
 
         &:hover {
-            color: $secondary-color;
+            color: var(--secondary-color);
 
             svg {
                 margin-left: .6125rem;
@@ -132,20 +132,20 @@
 
     &.is-border {
         background-color: transparent;
-        color: $heading-color;
+        color: var(--heading-color);
         border: 1px solid;
-        border-color: $border-color;
+        border-color: var(--border-color);
 
         &.is-icon {
             @include display-flex(flex);
             @include justify-content-start;
             @include align-items-center;
-            color: $heading-color;
+            color: var(--shadow-color);
             font-size: .875rem;
 
             i {
                 margin-right: .5rem;
-                color: $primary-color;
+                color: var(--shadow-color);
                 font-size: 1.2rem;
             }
 
@@ -159,38 +159,38 @@
         }
 
         &.is-danger {
-            border-color: $secondary-color;
-            color: $secondary-color;
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
         }
 
         &:hover {
-            color: $primary-color;
-            background-color: $white-color;
+            color: var(--primary-color);
+            background-color: var(--white-color);
 
             i {
-                color: $secondary-color;
+                color: var(--secondary-color);
             }
         }
 
         &:disabled,
         &.is-disable {
-            color: $body-color;
+            color: var(--body-color);
             background-color: transparent;
-            border: 1px solid $border-color;
+            border: 1px solid var(--border-color);
             cursor: not-allowed;
             box-shadow: none;
 
             &:hover {
                 background-color: transparent;
-                color: $body-color;
-                border-color: $border-color;
+                color: var(--body-color);
+                border-color: var(--border-color);
             }
         }
     }
 
     &.no-border {
         background-color: transparent;
-        color: $secondary-color;
+        color: var(--secondary-color);
         border-color: transparent;
         padding: 0;
 
@@ -198,12 +198,12 @@
             @include display-flex(flex);
             @include justify-content-start;
             @include align-items-center;
-            color: $primary-color;
+            color: var(--primary-color);
             font-size: .9375rem;
 
             i {
                 margin-right: .5rem;
-                color: $secondary-color;
+                color: var(--secondary-color);
             }
         }
     }
@@ -218,16 +218,16 @@
 
     &:disabled,
     &.is-disable {
-        color: $body-color;
+        color: var(--body-color);
         background-color: transparent;
-        border: 1px solid $border-color;
+        border: 1px solid var(--border-color);
         cursor: not-allowed;
         box-shadow: none;
 
         &:hover {
             background-color: transparent;
-            color: $body-color;
-            border-color: $border-color;
+            color: var(--body-color);
+            border-color: var(--border-color);
         }
     }
 
@@ -246,10 +246,10 @@ a.load-more-button {
     @include display-flex(flex);
     @include justify-content-center;
     @include align-items-center;
-    background-color: $bg-color;
+    background-color: var(--bg-color);
     font-weight: 600;
     text-transform: capitalize;
-    color: $heading-color;
+    color: var(--heading-color);
     width: 100%;
     padding: .5rem 1rem;
 
@@ -294,25 +294,25 @@ a.load-more-button {
     @include justify-content-center;
     @include align-items-center;
     @include flex-direction-column(column);
-    color: $shadow-color;
+    color: var(--shadow-color);
     @include radius(100%);
     min-height: 32px;
     cursor: pointer;
-    background-color: $bg-light;
+    background-color: var(--bg-light);
     @include transition(all .4s ease-in-out);
-    border: 1px solid $border-color;
+    border: 1px solid var(--border-color);
 
     i {
         font-size: 1rem;
     }
 
     &.is-bg {
-        background-color: $primary-light;
-        color: $primary-color;
+        background-color: var(--primary-light);
+        color: var(--primary-color);
 
         &:hover {
-            background-color: $primary-color;
-            color: $white-color;
+            background-color: var(--primary-color);
+            color: var(--white-color);
         }
 
     }
@@ -322,12 +322,12 @@ a.load-more-button {
     }
 
     &.is-border {
-        border: 1px solid $border-color;
+        border: 1px solid var(--border-color);
     }
 
     &:hover {
-        background-color: $secondary-light;
-        color: $secondary-color;
+        background-color: var(--secondary-light);
+        color: var(--secondary-color);
     }
 
     &:not(:last-child) {
@@ -374,22 +374,22 @@ a.load-more-button {
     @include justify-content-center;
     @include align-items-center;
     @include flex-direction-column(column);
-    color: $body-color;
+    color: var(--body-color);
     @include radius(5px);
     cursor: pointer;
     @include transition(all .4s ease-in-out);
 
 
     &.is-red {
-        background-color: $secondary-light;
+        background-color: var(--secondary-light);
     }
 
     &.is-green {
-        background-color: $primary-light;
+        background-color: var(--primary-light);
     }
 
     &.is-orange {
-        background-color: $orange-light;
+        background-color: var(--orange-light);
     }
 }
 
@@ -404,14 +404,14 @@ a.load-more-button {
     @include justify-content-center;
     @include align-items-center;
     @include flex-direction-column(column);
-    border: 1px solid $border-color;
+    border: 1px solid var(--border-color);
     @include radius(100%);
     @include transition(all .5s ease-in-out);
     cursor: pointer;
 
     &:hover {
-        color: $secondary-color;
-        border-color: $secondary-color;
+        color: var(--secondary-color);
+        border-color: var(--secondary-color);
     }
 }
 

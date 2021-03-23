@@ -11,17 +11,15 @@ textarea {
     background-repeat: no-repeat;
     background-position: center top;
     -webkit-font-smoothing: antialiased;
-    font-size: .8125rem;
 }
 
 body {
     font-family: $body-fonts;
-    background-color: $bg-color;
+    background-color: var(--bg-color);
     position: relative;
-    color: $body-color;
-
-
+    color: var(--body-color);
 }
+
 
 
 

@@ -1,14 +1,14 @@
 .custom-breadcrumb {
     padding: .6125rem;
-    background-color: $grey-light;
+    background-color: var(--grey-light);
 
     ol {
         li {
             a {
-                color: $primary-color;
+                color: var(--primary-color);
 
                 &:hover {
-                    color: $secondary-color;
+                    color: var(--secondary-color);
                 }
             }
 

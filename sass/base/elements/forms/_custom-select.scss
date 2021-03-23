@@ -22,7 +22,7 @@
     width: 100%;
 
     &.selected-item {
-      border: 1px solid $border-color;
+      border: 1px solid var(--border-color);
       height: 2.5rem;
       line-height: 2.5rem;
       padding: 0 1.5rem 0 1rem;
@@ -31,8 +31,8 @@
       @include radius(5px);
       position: relative;
       cursor: pointer;
-      color: $heading-color;
-      background-color: $white-color;
+      color: var(--heading-color);
+      background-color: var(--white-color);
       @include line-clamp(1);
       @include display-flex(flex);
       @include justify-content-start;
@@ -51,7 +51,7 @@
         right: .5rem;
         top: 0;
         font-size: 1.3rem;
-        color: $primary-color;
+        color: var(--primary-color);
         z-index: 99;
       }
     }
@@ -66,7 +66,7 @@
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    background-color: $white-color;
+    background-color: var(--white-color);
     @include box-shadow(0 5px 15px rgba(0, 0, 0, 0.15));
     max-height: 300px;
     display: none;
@@ -77,18 +77,18 @@
 
     &::-webkit-scrollbar {
       width: 4px;
-      background: $border-color;
+      background: var(--border-color);
       @include radius(4px);
     }
 
     &::-webkit-scrollbar-track {
-      background-color: $border-color;
+      background-color: var(--border-color);
       @include radius(4px);
     }
 
     &::-webkit-scrollbar-thumb {
       @include radius(4px);
-      background: $grey-color;
+      background: var(--grey-color);
     }
 
     li {
@@ -98,7 +98,7 @@
       @include align-items-center;
       cursor: pointer;
       @include transition(all 0.3s linear);
-      border-bottom: 1px solid $border-color;
+      border-bottom: 1px solid var(--border-color);
 
       label,
       span {
@@ -118,7 +118,7 @@
       }
 
       &:hover {
-        background-color: $primary-light;
+        background-color: var(--primary-light);
       }
     }
 
@@ -134,8 +134,8 @@
   &.is-bg {
     p {
       &.selected-item {
-        border-color: $primary-light;
-        background-color: $primary-light;
+        border-color: var(--primary-light);
+        background-color: var(--primary-light);
       }
     }
   }
@@ -148,15 +148,15 @@
   &.show-select {
     p {
       &.selected-item {
-        border-color: $primary-color;
-        color: $primary-color;
+        border-color: var(--primary-color);
+        color: var(--primary-color);
 
         &::after {
           content: "\ea6a";
           font-family: "IcoFont";
           float: right;
           font-size: 1.3rem;
-          color: $primary-color;
+          color: var(--primary-color);
         }
       }
     }
@@ -189,7 +189,7 @@
   line-height: 1.5;
   vertical-align: middle;
   @include user-select(none);
-  border: 1px solid $border-color;
+  border: 1px solid var(--border-color);
   border-radius: .25rem;
-  background: $white-color url("data:image/svg+xml,%3csvg xmlns='http: //www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e ") no-repeat right .75rem center/8px 10px;
+  background: var(--white-color) url("data:image/svg+xml,%3csvg xmlns='http: //www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e ") no-repeat right .75rem center/8px 10px;
 }

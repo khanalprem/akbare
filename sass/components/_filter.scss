@@ -26,7 +26,7 @@
         height: calc(1.5em + 0.75rem + 2px);
 
         @include input-placeholder {
-          color: $border-color;
+          color: var(--border-color);
           font-size: .775rem;
           text-transform: capitalize;
         }
@@ -41,7 +41,7 @@
       min-width: 160px;
 
       &.selected-item {
-        border: 1px solid $border-color;
+        border: 1px solid var(--border-color);
         height: 2.3rem;
         line-height: 2.3rem;
       }
@@ -58,7 +58,7 @@
   }
 
   .filter-title {
-    background-color: $bg-color;
+    background-color: var(--bg-color);
     padding: .6125rem 1rem;
 
     h6 {

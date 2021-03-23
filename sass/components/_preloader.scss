@@ -2,7 +2,7 @@
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: $white-color;
+  background-color: #000;
   z-index: 99999999;
   top: 0;
   left: 0;
@@ -12,40 +12,8 @@
 }
 
 .pin {
-  width: 30px;
-  height: 30px;
-  border-radius: 50% 50% 50% 0;
-  background: $primary-color;
-  position: absolute;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  left: 50%;
-  top: 50%;
-  margin: -20px 0 0 -20px;
-
-  -moz-animation: bounce 1s infinite ease-in;
-  -ms-animation: bounce 1s infinite ease-in;
-  -webkit-animation: bounce 1s infinite ease-in;
-  animation: bounce 1s infinite ease-in;
-
-  &::after {
-    content: '';
-    width: 14px;
-    height: 14px;
-    margin: 8px 0 0 8px;
-    background: rgba($primary-color, 0.2);
-    position: absolute;
-    border-radius: 50%;
-    border: 3px solid $white-color;
-  }
-}
-
-.pin1 {
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
   border-radius: 50% 50% 50% 0;
   position: absolute;
   left: 50%;
@@ -55,38 +23,122 @@
 }
 
 .pulse {
-  background: rgba($secondary-color, 0.4);
-  border-radius: 50%;
-  height: 14px;
-  width: 14px;
+  width: 26px;
+  height: 26px;
+  transform-origin: center bottom;
+  animation-name: flicker;
+  animation-duration: 3ms;
+  animation-delay: 200ms;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
   position: absolute;
   left: 50%;
   top: 50%;
-  margin: 11px 0px 0px -12px;
-  -webkit-transform: rotateX(55deg);
-  -moz-transform: rotateX(55deg);
-  -o-transform: rotateX(55deg);
-  -ms-transform: rotateX(55deg);
-  transform: rotateX(55deg);
+  margin: 37px 0px 0px 4px;
   z-index: -2;
+}
 
-  &::after {
-    content: "";
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    position: absolute;
-    margin: -13px 0 0 -13px;
-    -webkit-animation: pulsate 1s ease-out infinite;
-    -moz-animation: pulsate 1s ease-out infinite;
-    -o-animation: pulsate 1s ease-out infinite;
-    -ms-animation: pulsate 1s ease-out infinite;
-    animation: pulsate 1s ease-out infinite;
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    -webkit-box-shadow: 0 0 1px 2px $secondary-color;
-    box-shadow: 0 0 1px 2px $secondary-color;
+.flame {
+  bottom: 0;
+  position: absolute;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  transform: rotate(-45deg) scale(1.5, 1.5);
+}
+
+.yellow {
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background: gold;
+  box-shadow: 0px 0px 2px 1px gold;
+}
+
+.orange {
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  background: orange;
+  box-shadow: 0px 0px 2px 1px orange;
+}
+
+.red {
+  left: 1px;
+  width: 12px;
+  height: 12px;
+  background: OrangeRed;
+  box-shadow: 0px 0px 0px 2px orangered;
+}
+
+.white {
+  left: 5px;
+  bottom: -2px;
+  width: 4px;
+  height: 4px;
+  background: white;
+  box-shadow: 0px 0px 2px 1px white;
+}
+
+.circle {
+  border-radius: 50%;
+  position: absolute;
+}
+
+.blue {
+  width: 2px;
+  height: 2px;
+  left: 5px;
+  bottom: -5px;
+  background: SlateBlue;
+  box-shadow: 0px 0px 6px 3px SlateBlue;
+}
+
+.stick {
+  width: 3px;
+  height: 24px;
+  bottom: -28px;
+  background: orange;
+  box-shadow: 0px 0px 12px 2px orange;
+  @include radius(30px);
+  position: absolute;
+
+  &.is-left {
+    @include transform(rotate(45deg));
+    left: -1px;
+  }
+
+  &.is-right {
+    @include transform(rotate(-45deg));
+    right: 10px;
+  }
+}
+
+
+@keyframes flicker {
+  0% {
+    transform: rotate(-1deg);
+  }
+
+  20% {
+    transform: rotate(1deg);
+  }
+
+  40% {
+    transform: rotate(-1deg);
+  }
+
+  60% {
+    transform: rotate(1deg) scaleY(1.04);
+  }
+
+  80% {
+    transform: rotate(-2deg) scaleY(0.92);
+  }
+
+  100% {
+    transform: rotate(1deg);
   }
 }
 

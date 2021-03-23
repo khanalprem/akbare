@@ -5,7 +5,7 @@
   padding: .6125rem 1rem;
 
   h6 {
-    color: $heading-color;
+    color: var(--heading-color);
     font-weight: 600;
     font-size: .7125rem;
     flex-grow: 1;
@@ -42,7 +42,7 @@
     // }
     // &.orange{
     //     &::before{
-    //         background-color:$orange-color;
+    //         background-color:var(--orange-color);
     //         -webkit-animation: orangepulse 2s infinite;
     //     -moz-animation: orangepulse 2s infinite;
     //     animation: orangepulse 2s infinite;
@@ -73,7 +73,7 @@
     //     }
     // }
     &:hover {
-      color: $secondary-color;
+      color: var(--secondary-color);
     }
 
   }
@@ -98,7 +98,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgba($secondary-color, .3);
+      background-color: rgba(var(--secondary-color), .3);
       @include transition(.4s ease-in-out);
       @include radius(30px);
 
@@ -110,9 +110,9 @@
         left: 0;
         bottom: -3px;
         @include radius(50%);
-        background-color: rgba($secondary-color, .5);
+        background-color: rgba(var(--secondary-color), .5);
         @include transition(.4s ease-in-out);
-        @include box-shadow(0 1px 6px rgba($border-color, 0.5));
+        @include box-shadow(0 1px 6px rgba(var(--border-color), 0.5));
       }
 
       .round {
@@ -125,14 +125,14 @@
     }
 
     input:checked+.slider {
-      background-color: rgba($secondary-color, .8);
+      background-color: rgba(var(--secondary-color), .8);
     }
 
     input:checked+.slider:before {
       -webkit-transform: translateX(14px);
       -ms-transform: translateX(14px);
       transform: translateX(14px);
-      background-color: rgba($secondary-color, 1);
+      background-color: rgba(var(--secondary-color), 1);
     }
 
   }
@@ -146,8 +146,8 @@
   cursor: pointer;
 
   .theme-switch {
-    background: $heading-color;
-    color: $white-color;
+    background: var(--heading-color);
+    color: var(--white-color);
     font-size: 20px;
     margin: 0px;
     @include radius(50%);
@@ -173,20 +173,22 @@
   }
 }
 
-.dark {
+html[data-theme="dark"] {
   .theme-switch-wrapper {
     .theme-switch {
-      background: $white-color;
-      color: $body-color;
+      background-color: var(--bg-color);
+      color: var(--heading-color);
 
       i {
+        &.icofont-moon {
+          display: none;
+        }
+
         &.icofont-sun {
           display: block;
         }
 
-        &.icofont-moon {
-          display: none;
-        }
+
       }
     }
   }

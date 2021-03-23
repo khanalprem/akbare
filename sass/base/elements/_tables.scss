@@ -1,7 +1,7 @@
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: $body-color;
+  color: var(--body-color);
   @include radius(5px);
   table-layout: fixed;
   overflow: hidden;
@@ -10,7 +10,7 @@
   &.is-border {
 
     tr {
-      border: 1px solid $border-color;
+      border: 1px solid var(--border-color);
     }
   }
 }
@@ -19,20 +19,20 @@
 .table th {
   padding: .5rem 0.75rem;
   vertical-align: top;
-  border-top: 1px solid $border-color;
+  border-top: 1px solid var(--border-color);
 }
 
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid $border-color;
-  background-color: $bg-color;
-  color: $body-color;
+  border-bottom: 2px solid var(--border-color);
+  background-color: var(--bg-color);
+  color: var(--body-color);
   font-weight: 400;
   text-transform: capitalize;
 }
 
 .table tbody+tbody {
-  border-top: 2px solid $border-color;
+  border-top: 2px solid var(--border-color);
 }
 
 .table-sm td,
@@ -42,7 +42,7 @@
 
 .table-bordered td,
 .table-bordered th {
-  border: 1px solid $border-color;
+  border: 1px solid var(--border-color);
 }
 
 @media (max-width: 575.98px) {
@@ -132,7 +132,7 @@
     }
 
     td {
-      color: $heading-color;
+      color: var(--heading-color);
 
       .site-progress {
         @include display-flex(flex);
@@ -186,7 +186,7 @@
 
       b {
         font-weight: 500;
-        color: $heading-color;
+        color: var(--heading-color);
 
         &.counter {
           margin-left: .6125rem;
@@ -206,7 +206,7 @@
         p {
           height: 2.2rem;
           line-height: 2.2rem;
-          background-color: $white-color;
+          background-color: var(--white-color);
         }
       }
 
@@ -215,7 +215,7 @@
         cursor: pointer;
 
         &:hover {
-          color: $primary-color;
+          color: var(--primary-color);
         }
       }
     }
@@ -231,7 +231,7 @@
       }
 
       span {
-        color: $bg-light;
+        color: var(--bg-light);
 
         &:not(:last-child) {
           margin-right: .6125rem;
@@ -244,7 +244,7 @@
 
   &.is-sticky {
     overflow-x: unset;
-    background-color: $bg-color;
+    background-color: var(--bg-color);
 
     table {
       thead {
@@ -277,14 +277,14 @@
     @include display-flex(flex);
     @include justify-content-center;
     @include align-items-center;
-    color: $body-color;
+    color: var(--body-color);
     @include radius(20px);
     cursor: pointer;
     @include transition(all .4s ease-in-out);
     min-width: 28px;
     min-height: 28px;
     margin-right: -4px;
-    border: 1px solid $white-color;
+    border: 1px solid var(--white-color);
     @include transform(scale(1));
     position: relative;
 
@@ -295,18 +295,18 @@
 
 
     &.is-red {
-      background-color: $secondary-light;
-      color: $secondary-color;
+      background-color: var(--secondary-light);
+      color: var(--secondary-color);
     }
 
     &.is-green {
-      background-color: $primary-light;
-      color: $primary-color;
+      background-color: var(--primary-light);
+      color: var(--primary-color);
     }
 
     &.is-orange {
-      background-color: $orange-light;
-      color: $orange-color;
+      background-color: var(--orange-light);
+      color: var(--orange-color);
     }
 
     img {
@@ -346,12 +346,12 @@
     @include justify-content-center;
     @include align-items-center;
     font-size: .875rem;
-    color: $body-color;
+    color: var(--body-color);
 
     b {
       font-weight: 600;
       margin-right: .35rem;
-      color: $heading-color;
+      color: var(--heading-color);
     }
 
     &:not(:last-child) {

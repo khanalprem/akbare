@@ -13,24 +13,24 @@
                         @include align-items-center;
                         font-size: .875rem;
                         font-weight: 400;
-                        color: $heading-color;
+                        color: var(--heading-color);
 
                         span {
                             &.circle-icon {
                                 border: none;
-                                background-color: $white-color;
+                                background-color: var(--white-color);
                             }
                         }
 
                         &.is-active,
                         &:hover {
-                            background-color: $bg-light;
-                            color: $heading-color;
+                            background-color: var(--bg-light);
+                            color: var(--heading-color);
 
                             span {
                                 &.circle-icon {
-                                    background-color: $primary-color;
-                                    color: $white-color;
+                                    background-color: var(--primary-color);
+                                    color: var(--white-color);
                                 }
                             }
                         }
@@ -45,12 +45,12 @@
 
         .order-col {
             p {
-                color: $shadow-color;
+                color: var(--shadow-color);
                 margin-bottom: .25rem;
             }
 
             b {
-                color: $heading-color;
+                color: var(--heading-color);
             }
 
 
@@ -66,7 +66,7 @@
                     }
 
                     .is-date {
-                        color: $shadow-color;
+                        color: var(--shadow-color);
 
                         i {
                             margin-right: .25rem;
@@ -88,14 +88,14 @@
                     }
 
                     p {
-                        color: $shadow-color;
+                        color: var(--shadow-color);
                     }
 
 
                 }
 
                 .order-dsc {
-                    border-top: 1px solid $border-color;
+                    border-top: 1px solid var(--border-color);
 
                     .card-header {
                         border: none;

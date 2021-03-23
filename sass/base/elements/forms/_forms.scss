@@ -21,7 +21,7 @@
 
             &:focus {
                 box-shadow: none;
-                border-color: $secondary-color;
+                border-color: var(--secondary-color);
             }
         }
     }

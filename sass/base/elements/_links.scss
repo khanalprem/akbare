@@ -1,15 +1,15 @@
 // a {
-//     color: $primary-color;
+//     color: var(--primary-color);
 //     text-decoration:none;
 
 // 	&:visited {
-// 		color: $primary-color;
+// 		color: var(--primary-color);
 // 	}
 
 // 	&:hover,
 // 	&:focus,
 // 	&:active {
-// 		color: $secondary-color;
+// 		color: var(--secondary-color);
 // 	}
 
 // 	&:focus {

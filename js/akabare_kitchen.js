@@ -15,7 +15,7 @@ Primary use: Ecommerce
 
   function preloader() {
     $(document).ready(function () {
-      $('.preloader').fadeOut(5000);
+      $('.preloader').fadeOut(15000);
     });
   }
   preloader();
@@ -339,19 +339,18 @@ Primary use: Ecommerce
   );
   const currentTheme = localStorage.getItem('theme');
   if (currentTheme) {
-    document.documentElement.setAttribute('class', currentTheme);
+    document.documentElement.setAttribute('data-theme', currentTheme);
 
     if (currentTheme === 'dark') {
       toggleSwitch.checked = true;
     }
   }
-
   function switchTheme(e) {
     if (e.target.checked) {
-      document.documentElement.setAttribute('class', 'dark');
+      document.documentElement.setAttribute('data-theme', 'dark');
       localStorage.setItem('theme', 'dark');
     } else {
-      document.documentElement.setAttribute('class', 'light');
+      document.documentElement.setAttribute('data-theme', 'light');
       localStorage.setItem('theme', 'light');
     }
   }

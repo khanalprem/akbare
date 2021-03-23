@@ -1,6 +1,6 @@
 footer {
     &.site-footer {
-        background-color: $white-color;
+        background-color: var(--white-color);
         margin-top: 2rem;
 
         h6 {
@@ -12,7 +12,7 @@ footer {
 
         .footer-top {
             padding: 2rem 0;
-            border-top: 1px solid $border-color;
+            border-top: 1px solid var(--border-color);
 
             form {
                 margin: 1rem 0;
@@ -35,8 +35,8 @@ footer {
 
         .footer-middle {
             padding: 3rem 0;
-            border-top: 1px solid $border-color;
-            border-bottom: 1px solid $border-color;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
 
             ul {
                 &.is-list {
@@ -62,8 +62,8 @@ footer {
         .btn-icon {
             height: 33px;
             width: 33px;
-            background-color: $bg-color;
-            border: 1px solid $border-color;
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
             @include radius(50%);
             @include display-flex(flex);
             @include justify-content-center;
@@ -76,8 +76,8 @@ footer {
             }
 
             &:hover {
-                background-color: $secondary-light;
-                color: $secondary-color;
+                background-color: var(--secondary-light);
+                color: var(--secondary-color);
 
             }
         }
@@ -112,12 +112,12 @@ footer {
     bottom: 2rem;
     right: 1rem;
     z-index: 1011;
-    background-color: $primary-color;
-    color: $white-color;
+    background-color: var(--primary-color);
+    color: var(--white-color);
     @include transition(all .5s ease-in-out);
 
     &:hover {
-        background-color: $secondary-color;
-        color: $white-color
+        background-color: var(--secondary-color);
+        color: var(--white-color)
     }
 }

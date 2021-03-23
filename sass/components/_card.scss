@@ -4,18 +4,18 @@
     @include flex-direction-column(column);
     min-width: 0;
     word-wrap: break-word;
-    background-color: $white-color;
+    background-color: var(--white-color);
     background-clip: border-box;
     @include radius(5px);
 
     .card-footer {
         padding: 1rem;
         padding-top: .6125rem;
-        border-top: 1px solid $border-color;
+        border-top: 1px solid var(--border-color);
     }
 
     .card-header {
-        border-bottom: 1px solid $border-color;
+        border-bottom: 1px solid var(--border-color);
         padding-bottom: .6125rem;
     }
 
@@ -106,9 +106,9 @@
         @include display-flex(flex);
         @include justify-content-start;
         @include align-items-center;
-        border: 1px solid $primary-color;
-        background-color: $primary-light;
-        color: $primary-color;
+        border: 1px solid var(--primary-color);
+        background-color: var(--primary-light);
+        color: var(--primary-color);
         font-size: .775rem;
         @include radius(24px);
         padding: 0 .5rem;
@@ -146,12 +146,12 @@
             min-width: initial;
 
             &.is-bg {
-                background-color: $primary-light;
-                color: $heading-color;
+                background-color: var(--primary-light);
+                color: var(--heading-color);
                 box-shadow: none;
 
                 i {
-                    color: $primary-color;
+                    color: var(--primary-color);
                 }
             }
         }
@@ -180,17 +180,17 @@
     &::-webkit-scrollbar {
         width: 4px;
         height: 8px;
-        background: $border-color;
+        background: var(--border-color);
         @include radius(4px);
     }
 
     &::-webkit-scrollbar-track {
-        background-color: $border-color;
+        background-color: var(--border-color);
         @include radius(4px);
     }
 
     &::-webkit-scrollbar-thumb {
         @include radius(4px);
-        background: $grey-color;
+        background: var(--grey-color);
     }
 }

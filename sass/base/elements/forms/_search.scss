@@ -7,9 +7,9 @@
     .search-wrap {
         @include display-flex(flex);
         @include justify-content-between;
-        border: 1px solid $border-color;
+        border: 1px solid var(--border-color);
         @include align-items-stretch;
-        background-color: $white-color;
+        background-color: var(--white-color);
         @include flex-grow(1);
         max-width: 600px;
         @include radius(5px);
@@ -20,14 +20,14 @@
                 height: calc(1.2rem + .75rem + 2px);
                 border: none;
                 display: initial;
-                background-color: $white-color;
+                background-color: var(--white-color);
 
                 &:focus {
-                    background-color: $bg-color;
+                    background-color: var(--bg-color);
                 }
 
                 @include input-placeholder {
-                    color: $heading-color;
+                    color: var(--heading-color);
                 }
             }
         }
@@ -41,7 +41,7 @@
             @include align-items-center;
             @include flex-direction-column(column);
             cursor: pointer;
-            color: $primary-color;
+            color: var(--primary-color);
 
 
             i {
@@ -56,7 +56,7 @@
             }
 
             &:hover {
-                color: $secondary-color;
+                color: var(--secondary-color);
             }
         }
     }
@@ -66,17 +66,17 @@
         width: 40px;
         height: 37px;
         min-width: initial;
-        border-color: $grey-color;
+        border-color: var(--grey-color);
         @include radius(8px);
         margin-left: .6125rem;
-        background-color: $white-color;
-        color: $secondary-color;
+        background-color: var(--white-color);
+        color: var(--secondary-color);
         margin-left: 1rem;
 
         &:focus,
         &:hover {
-            background-color: $secondary-color;
-            color: $white-color;
+            background-color: var(--secondary-color);
+            color: var(--white-color);
             outline: none;
             -webkit-outline: none;
             box-shadow: none;
@@ -86,7 +86,7 @@
     a {
         &.toggle-icon {
             margin-left: 1rem;
-            color: $body-color;
+            color: var(--body-color);
 
             svg {
                 font-size: 1.5rem;
@@ -113,33 +113,33 @@
                     height: calc(2.5rem + .75rem + 2px);
 
                     @include input-placeholder {
-                        color: $heading-color;
+                        color: var(--heading-color);
                     }
 
                     &:focus {
-                        background-color: $primary-light;
+                        background-color: var(--primary-light);
                     }
                 }
             }
 
             span {
                 width: 60px;
-                background-color: $white-color;
+                background-color: var(--white-color);
 
                 i {
                     font-size: 1.5rem;
-                    color: $secondary-color;
+                    color: var(--secondary-color);
                 }
             }
 
             &:focus-within {
-                background-color: $primary-light;
+                background-color: var(--primary-light);
 
                 span {
-                    background-color: $primary-light;
+                    background-color: var(--primary-light);
 
                     i {
-                        color: $primary-color;
+                        color: var(--primary-color);
                     }
                 }
             }

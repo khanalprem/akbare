@@ -37,23 +37,46 @@
 </head>
 
 <body>
+    <!-- Preloader -->
     <div class="preloader">
-        <div class='pin1'>
-            <img src="img/logo.png" alt="preloader" />
+        <div class='pin'>
+            <img src="img/app-logo.png" alt="preloader" />
         </div>
-        <div class='pulse'></div>
+        <div class='pulse'>
+            <div class="red flame"></div>
+            <div class="orange flame"></div>
+            <div class="yellow flame"></div>
+            <div class="white flame"></div>
+            <div class="blue circle"></div>
+            <div class="stick is-left"></div>
+            <div class="stick is-right"></div>
+        </div>
     </div>
     <!-- site header -->
     <header class="site-header">
         <div class="container">
             <div class="header-in">
                 <div class="header-left">
-                    <a class="site-logo" href="index.html">
-                        <img src="img/logo.png" alt="akabare" />
+                    <a href="#" class="site-logo" href="index.html">
+                        <picture>
+                            <source media="(min-width:450px)" srcset="img/logo.png">
+                            <img src="img/app-logo.png" alt="akabare" />
+                        </picture>
                     </a>
+
                 </div>
                 <div class="header-middle is-flex is-start">
-
+                    <div class="mobile-menu">
+                        <div class="mobile-menu-button">
+                            <a href="#" class="toggle-button">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                            <b>Menu</b>
+                        </div>
+                    </div>
                     <div class="custom-dropdown is-left location-dropdown">
                         <a href="#" class="is-flex is-start is-icon">
                             <span class="circle-icon is-shadow">
@@ -86,17 +109,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="mobile-menu">
-                        <div class="mobile-menu-button">
-                            <a href="#" class="toggle-button">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </a>
-                            <b>Menu</b>
-                        </div>
-                    </div>
+
                 </div>
                 <div class="header-right is-flex is-end">
 
@@ -157,6 +170,7 @@
                             <label class="theme-switch circle-icon" for="checkbox">
                                 <input type="checkbox" id="checkbox" />
                                 <i class="icofont-moon"></i>
+                                <i class="icofont-sun"></i>
                             </label>
                             <em>Enable Dark Mode!</em>
                         </div>
@@ -739,62 +753,11 @@
 
     <!-- site Footer -->
     <footer class="site-footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="grid-md-4">
-                        <div class="form-inline is-flex is-start">
-                            <select class="custom-select mr-15">
-                                <option>USD</option>
-                                <option>EUR</option>
-                                <option>RUBL</option>
-                            </select>
-                            <select class="custom-select">
-                                <option>United States</option>
-                                <option>Russia</option>
-                                <option>Uzbekistan</option>
-                            </select>
-                        </div>
-
-                    </div>
-                    <div class="grid-md-4 ">
-                        <form>
-                            <div class="custom-input-group">
-                                <input type="text" placeholder="Email" class="form-control" name="">
-                                <span class="input-group">
-                                    <button type="submit" class="common-button is-bg"> Subscribe</button>
-                                </span>
-                            </div>
-
-                        </form>
-                    </div>
-                    <div class="grid-md-4 ">
-                        <div class="is-flex is-end is-social-icons">
-                            <a href="#" class="btn-icon"><i class="icofont-facebook"></i></a>
-                            <a href="#" class="btn-icon "><i class="icofont-twitter"></i></a>
-                            <a href="#" class="btn-icon "><i class="icofont-instagram"></i></a>
-                            <a href="#" class="btn-icon "><i class="icofont-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
 
         <div class="footer-middle">
             <div class="container">
                 <div class="row">
-                    <aside class="grid-lg grid-sm-6">
-                        <h6 class="title">Products</h6>
-                        <ul class="is-list">
-                            <li> <a href="listing.html">Listing</a></li>
-                            <li> <a href="product_details.html">Detail</a></li>
-                            <li> <a href="picks_today.html">Trending</a></li>
-                            <li> <a href="recommend.html">Recommended</a></li>
-                            <li> <a href="fresh_vegan.html">Most Popular</a></li>
-                        </ul>
-                    </aside>
+
                     <aside class="grid-lg grid-6">
                         <h6 class="title">Checkout Process</h6>
                         <ul class="is-list">
@@ -829,15 +792,22 @@
                         </ul>
                     </aside>
                     <aside class="grid-lg grid-6">
-                        <h6 class="title">Extra Pages</h6>
-                        <ul class="is-list">
-                            <li><a href="promo_details.html"> Promo Details </a></li>
-                            <li><a href="terms_conditions.html"> Conditions </a></li>
-                            <li><a href="help_support.html"> Help Support </a></li>
-                            <li><a href="refund_payment.html"> Refund Payment </a></li>
-                            <li><a href="faq.html"> FAQ </a></li>
-                            <li><a href="signin.html"> Sign In </a></li>
-                        </ul>
+                        <h6 class="title">Social & Newsletter</h6>
+                        <form class="mb-30 mt-30">
+                            <div class="custom-input-group">
+                                <input type="text" placeholder="Email" class="form-control" name="">
+                                <span class="input-group">
+                                    <button type="submit" class="common-button is-bg"> Subscribe</button>
+                                </span>
+                            </div>
+
+                        </form>
+                        <div class="is-flex is-start is-social-icons">
+                            <a href="#" class="btn-icon"><i class="icofont-facebook"></i></a>
+                            <a href="#" class="btn-icon "><i class="icofont-twitter"></i></a>
+                            <a href="#" class="btn-icon "><i class="icofont-instagram"></i></a>
+                            <a href="#" class="btn-icon "><i class="icofont-youtube"></i></a>
+                        </div>
                     </aside>
                 </div>
 
