@@ -15,7 +15,7 @@ Primary use: Ecommerce
 
   function preloader() {
     $(document).ready(function () {
-      $('.preloader').fadeOut(15000);
+      $('.preloader').fadeOut();
     });
   }
   preloader();
@@ -296,17 +296,32 @@ Primary use: Ecommerce
   }
   menuIcon();
 
-  if (winwidth <= 991) {
-    $(
-      '.main-navigation li.menu-item-has-children span.icon,.main-navigation li.page-item-has-children span.icon'
-    ).on('click', function (e) {
-      e.preventDefault();
-      $(this)
-        .siblings(
-          '.main-navigation li.menu-item-has-children ul.sub-menu,.main-navigation li.page-item-has-children ul.sub-menu'
-        )
-        .slideToggle(300);
-    });
+  if (winwidth <= 767) {
+    $('.main-navigation li.menu-item-has-children a.submenu-link').click(
+      function (e) {
+        e.preventDefault();
+        var e = $(this).next('.sub-menu'),
+          a = '.main-navigation li.menu-item-has-children .sub-menu';
+        $(a)
+          .not(e)
+          .slideUp(function () {
+            $(this).closest('li').removeClass('is-active');
+          }),
+          $(e).slideToggle(function () {
+            var e = $(this).closest('li');
+            $(e).hasClass('is-active')
+              ? $(e).removeClass('is-active')
+              : $(e).addClass('is-active');
+          });
+      }
+    ),
+      $(
+        '.main-navigation li.menu-item-has-children .sub-menu li.menu-item-has-children > a'
+      ).click(function () {
+        e.preventDefault();
+        var e = $(this).next('.sub-menu');
+        $(e).slideToggle();
+      });
   }
 
   function stickyMenu() {

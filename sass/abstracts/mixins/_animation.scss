@@ -1,19 +1,8 @@
-@mixin transition($value) {
-  -webkit-transition: $value;
-  -o-transition: $value;
-  transition: $value;
-}
-
 @mixin animation($value) {
   -webkit-animation: $value;
   animation: $value;
 }
 
-@mixin transition-duration($time) {
-  -webkit-transition-duration: $time;
-  -o-transition-duration: $time;
-  transition-duration: $time;
-}
 
 @-webkit-keyframes rotate3d {
   0% {

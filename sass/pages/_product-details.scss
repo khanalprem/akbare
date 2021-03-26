@@ -30,8 +30,16 @@
     .cart-buttons {
         .common-button {
             min-height: 40px;
-            min-width: 140px;
+            min-width: 120px;
+            font-size: .775rem;
+
+            @media #{$breakpoint-lg} {
+                min-height: 40px;
+                min-width: 140px;
+                font-size: .875rem;
+            }
         }
+
     }
 
     .akabare-slider-item {

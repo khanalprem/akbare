@@ -334,6 +334,8 @@ a.toggle-button {
                     }
                 }
 
+
+
                 a {
                     color: var(--white-color);
                     padding: .5rem .6125rem;
@@ -345,21 +347,19 @@ a.toggle-button {
                 &.page_item_has_children {
                     position: relative;
 
-
-
                     ul,
                     ul ul {
                         border: none;
                         display: none;
-                        transition: initial;
+                        transition: unset;
                         position: initial;
-                        top: initial;
-                        left: initial;
+                        top: unset;
+                        left: unset;
                         transform: none;
                         opacity: 1;
-                        transform-origin: initial;
+                        transform-origin: unset;
                         width: 100%;
-                        visibility: initial;
+                        visibility: unset;
                         background-color: transparent;
 
                         li {
@@ -377,7 +377,7 @@ a.toggle-button {
                                 width: 100%;
                                 border: 0;
                                 color: var(--white-color);
-                                border-color: var(--body-color);
+                                border-color: var(--body-color) !important;
                             }
 
 
@@ -400,31 +400,14 @@ a.toggle-button {
 
                         ul {
                             display: none;
-                            transition: initial;
+                            transition: none;
                             position: initial;
-                            top: initial;
-                            left: initial;
+                            top: unset;
+                            left: unset;
                             display: none;
                             transform: none;
-                            visibility: initial;
-                            transform-origin: initial;
-
-                        }
-                    }
-
-                    &:focus-within {
-                        a {
-                            &::after {
-                                display: none;
-                            }
-                        }
-
-                        ul {
-                            display: block;
-
-                            ul {
-                                display: none;
-                            }
+                            visibility: unset;
+                            transform-origin: unset;
 
                         }
                     }
@@ -433,7 +416,7 @@ a.toggle-button {
                         li {
                             &:focus-within {
                                 ul {
-                                    display: block;
+                                    display: none;
                                 }
                             }
                         }
@@ -452,10 +435,24 @@ a.toggle-button {
                     }
                 }
 
+                &.is-active {
+                    a {
+                        color: var(--secondary-color);
+                    }
+
+                    span {
+                        &.icon {
+                            @include transform(roate(360deg));
+                        }
+                    }
+                }
+
                 &:not(:last-child) {
                     margin-right: 0;
                 }
             }
+
+
         }
     }
 

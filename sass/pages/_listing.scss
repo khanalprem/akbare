@@ -14,5 +14,13 @@
                 }
             }
         }
+
+        .filter-buttons {
+            @media screen and (max-width:425px) {
+                margin-top: .6125rem;
+            }
+        }
     }
+
+
 }

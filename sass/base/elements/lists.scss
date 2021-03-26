@@ -40,7 +40,6 @@ ul {
         li {
             padding: .5rem .6125rem;
             color: var(--heading-color);
-
             @include transition(all .4s ease-in-out);
             @include display-flex(flex);
             @include justify-content-start;
