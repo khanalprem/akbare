@@ -51,6 +51,16 @@
     }
 }
 
+html[data-theme="dark"] {
+
+    .slick-arrow,
+    .slick-arrow:hover,
+    .slick-arrow:focus {
+        background-color: var(--heading-color);
+
+    }
+}
+
 
 @media #{$breakpoint-pt} {
 
